@@ -31,3 +31,10 @@
 
 공유폴더 권한 설정
 ![스크린샷 2019-08-04 오후 10 07 11](https://user-images.githubusercontent.com/44438752/62424075-ac4d2580-b704-11e9-93fc-25784a9d572b.png)
+
+
+4. ssh 설정
+
+![스크린샷 2019-08-04 오후 10 18 03](https://user-images.githubusercontent.com/44438752/62424153-c63b3800-b705-11e9-8d7b-7a1152292621.png)
+
+![스크린샷 2019-08-04 오후 10 17 06](https://user-images.githubusercontent.com/44438752/62424155-d05d3680-b705-11e9-8670-f32f11cb40fe.png)
