@@ -53,3 +53,30 @@ NAS 설치후,
 5-1. ssh와 같이 포트번호 설정 및 활성화시키기
 5-2. 클라이언트 접속
 <>
+<br/><br/><br/><br/>
+
+## 6. Ubuntu Linux Samba 공유 폴더 Mount 하기 
+6-1. smb 활성화
+![스크린샷 2019-08-04 오후 10 17 06](https://user-images.githubusercontent.com/44438752/62620486-6ab2b980-b954-11e9-9b6d-826fb7086e1f.png)
+
+<br/><br/>
+6-2. 공유 폴더 설정
+![스크린샷 2019-08-04 오후 10 17 06](https://user-images.githubusercontent.com/44438752/62620499-6e464080-b954-11e9-94fc-685fc349084c.png)
+
+<br/><br/>
+6-3. 클라이언트 환경에서 samba설치 안되 있을 경우, sudo apt-get install samba-common
+![Screenshot from 2019-08-07 21-06-37](https://user-images.githubusercontent.com/44438752/62622674-dea39080-b959-11e9-9b51-b15adb1c591c.png)
+
+<br/><br/>
+6-4. 클라이언트 환경에 폴더 생성
+
+<br/><br/>
+6-5. 마운트 하기
+![Screenshot from 2019-08-07 21-21-19](https://user-images.githubusercontent.com/44438752/62622679-e06d5400-b959-11e9-8a44-49dbe3c3e4c3.png)
+
+<br/><br/>
+6-6. 마운트 잘 되었는지 확인
+
+![aa](https://user-images.githubusercontent.com/44438752/62622990-aea8bd00-b95a-11e9-8ac1-70cee0650ab5.png)
+
+
