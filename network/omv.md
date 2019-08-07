@@ -3,7 +3,7 @@ NAS 설치후,
 <br/><br/>
 ## 1. 네트워크 설정
 1-1. 고정ip 등록하기
-![스크린샷 2019-08-04 오후 9 37 47](https://user-images.githubusercontent.com/44438752/62423911-49f32580-b702-11e9-8fe9-08f8b220e481.png)
+![62423911-49f32580-b702-11e9-8fe9-08f8b220e481](https://user-images.githubusercontent.com/44438752/62628366-1f090b80-b966-11e9-8dc4-bb7cebbdf87f.png)
 
 <br/><br/><br/><br/>
 
