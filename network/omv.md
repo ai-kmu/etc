@@ -29,6 +29,9 @@ NAS 설치후,
 위치 지정
 ![스크린샷 2019-08-04 오후 10 06 32](https://user-images.githubusercontent.com/44438752/62424064-8758b280-b704-11e9-9780-6bac0d394f32.png)
 
+상대경로도 설정
+![스크린샷 2019-08-04 오후 10 06 32](https://user-images.githubusercontent.com/44438752/62618706-de05fc80-b94f-11e9-96b1-2bb6b7a2185d.png")
+
 공유폴더 권한 설정
 ![스크린샷 2019-08-04 오후 10 07 11](https://user-images.githubusercontent.com/44438752/62424075-ac4d2580-b704-11e9-93fc-25784a9d572b.png)
 
