@@ -40,19 +40,17 @@ NAS 설치후,
 
 <br/><br/><br/><br/>
 
-## 4. ssh 설정 
+## 4. ssh 설정 (ftp 설정도 마찬가지)
 4-1. 포트번호 설정 및 활성화시키기
-![스크린샷 2019-08-04 오후 10 18 03](https://user-images.githubusercontent.com/44438752/62424153-c63b3800-b705-11e9-8d7b-7a1152292621.png)
+![62424153-c63b3800-b705-11e9-8d7b-7a1152292621](https://user-images.githubusercontent.com/44438752/62628653-a5bde880-b966-11e9-9249-bba3c1fb3daa.png)
 
 <br/><br/>
 4-2. 클라이언트 접속
-![스크린샷 2019-08-04 오후 10 17 06](https://user-images.githubusercontent.com/44438752/62424155-d05d3680-b705-11e9-8670-f32f11cb40fe.png)
+sftp -oPort=<포트번호> <아이디>@<ip주소>
+<br/>
+![hy](https://user-images.githubusercontent.com/44438752/62629256-cc305380-b967-11e9-89b0-0b33d0bba92c.png)
 
-## 5. ftp 설정
-5-1. ssh와 같이 포트번호 설정 및 활성화시키기
-5-2. 클라이언트 접속
-<>
-<br/><br/><br/><br/>
+
 
 ## 6. Ubuntu Linux Samba 공유 폴더 Mount 하기 
 6-1. smb 활성화
@@ -66,8 +64,9 @@ NAS 설치후,
 6-3. 클라이언트 환경에서 samba설치 안되 있을 경우, sudo apt-get install samba-common
 ![Screenshot from 2019-08-07 21-06-37](https://user-images.githubusercontent.com/44438752/62622674-dea39080-b959-11e9-9b51-b15adb1c591c.png)
 
-6-4. 삼바 서버 확인
-![Screenshot from 2019-08-07 21-34-08](https://user-images.githubusercontent.com/44438752/62623249-5d4cfd80-b95b-11e9-80c8-bf221986423b.png)
+6-4. 삼바 서버 확인 smbclient -L <ip주소>
+<br/>
+![62623249-5d4cfd80-b95b-11e9-80c8-bf221986423b (1)](https://user-images.githubusercontent.com/44438752/62628787-f0d7fb80-b966-11e9-8fda-d3b7b1906478.png)
 
 <br/><br/>
 
@@ -77,14 +76,13 @@ vi seongsil
 <br/><br/>
 ![aa](https://user-images.githubusercontent.com/44438752/62623485-ec5a1580-b95b-11e9-8ee9-31c8285cbaba.png)
 6-5. 마운트 하기
-mount -t cifs -o user='사용자이름' //서버주소/공유폴더 마운트경로
+sudo mount -t cifs -o user='사용자이름' //서버주소/공유폴더 마운트경로
 
-![Screenshot from 2019-08-07 21-21-19](https://user-images.githubusercontent.com/44438752/62622679-e06d5400-b959-11e9-8a44-49dbe3c3e4c3.png)
-
+![dde](https://user-images.githubusercontent.com/44438752/62629107-85425e00-b967-11e9-86d2-8b12259d0e4d.png)
 <br/><br/>
 
 6-6. 마운트 잘 되었는지 확인
 
-![aa](https://user-images.githubusercontent.com/44438752/62622990-aea8bd00-b95a-11e9-8ac1-70cee0650ab5.png)
+![aa](https://user-images.githubusercontent.com/44438752/62629144-94291080-b967-11e9-8102-2fe968f09885.png)
 
 
