@@ -83,7 +83,6 @@ grep openssh -> openssh라는 문자 검색
 <br/><br/>
 
 ## 8. ssh 포트번호 수정
-- 22 -> 10000
 
 
 ![image](https://user-images.githubusercontent.com/44438752/62206374-a2f24f00-b3cc-11e9-8bd6-851b37a42c80.png)
