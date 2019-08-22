@@ -19,3 +19,25 @@
    - $ sudo ubuntu-drivers autoinstall
    - $ sudo reboot
 
+1. Nvidia-docker version2 설치
+   - 먼저 오래된 버전의 도커가 설치되어 있다면, 아래의 명령어를 사용해서 삭제
+   - $ sudo apt-get remove docker docker-engine docker.io
+
+   - 그리고 아래의 명령어를 사용하여 설치에 필요한 패키지들을 설치
+   - $ sudo apt-get update && sudo apt-get install \ apt-transport-https \ ca-certificates \ curl \ software-properties-common
+
+   - 패키지 저장소 추가
+   - 아래의 명령어를 사용하여 도커의 공식 GPG 키와 저장소를 추가해 주시기 바랍니다.
+
+   - $ curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add – 
+
+   - $ sudo add-apt-repository \ "deb [arch=amd64] https://download.docker.com/linux/ubuntu \ $(lsb_release -cs) \ stable"
+
+   - 그리고 아래의 명령어를 사용하여 docker 패키지가 검색되는지 확인
+   - $ sudo apt-get update && sudo apt-cache search docker-ce
+
+   - 만약 현재 우분투 버전에서 설치 패키지가 검색된다면 아래와 같은 내용이 출력
+   - docker-ce - Docker: the open-source application container engine
+
+
+
