@@ -38,6 +38,35 @@
 
    - 만약 현재 우분투 버전에서 설치 패키지가 검색된다면 아래와 같은 내용이 출력
    - docker-ce - Docker: the open-source application container engine
+   
+   - 도커 CE 설치
+
+   - $ sudo apt-get update && sudo apt-get install docker-ce
+   - 일반 사용자계정으로 docker 명령어를 사용하기 위해서는 아래의 명령어로 그룹을 추가
+
+   - $ sudo usermod -aG docker $USER
+   - 위의 명령어를 사용하여 일반 사용자를 docker 그룹에 추가하지 않았을 경우 일반 사용자로 docker 명령어 실행시 아래와 같은 오류가 발생 
+   - Got permission denied while trying to connect to the Docker daemon socket at unix:///var/run/docker.sock: Get     http://%2Fvar%2Frun%2Fdocker.sock/v1.39/containers/json?all=1: dial unix /var/run/docker.sock: connect: permission denied
+   - 따라서, 일반 사용자에서 docker 명령어 실행 시 permission denied 오류가 발생하지 않도록 사용자 그룹을 추가
+   - 루트권한으로
+   - $ curl -s -L https://nvidia.github.io/nvidia-docker/gpgkey | \ sudo apt-key add - 
+   - $ distribution=$(. /etc/os-release;echo $ID$VERSION_ID) 
+   - $ curl -s -L https://nvidia.github.io/nvidia-docker/$distribution/nvidia-docker.list | \ sudo tee /etc/apt/sources.list.d/nvidia-docker.list 
+   - $ sudo apt-get update
+
+   - $ sudo apt-get install -y nvidia-docker2
+
+   - 오류 발생시
+   - $ sudo usermod -a -G docker $USER 
+   - $ sudo service docker restart
+   - $ sudo reboot
+1. 이미지 설치
+   - docker pull korca2002/milab2:0.0
+   - 동작 확인
+   - docker run --runtime=nvidia --rm -it -n milab korca2002/milab2:0.0 bash
+   - docker run --runtime=nvidi -d --rm -p 8888:8888 -v /home/$USER:/home/milab -n milab korca2002/milab2:0.0
+   - docker run --runtime=nvidi -d --rm -p 8888:8888 -v /home/$USER:/home/milab -n milab -e JUPYTER_ENABLE_LAB=yes korca2002/milab2:0.0
+
 
 
 
