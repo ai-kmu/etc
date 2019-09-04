@@ -85,7 +85,7 @@ sftp -oPort=<포트번호> <아이디>@<ip주소>
 <br/><br/>
 
 6-4. 클라이언트 환경에 폴더 생성
-vi seongsil
+mkdir seongsil
 
 <br/><br/>
 ![aa](https://user-images.githubusercontent.com/44438752/62623485-ec5a1580-b95b-11e9-8ee9-31c8285cbaba.png)
