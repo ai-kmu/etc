@@ -1,4 +1,4 @@
-#너비 우선 탐색(BFS, Breadth-First Search)문제
+#너비 우선 탐색(BFS, Breadth-First Search)
 
 import sys
 # sys.stdin = open("input.txt", 'r')
