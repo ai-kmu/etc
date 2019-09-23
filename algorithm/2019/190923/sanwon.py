@@ -1,6 +1,5 @@
 goal_x,goal_y=map(int,input().split())#리눅스 스탠다드 input으로 받는다.
 maze = [list(map(int, list(input()))) for i in range(goal_x)]#미로를 리스트 형태로 바꾼다.
-goal=[goal_x-1,goal_y-1]
 move=[[0,1],[-1,0],[1,0],[-1,0]]#상,하,좌,우
 visit=[[0]*goal_y for i in range(goal_x)]#방문 했는지 점검
 dist=[[0]*goal_y for i in range(goal_x)]#이동거리 계산
