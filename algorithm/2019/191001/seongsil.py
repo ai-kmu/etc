@@ -5,12 +5,11 @@ def solution(operations):
         op, num = i.split()
         if op == "I":
             queue.append(int(num))
-        elif op == "D":
-            if op == "D" and queue:
-                if num == "-1":
-                    queue.remove(min(queue))
-                elif num == "1":           
-                    queue.remove(max(queue))
+        elif op == "D" and queue:
+            if num == "-1":
+                queue.remove(min(queue))
+            elif num == "1":           
+                queue.remove(max(queue))
 
     if queue:
         return [max(queue), min(queue)]
