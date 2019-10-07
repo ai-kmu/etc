@@ -1,6 +1,5 @@
 from collections import deque
 
-# deque는 이 용도가 아니지만...
 def solution(operations):
     dq = deque()
     for operation in operations:
