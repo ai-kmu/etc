@@ -8,3 +8,4 @@ def solution(A, B):
                 lst.append(B[j])
                 B.remove(B[j])
                 break
+    return len(lst)
