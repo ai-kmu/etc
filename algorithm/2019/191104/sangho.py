@@ -36,7 +36,7 @@ def start(lis,c,l):
         elif (li[n:n+2] == "12" or li[n:n+2] == "21"):
             n += 1
             cost += (c+3)
-            answer.append([n+1,n+2])
+            answer.append([n+1,n+2]) 
             if li[n:n+2] == "12" :
                 li = li[:n] + '2' + li[n+1:]
                 li = li[:n+1] + '1' + li[n+2:]
