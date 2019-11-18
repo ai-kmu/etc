@@ -25,7 +25,7 @@ def check(nums, target):
         #print("counter2:" ,counter)
         #print("res:", res)
     return res
-    #res : 1 -> 0 -> 0 -> 0 -> 0 -> 1
+    #res : 2 -> 0 -> 0 -> 0 -> 0 -> 2
     
     
     
