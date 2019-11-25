@@ -1,6 +1,6 @@
 1. 컨테이너 목록 출력
 
-    docker ps
+      docker ps
 <br/><br/>
 
 2. 컨테이너 스탑
