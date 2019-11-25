@@ -6,13 +6,13 @@
 
 2. 컨테이너 스탑
 
-       docker stop -<컨테이너 이름>
+       docker stop <컨테이너 이름>
     
 <br/><br/>
 
 3. 컨테이너 삭제
 
-       docker rm -<컨테이너 이름>
+       docker rm <컨테이너 이름>
     
 <br/><br/>
 
