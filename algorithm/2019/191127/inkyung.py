@@ -15,6 +15,7 @@ def solution(begin, target, words):
                     #만약 이미 2개가 다르다면 break
                     if cnt == 2:    break
                 #한글자만 다르다면 lst에 해당 단어를 추가함
+                #words에서도 해당 단어를 제거
                 if cnt == 1:
                     lst.append(word)
                     words.remove(word)
@@ -26,3 +27,4 @@ def solution(begin, target, words):
         #변화한 단어들 중에 target이 없다면 만들어 둔 리스트 안에서 다시 반복문 수행
         #리스트 안에는 이전에 추가한 word하나만 존재
         else:
+            begin = lst
