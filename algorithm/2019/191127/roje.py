@@ -6,8 +6,8 @@ def solution(begin,target,words):
         while(len(words)!=0):
             for word in words:
                 count=0
-                for i in range(len(begin)):
-                    if begin[i]!=word[i]:
+                for idx in range(len(begin)):
+                    if begin[idx]!=word[idx]:
                         count+=1
                     if count==2:
                         break
