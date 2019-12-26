@@ -1,8 +1,11 @@
 def solution(begin,target,words):
     ans_cnt = 0
+    # target이 words에 존재하지 않으면 바로 return 0
     if target not in words:
-        ans_cnt = 0
+        return 0
+    # target이 words에 존재할 때
     else:
+        # words에 단어들이 존재할때까지
         while(len(words) != 0):
             for word in words:
                 count = 0
