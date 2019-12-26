@@ -3,20 +3,20 @@ def solution(begin,target,words):
     if target not in words:
         ans_cnt = 0
     else:
-        while(len(words)!=0):
+        while(len(words) != 0):
             for word in words:
-                count=0
+                count = 0
                 for idx in range(len(begin)):
-                    if begin[idx]!=word[idx]:
-                        count+=1
-                    if count==2:
+                    if begin[idx] != word[idx]:
+                        count += 1
+                    if count == 2:
                         break
-                if count==1:
+                if count == 1:
                     temp = word
                     words.remove(word)
-            ans_cnt+=1
+            ans_cnt += 1
             if target == temp:
                 return ans_cnt
             else:
-                begin=temp
+                begin = temp
     return ans_cnt
