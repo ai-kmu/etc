@@ -9,7 +9,6 @@ def solution(begin, target, words):
                 return count
 
             for i in range(len(words)-1, -1, -1):  
-                print("i: ", i)
                 next_word = words[i]
                 if sum([x!=y for x, y in zip(word, next_word)]) == 1:
                     temp.append(words.pop(i))
