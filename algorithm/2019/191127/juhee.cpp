@@ -3,8 +3,8 @@
 #include <algorithm>
 
 using namespace std;
-bool mapp[51][51];
-bool visit[51];
+bool mapp[51][51];          // 변환 가능한 단어를 나타내는 인접행렬
+bool visit[51];             // 방문했던 노트 check
 const int INF = 99999;
 
 int mapping(string& begin, string& target, vector<string>& words) {
@@ -20,6 +20,7 @@ int mapping(string& begin, string& target, vector<string>& words) {
             if (nowWord.compare(targetWord) != 0) {
                 bool wordCheck = false;
                 for (int wi = 0; wi < nowWord.size(); ++wi) {
+                    // 한 글자만 다를 때 ture로 체크 !
                     if (nowWord[wi] != targetWord[wi]) {
                         if (wordCheck) {
                             wordCheck = false;
@@ -47,6 +48,7 @@ int count(int nowWord, int targetWord, int level, int length) {
     int minn = INF;
     for (int wi = 0; wi < length; ++wi) {
         if (mapp[nowWord][wi] && !visit[wi]) {
+            // 깊이 우선 탐색하면서 반환된 트리의 레벨 중 가장 작은 것을 반환함.
             minn = min(count(wi, targetWord, level + 1, length), minn);
         }
     }
