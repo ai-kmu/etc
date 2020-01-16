@@ -41,7 +41,7 @@ for iter in range(iteration):
     num_list.append(tmp_list)
     
 num_list.sort()
-start, end = num_list.pop()
+start, end = num_list.pop(0)
 
 for iter in range(iteration - 1):
     tmp_start, tmp_end = num_list[iter]
