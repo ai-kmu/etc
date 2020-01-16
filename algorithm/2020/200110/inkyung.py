@@ -1,3 +1,4 @@
+#시간초과 발생함
 num = int(input())
 lst = list()
 
