@@ -3,7 +3,7 @@
 #include <vector>
 #include <set>
 #include <algorithm>
-#define TEST
+//#define TEST
 //
 //2020.01.17
 //선긋기
