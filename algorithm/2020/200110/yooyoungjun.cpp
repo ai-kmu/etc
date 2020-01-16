@@ -4,13 +4,9 @@
 #include <set>
 #include <algorithm>
 #define TEST
-
+//
 //2020.01.17
-
-//¾ÆÀÌµð¾î ½Ã°£ : 8:03~8:32 
-//±¸Çö ½Ã°£ : 8:41~
-//ÃÑ ½Ã°£ : 
-
+//ì„ ê¸‹ê¸°
 std::fstream ifStream;
 
 double Line()
