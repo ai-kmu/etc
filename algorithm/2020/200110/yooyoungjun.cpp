@@ -4,7 +4,10 @@
 #include <set>
 #include <algorithm>
 //#define TEST
+//Set 함수들어갈때 1bit 크기문제
 //
+
+
 //2020.01.17
 //선긋기
 std::fstream ifStream;
