@@ -1,0 +1,19 @@
+def DFS(n, computers, visit, size):
+  for i in range(size):
+    if(visit[i] == False and computers[n][i] == 1):
+      visit[i] = True
+      DFS(i, computers, visit, size)
+
+def solution(n, computers):
+  answer = 0
+  visit = [False for i in range(n)]
+  while(True):
+    for i in range(n):
+      if visit[i] == False:
+        print(visit)
+        answer += 1
+        visit[i] = True
+        DFS(i, computers, visit, n)
+        
+    break
+  return answer
