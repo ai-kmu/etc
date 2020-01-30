@@ -24,12 +24,12 @@ def solution(distance, rocks, n):
                 prev = rock
   
         if count > n:
-            max_ = criterion -1   # -1, +1 안하면 left=4, right=5에서 무한루프
+            max_ = criterion -1   
             
 
         else:
             answer = mins 
-            min_ = criterion + 1 # +1 안하면 left=5, right=5에서 무한루프      
+            min_ = criterion + 1     
     return answer
 
 distance = 25
