@@ -1,4 +1,4 @@
-import math
+
 def solution(distance, rocks, n):
     
     rocks.sort()
