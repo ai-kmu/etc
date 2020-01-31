@@ -1,0 +1,27 @@
+def solution(distance, rocks, n):
+    answer = 0
+    rocks = [0] + sorted(rocks) + [distance]
+    start, end = 0, max(rocks)
+
+    while start <= end:
+        mid = (start + end) // 2
+        temp = 0
+        prev = 0
+        for i in range(len(rocks)-1):
+            if rocks[i+1] - rocks[i] < mid:
+                prev += rocks[i+1] - rocks[i]
+                if prev >= mid:
+                    prev = 0
+                else:
+                    temp += 1
+            else:
+                prev = 0
+            if temp > n:
+                break
+
+        if temp > n:
+            end = mid - 1
+        else:
+            start = mid + 1
+
+    return end
