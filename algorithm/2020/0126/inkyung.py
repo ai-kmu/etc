@@ -12,7 +12,7 @@ def solution(distance, rocks, n):
         mid = (start + end) // 2
         
         for rock in rocks:
-            #중간 값과 prev의 차이를 비교했을 때 중간 값이 크다면 cnt를 늘려주고
+            #mid 보다 큰 값을 prev에 저장하고, mid 값이 크다면 cnt를 늘려주고
             #그러지 않다면 prev의 값을 rock으로 바꿈
             #즉, mid값을 기준으로 최소 거리를 정해서 최소 거리보다 작다면 제거하는 방식
             if rock - prev < mid:
@@ -21,9 +21,9 @@ def solution(distance, rocks, n):
                 prev = rock
         
         #이분 탐색은 중간 값을 기준으로 크거나 작을 때 변경이 있음
-        #cnt가 n보다 크면 중간지점에서 한개를 줄어야 하고 
+        #cnt가 n보다 크면 mid 값을 줄어야 하고 
         #--> 더 작은 폭으로 만들기위해서
-        #그렇지 않다면 중간지점에서 한개를 늘려야한다
+        #그렇지 않다면 mid 값을 늘려야한다
         if cnt > n:
             end = mid - 1
         else:
