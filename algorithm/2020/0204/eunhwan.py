@@ -30,3 +30,21 @@ for i in markers:
     for j in range(__constant__):
         markers[i] += sum(list(map(lambda x: x == i, shape[j])))
     print(markers[i])
+
+"""
+Additional tricky thinking
+flattening shape to 1d, and stringify. like this way :->
+
+from collections import Counter
+
+all_str = Counter(list(''.join([str(e) for row in shape for e in row if e != 0])))
+
+for i in markers:
+    print(all_str[str(i)])
+    
+or
+all_str = ''.join([str(e) for row in shape for e in row if e != 0])
+
+for i in markers:
+    print(all_str.count(str[i]))
+"""
