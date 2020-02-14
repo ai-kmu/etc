@@ -1,4 +1,5 @@
-import sys
+# 답은 잘나오는데 왜 런타임 에러가 뜨는지 몰겠
+
 MAX = 1001
 
 def pre_solve(dp, first_color,num_of_house):
@@ -7,7 +8,7 @@ def pre_solve(dp, first_color,num_of_house):
             dp[0][j] = cost[0][j]
         else:
             dp[0][j] = MAX
-            
+
 def solve(num_of_house, cost):
     min_ = 1001
     for i in range(3): #첫번째 집 색 고정
@@ -19,16 +20,17 @@ def solve(num_of_house, cost):
             dp[j][2] = cost[j][2] + min(dp[j-1][0], dp[j-1][1])
             
         dp[num_of_house-1][i] = MAX
-        
+
         if min_ > min(dp[num_of_house-1]):
             min_ = min(dp[num_of_house-1])
 
     return min_
 
+
 num_of_house = int(input())
 cost = []
 for n in range(num_of_house):
-    temp = list(map(int, sys.stdin.readline().split()))
+    temp = list(map(int, input().split()))
     cost.append(temp)
 
 print(solve(num_of_house, cost))
