@@ -8,7 +8,7 @@ def pre_solve(dp, first_color,num_of_house):
             dp[0][j] = MAX
 
 def solve(num_of_house, cost):
-    min_ = math.inf 
+    min_ = math.inf
     for i in range(3): #첫번째 집 색 고정
         dp = [[-1]*3 for _ in range(num_of_house)]
         pre_solve(dp,i,num_of_house)        
@@ -30,8 +30,5 @@ cost = []
 for n in range(num_of_house):
     temp = list(map(int, input().split()))
     cost.append(temp)
-    
-MAX = 1001 * num_of_house + 1
+MAX = math.inf  # or 1001 * num_of_house + 1
 print(solve(num_of_house, cost))
-
-
