@@ -12,7 +12,7 @@ for i in range(1, n+1):
     area = 0
     for j in range(MAX):
         for k in range(MAX):
-            if first[j][k] == i:
+            if papers[j][k] == i:
                 area += 1
                 
     print(area)
