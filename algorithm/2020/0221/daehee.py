@@ -8,7 +8,8 @@ MIN = 0
 distances = [-1 for _ in range(100001)]
 distances[n] = 0
 
-to_go = deque([n])
+to_go = deque()
+to_go.append(n)
 
 while to_go:
     now = to_go.popleft()
