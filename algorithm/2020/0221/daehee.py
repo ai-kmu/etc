@@ -12,13 +12,18 @@ to_go = deque([n])
 
 while to_go:
     now = to_go.popleft()
-    for _next in [2*now, now+1, now-1]:
+    
+    mult = now*2
+    if MIN <= mult <= MAX and distances[mult] == -1:
+        to_go.appendleft(mult)
+        distances[mult] = distances[now]
+    
+    a_second_later = [now-1, now+1]
+    for _next in a_second_later:
         if MIN <= _next <= MAX and distances[_next] == -1:
-            if _next == 2*now:
-                to_go.appendleft(_next)
-                distances[_next] = distances[now]
-            else:
-                to_go.append(_next)
-                distances[_next] = distances[now]+1
+            to_go.append(_next)
+            distances[_next] = distances[now]+1
+                    
+                    
 
 print(distances[k])
