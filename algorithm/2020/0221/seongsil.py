@@ -6,9 +6,9 @@ def bfs():
     while q:
         v = q.popleft()
         next_ = [v-1, v+1, v*2]
-        for i, next_step in enumerate(next_):
+        for next_step in next_:
             if 0 <= next_step < MAX and time[next_step]==-1:
-                if i == 2:
+                if i == v*2:
                     q.appendleft(next_step)
                     time[next_step] = time[v]
                 else:
