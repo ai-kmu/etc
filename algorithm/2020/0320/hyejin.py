@@ -18,6 +18,7 @@ def solution(priorities, location):
 
         # 중요도가 더 높은 문서가 있는지 search를 해야하는데, priorities list는 크기가 너무 큼.
         # search 시간을 조금 줄이기 위해서 set을 사용. (priority 1~9) 최대 9개만 검사
+        # => 만약 priority의 개수가 element보다 크다면 쓰면 안됌.
         set_priorities = set(priorities)
 
         for compare_prior in set_priorities:
