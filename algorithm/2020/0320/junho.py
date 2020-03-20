@@ -2,9 +2,10 @@ def solution(priorities, location):
     list = priorities
     answer = 0
     lonum = 0   # 각 우선순위에서 출력되는 마지막 index 저장 변수
+    maximp = 9
     movelocation = location   #location 변동값 저장 변수
     objnum = list[location]   #목표 위치 우선순위
-    for i in range(9,objnum,-1):    #우선순위 9 부터 목표위치값 이전까지
+    for i in range(maximp,objnum,-1):    #높은우선순위 부터 목표위치값 이전까지
         tem = []
         for j,k in enumerate(list):
             if i ==k:   #해당 우선순위 index tem에 저장
