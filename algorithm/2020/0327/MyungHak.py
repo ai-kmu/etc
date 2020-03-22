@@ -12,12 +12,12 @@ def solution(arrangement):
     split_bar = 0
     answer = 0
     for word in arrangement:
-        if word == '(':             #밑에 있는 막대의 수를 증가시킴
+        if word == '(':             #"("가 나온 경우 밑에 있는 막대의 수를 증가시킴
             split_bar += 1
-        elif word == ")":           #밑에 있는 막대의 수를 감소시킴
+        elif word == ")":           #")"가 나온 경우 밑에 있는 막대의 수를 감소시킴
             split_bar -= 1
-        else:                       #레이저가 발사된 경우
+        else:                       #레이저가 발사된 경우 잘린 막대수를 answer 변수에 더해줌
             answer+=split_bar
-    arrangement = arrangement.replace("/", "")
+    arrangement = arrangement.replace("/", "") #나중에 원래 막대수를 구하기 위하여 레이저가 발사된것을 뜻하는 문자를 지워줌
     
     return answer + int(len(arrangement)/2)
