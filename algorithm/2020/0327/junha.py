@@ -13,7 +13,7 @@ def solution(arr):
             # Laser shot
             if diff == 1:
                 answer += len(start_stack)
-            # the rest pip    
+            # the rest pipe    
             else:
                 answer += 1
                 
