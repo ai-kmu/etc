@@ -16,3 +16,27 @@ def solution(arrangement):
         else: #)가 나오면 막대기의 끝이라는 것을 의미하기 때문에 막대기의 숫자를 하나 줄여주고 끝난 막대기의 마지막을 더해줌
             stick -= 1
             answer += 1
+
+            
+### 성실언니 ###
+
+def solution (arrangement):
+    
+    answer = 0
+    bar = 0
+    arrangement = list(arrangement)
+    
+    while arrangement:
+        if arrangement[0] == "(":
+            bar += 1
+            arrangement.pop(0)
+            if arrangement[0]  == ")":  # 레이저
+                bar -=  1 #레이저니 바 제거
+                answer += bar # 레이저로 쪼개진 쇠막대기 add
+                arrangement.pop(0)
+        else:
+            answer += 1  #  쇠막대기 하나 종료
+            bar -= 1 # 종료된 쇠막대기 제외     
+            arrangement.pop(0)
+            
+    return answer
