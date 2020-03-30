@@ -9,6 +9,6 @@ for each in reversed(coinval):                    #코인 값이 큰거부터 �
     eachnum = int(sumval/each)                    #가치 합보다 작으면 그 코인의 개수
     sumval -= each * eachnum                      #가치 합에서 그 코인에 할당된 값 빼기
     coinnum += eachnum 
-    if(sumval == 0):
+    if(sumval == 0):                              # 가치 합이 다 할당 된 경우 종료
       break;
 print(coinnum)
