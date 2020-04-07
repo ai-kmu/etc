@@ -16,7 +16,7 @@ class KeyLock:                          # class 선언
         self.key = np.rot90(self.key)
         
     def is_unlocked(self):              # 매칭
-        ones = np.ones((self.M,self.M))
+        ones = np.ones((self.N,self.N)) # lock 사이즈만큼 1로 가득채워진 ndarray 선언(기준 선언)
         locks = self.lock.copy()
         
         end = self.M + self.N - 1
@@ -25,10 +25,9 @@ class KeyLock:                          # class 선언
             for i in range(end):        # 컨볼루션처럼 돌면서 매칭함
                 for j in range(end):
                     locks = self.lock.copy()
-                    locks[i:i+self.M, j:j+self.M] += self.key
-                    summ = locks[self.M-1:end, self.M-1:end].copy()
-                    print(summ)
-                    comp = np.array_equal(summ, ones)
+                    locks[i:i+self.M, j:j+self.M] += self.key        #lock의 복사본에 key값을 더함
+                    summ = locks[self.M-1:end, self.M-1:end].copy()  #padding을 제외한 lock만큼만 떼옴
+                    comp = np.array_equal(summ, ones)                #일치하는지 확인
                     if comp == True:
                         return True
             self.rotate()
