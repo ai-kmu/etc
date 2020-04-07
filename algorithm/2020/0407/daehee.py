@@ -21,7 +21,7 @@ class KeyLock:                          # class 선언
         
         end = self.M + self.N - 1
 
-        for _ in range(3):              # 회전수 만큼
+        for _ in range(4):              # 회전수 만큼
             for i in range(end):        # 컨볼루션처럼 돌면서 매칭함
                 for j in range(end):
                     locks = self.lock.copy()
