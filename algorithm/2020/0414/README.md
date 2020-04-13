@@ -3,10 +3,8 @@
 제출 기한 : 2020년 4월 14일
 ### 설명 참고
 ![image](https://user-images.githubusercontent.com/46951365/79038197-642abf00-7c12-11ea-8fa1-ac5561837506.png)
-
-
 <details>
-<summary> ######. </summary>
+<summary> ` </summary>
 <div markdown="1">
 ![image](https://user-images.githubusercontent.com/46951365/79117750-ed82f280-7dc6-11ea-823f-0e44d710e407.png)
 </div>
