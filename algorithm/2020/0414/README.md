@@ -64,11 +64,3 @@
 
 
 
-
-
-<details>
-<summary> ` </summary>
-<div markdown="1">
-![image](https://user-images.githubusercontent.com/46951365/79117750-ed82f280-7dc6-11ea-823f-0e44d710e407.png)
-</div>
-</details>
