@@ -74,39 +74,3 @@ print(solution(food_time_1, k_1))
 #     def display(self):
 #         print(self.queue)
 
-# def solution(food_times, k):
-#     # 음식 순서값 저장
-#     answer = 0
-#
-#     # food_times 재정의(원판 위치, 음식 크기)
-#     food_times = [(food, pos) for pos, food in enumerate(food_times, 1)]
-#     print('food_times : ', food_times)
-#     hq.heapify(food_times)
-#     print('Insert heap food_times list : ', food_times)
-#
-#     # 가장 크기 작은 음식
-#     smallest_food = food_times[0][0]
-#     print('smallest food : ', smallest_food)
-#     prev_food = 0
-#     print('prev_food : ', prev_food)
-#     print('length of food_times : ', len(food_times))
-#     print()
-#
-#     # 작은 음식을 완전히 소비하기 위해 원판 완주할 수 있는 경우
-#     while k - ((smallest_food - prev_food) * len(food_times)) >= 0:
-#         # 해당 음식을 완전히 소비하는 데 걸린 시간만큼 뺀다
-#         k -= (smallest_food - prev_food) * len(food_times)
-#         print('k : ', k)
-#         prev_food, index = hq.heappop(food_times)
-#         print('prev_food : ', prev_food)
-#         print()
-#         print('index : ', index)
-#
-#         if not food_times:
-#             return -1
-#         smallest_food = food_times[0][0]
-#         print('smallest food in Loop : ', smallest_food)
-#     food_times = sorted(food_times, key=lambda x : x[1])
-#     print('Last food_times list : ', food_times)
-#
-#     return food_times[k % len(food_times)][1]
