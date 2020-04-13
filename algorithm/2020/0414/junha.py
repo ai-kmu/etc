@@ -8,24 +8,26 @@
    if cur_min == -1;  return -1; 하고 끝.
 4. while이 break된다면, 
    cur_min의 값보다 같거나 큰 수들 중, (k)%n 번쨰 음식을 찾는다. ---> find_index함수가 해준다.
+   
+   
+cur_next : 
+   sort된 list에서
+   다음으로 작은 시간이 걸리는 음식과 그 음식의 index를 찾는다.
+   
+fine_index : 
+   sort되지 않은 list에서
+   cur_min보다 큰 수 중 m번째 음식의 index를 찾는다.
 '''
 
 
 def cur_next(lis, cur_min, cur_pos, n, l):
-   '''
-   sort된 list에서
-   다음으로 작은 시간이 걸리는 음식과 그 음식의 index를 찾는다.
-   '''
     for i in range(cur_pos+1, l):
         if cur_min < lis[i]:
             return lis[i], i
     return -1 , l+1
 
+
 def fine_index(food_times, m, cur_min) : 
-   '''
-   sort되지 않은 list에서
-   cur_min보다 큰 수 중 m번째 음식의 index를 찾는다.
-   '''
     for index, Value in enumerate(food_times):
         if cur_min <= Value :
             if m == 0:
