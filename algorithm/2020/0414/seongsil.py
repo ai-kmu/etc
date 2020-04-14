@@ -1,3 +1,4 @@
+# 정확도 통과, 효율성 통과 못함
 def solution(food_times, k):
     time = 0
     while True:
