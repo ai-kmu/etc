@@ -46,7 +46,7 @@ def solution(food_times, k):
     
     # 아직 남아있는 음식들의 index들을 저장.
     rest_time_idx = []
-    # count만큼 돈 후에 남은 시간들을 계산하고 남은 음식은 index를 저장해줌. 0은 다시 back할 가능성이 있기 때문에
+    # count만큼 돈 후에 남은 시간들을 계산하고 남은 음식은 index를 저장해줌. 0은 다시 back할 가능성이 있기 때문에 포함해야함.
     for i in range(num_food):
         food_times[i] -= sub_time
         if food_times[i] >= 0:
