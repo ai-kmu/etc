@@ -10,7 +10,7 @@
 ### 최적의 효율성을 가지는 [코드](https://github.com/ai-kmu/etc/blob/master/algorithm/2020/0414/junha.py)를 올려놓습니다.  
 
 ## 예시 해설 
-![img](https://user-images.githubusercontent.com/46951365/79117750-ed82f280-7dc6-11ea-823f-0e44d710e407.png)
+![img](https://user-images.githubusercontent.com/46951365/79117750-ed82f280-7dc6-11ea-823f-0e44d710e407.png)  
 ps. 8 <= 6*3  -> 8 <= 4*3 으로 정정
 
 ***
