@@ -2,20 +2,19 @@ def solution(food_times, k):
     answer = 0
     first = 0
     orin_num = 0
-    check = 0 #num2¿Í °°Àº ¼ö¸¦ Ã£´Â º¯¼ö
-    #¸Ô´Â½Ã°£ÀÇ ¼ø¼­¸¦ ±â¾ïÇÏ´Â »õ·Î¿î ¹è¿­ »ı¼º
+    check = -1 #num2ì™€ ê°™ì€ ìˆ˜ë¥¼ ì°¾ëŠ” ë³€ìˆ˜
+    #ë¨¹ëŠ”ì‹œê°„ì˜ ìˆœì„œë¥¼ ê¸°ì–µí•˜ëŠ” ìƒˆë¡œìš´ ë°°ì—´ ìƒì„±
     new_f_t = []
     for i in range(len(food_times)):
         new_f_t.append([food_times[i],i+1])
-    #new_f_t.sort()
     food_times.sort()
 
-    #k¿Í ½Ã°£ ºñ±³
+    #kì™€ ì‹œê°„ ë¹„êµ
     while True:
-        first += food_times[0] #Èê·¯°£ ½Ã°£ ´©Àû
+        first += food_times[0] #í˜ëŸ¬ê°„ ì‹œê°„ ëˆ„ì 
         num = food_times[0] * len(food_times)
         
-        #k¿¡¼­ ³²Àº ½Ã°£ ÁÙÀÌ±â
+        #kì—ì„œ ë‚¨ì€ ì‹œê°„ ì¤„ì´ê¸°
         if k > num:
             k -= num
         elif k == num:
@@ -33,16 +32,16 @@ def solution(food_times, k):
                         break
                     continue
                 check += 1
+                num2 += 1
             answer = new_f_t[check][1]
             break
         
-
-        del food_times[0] #0¹øÂ° µ¥ÀÌÅÍ »èÁ¦
-        #³²Àº À½½ÄÀÌ ¾øÀ» ¶§ -1 ¹İÈ¯
+        del food_times[0] #0ë²ˆì§¸ ë°ì´í„° ì‚­ì œ
+        #ë‚¨ì€ ìŒì‹ì´ ì—†ì„ ë•Œ -1 ë°˜í™˜
         if not food_times:
             answer = -1
             break
         orin_num = food_times[0]
-        food_times[0] -= first #0¹øÂ°¸¸ ´©ÀûµÈ Èê·¯°£ ½Ã°£À» »©ÁØ´Ù.
+        food_times[0] -= first #0ë²ˆì§¸ë§Œ ëˆ„ì ëœ í˜ëŸ¬ê°„ ì‹œê°„ì„ ë¹¼ì¤€ë‹¤.
 
     return answer
