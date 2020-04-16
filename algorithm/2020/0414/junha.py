@@ -39,12 +39,14 @@ def solution(food_times, k):
     # 1 food_times를 sort한다.
     lis = food_times[:]
     lis.sort()
+      
     # 2 cur_min = list[0]; cur_pos = 0; n = len(food_times);
     cur_min = lis[0]
     diff = cur_min
     cur_pos = 0 # list 0부터 시작
     n = len(lis) # 남은 음식 수
     l = n # 처음 음식의 총 갯수
+      
     # 3 while 문을 돌아야한다면. 
     while diff*n <= k:
         k = k - diff*n
