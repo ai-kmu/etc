@@ -1,9 +1,6 @@
 from copy import deepcopy
 import re
 
-actual_banned_ids = []
-
-
 def determine_n_combination(overall_candidates):
     actual_banned_ids = []
     def check(idx, candidates, cur_set):
