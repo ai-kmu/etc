@@ -30,10 +30,10 @@ def solution(user_id, banned_id):
         for i in range(N1): # user_id의 원소를 하나씩 살펴본다. 
             # 위에서 고른 user_id의 하나와, banned_id의 원소 모두와 비교해본다.
             if u[i] == 0 and len(banned_id[b]) == len(user_id[i]): # 중요한 전제 조건. 2 문자열의 길이가 같아야 한다. 
-                if check(banned_id[b], user_id[i]) == True: 
-                    u[i] = 1
-                    back(u, b + 1)
-                    u[i] = 0
+                if check(banned_id[b], user_id[i]) == True: # banned_id 원소 하나 당, 매핑이 되는 user_id 하나를 골라냈다면, 
+                    u[i] = 1 # 위에서 매핑한 user_id임을 표기해논다.
+                    back(u, b + 1) # 다음 banned_id 원소에, 매핑되는 user_id 하나를 골라낸다.
+                    u[i] = 0 # 맨 처음부터 원상 복귀.
 
     # 1 : 변수 선언 및 정의
     answer = 0
@@ -41,6 +41,38 @@ def solution(user_id, banned_id):
     N2 = len(banned_id)
     u = [0 for ii in range(N1)]  # u[k]=1 는 user_id[k]가 banned_id 중 하나에 해당함을 의미한다. 
     result = [] # 가능한 u 배열의 경우와 수를 저장한다. 
+
+    # 2 : reculsive 돌기 시작!
     back(u, 0)
+
+    # 3 : 최종 결과 return.
     answer = len(result) # 입출력 예 1의 result = [[1,0,0,1,0] , [0,1,0,1,0]]. 즉 2가지 경우가 존재한다.
     return answer
+
+if __name__ == "__main__":
+    user_id = ["frodo", "fradi", "crodo", "abc123", "frodoc"]
+    banned_id = ["fr*d*", "abc1**"]
+    print(solution(user_id, banned_id))
+    pass
+
+
+"""
+Reculsive 흐름도 
+[1, 1, 0, 0, 0]
+[1, 0, 1, 0, 0]
+[0, 0, 0, 1, 0]
+[1, 0, 0, 0, 1]
+[0, 0, 0, 0, 0]
+
+[0, 1, 1, 0, 0]
+[0, 1, 0, 1, 0]
+[0, 1, 0, 0, 1]
+[0, 0, 0, 0, 0]
+
+[0, 0, 1, 1, 0]
+[0, 0, 1, 0, 1]
+[0, 0, 0, 0, 0]
+
+[0, 0, 0, 1, 1]
+[0, 0, 0, 0, 0]
+"""
