@@ -1,5 +1,11 @@
 import re
 
+"""
+YunHyeok Kwak
+2019 카카오 개발자 겨울 인턴십 - 불량 사용자
+In worst case, very roughly, O(len(user_ids)^len(user_ids))
+"""
+
 def determine_n_combination(overall_candidates):
     # T(this part) = In worst case, O(len(user_ids)^len(user_ids))
     actual_banned_ids = set()
