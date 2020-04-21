@@ -1,4 +1,3 @@
-from copy import deepcopy
 import re
 
 def determine_n_combination(overall_candidates):
@@ -8,7 +7,7 @@ def determine_n_combination(overall_candidates):
         # Variant DFS
         if idx == len(overall_candidates):
             if str(cur_set) not in actual_banned_ids:
-                actual_banned_ids.add(str(deepcopy(cur_set)))
+                actual_banned_ids.add(str(cur_set))
             return
         for actual_id in overall_candidates[idx]:
             if actual_id not in cur_set:
