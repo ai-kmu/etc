@@ -1,16 +1,14 @@
 from copy import deepcopy
 import re
 
-# In worst case, very roughly, O(len(user_ids)^len(user_ids))
-
 def determine_n_combination(overall_candidates):
     # T(this part) = In worst case, O(len(user_ids)^len(user_ids))
-    actual_banned_ids = []
+    actual_banned_ids = set()
     def check(idx, cur_set):
         # Variant DFS
         if idx == len(overall_candidates):
-            if cur_set not in actual_banned_ids:
-                actual_banned_ids.append(deepcopy(cur_set))
+            if str(cur_set) not in actual_banned_ids:
+                actual_banned_ids.add(str(deepcopy(cur_set)))
             return
         for actual_id in overall_candidates[idx]:
             if actual_id not in cur_set:
