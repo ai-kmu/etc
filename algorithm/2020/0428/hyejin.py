@@ -1,14 +1,18 @@
-def solution(n, t, m, timetable):
+olution(n, t, m, timetable):
     answer = ''
     timetable = sorted(timetable)
+    # 셔틀 시간대 만들어주기
     shuttle_time = []
     for i in range(n):
         time = str(9+(i*t)//60).zfill(2)+":"+str(0+(i*t)%60).zfill(2)
         shuttle_time.append(time)
-
+    
+    # 셔틀 시간대에 탄 크루 수 저장할 리스트
     shuttle_count = [0] * n
     
+    # 현재 셔틀 시간 index
     curr_idx = 0
+    # 탈 수 있는 마지막 승객의 timetable 시간
     con_last_time = ''
     for i in range(len(timetable)):
         # 현재 승객이 마지막 셔틀보다 늦게 온다? 그럼 그 뒤 사람들 다 못탐. 콘은 셔틀시간에 와도 됌
