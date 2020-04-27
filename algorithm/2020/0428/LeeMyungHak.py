@@ -23,7 +23,7 @@ def solution(n, t, m, timetable): # 버스는 n회 t분 간격으로 도착하�
         empty_seat = m
         while empty_seat > 0:                       # 자리에 clue를 태운다
             if clue_idx < num_clue:                 # 아직 회사에 못간 clue가 있다면
-                if clues[clue_idx] <= bus_time:     # 현재 버스가 있을 때 보다 이전에 와있던 clue들을 태운다, 이 때 lastChance는 현재의 clue보다 1분 먼저온 것이다
+                if clues[clue_idx] <= bus_time:     # 현재 버스가 왔을 때 보다 이전 시간에 와있던 clue들을 태운다, 이 때 lastChance는 현재의 clue보다 1분 먼저온 것이다
                     lastChance = clues[clue_idx]-1 
                     clue_idx+=1
                     empty_seat-=1
