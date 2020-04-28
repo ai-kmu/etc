@@ -1,3 +1,13 @@
+def calc_time(hour, minute):
+    if hour < 10 and minute < 10:
+        return '0' + str(hour) + ':0' + str(minute)
+    elif hour < 10 and minute > 10:
+        return '0' + str(hour) + ':' + str(minute)
+    elif hour > 10 and minute < 10:
+        return str(hour) + ':0' + str(minute)
+    else:
+        return str(hour) + ':' + str(minute)
+
 def solution(n, t, m, timetable):
     """
     정답률 58.3
@@ -13,16 +23,8 @@ def solution(n, t, m, timetable):
         if minute >= 60:
             hour += 1
             minute = 0
-    if minute >= 10:
-        if hour < 10:
-            time = '0' + str(hour) +':' + str(minute)
-        else:
-            time = str(hour) + ':' + str(minute)
-    else:
-        if hour < 10:
-            time = '0' + str(hour) + ':0' + str(minute)
-        else:
-            time = str(hour) + ':0' + str(minute)
+            
+    time = calc_time(hour, minute)
     
     #만약 마지막에 줄 선 사람이 9시 이후에 줄을 선다면 bus_table에 마지막 
     #버스를 탈 수 있는 시간을 넣어줌
@@ -54,15 +56,7 @@ def solution(n, t, m, timetable):
             if minute == -1:
                 hour -= 1
                 minute = 59
-            
-            if hour < 10 and minute < 10:
-                return '0' + str(hour) + ':0' + str(minute)
-            elif hour < 10 and minute > 10:
-                return '0' + str(hour) + ':' + str(minute)
-            elif hour > 10 and minute < 10:
-                return str(hour) + ':0' + str(minute)
-            else:
-                return str(hour) + ':' + str(minute)
+            return calc_time(hour, minute)
         
         if len(timetable) == person_num:
             temp = timetable[-1].split(':')
@@ -72,12 +66,4 @@ def solution(n, t, m, timetable):
             if minute == -1:
                 hour -= 1
                 minute = 59
-            
-            if hour < 10 and minute < 10:
-                return '0' + str(hour) + ':0' + str(minute)
-            elif hour < 10 and minute > 10:
-                return '0' + str(hour) + ':' + str(minute)
-            elif hour > 10 and minute < 10:
-                return str(hour) + ':0' + str(minute)
-            else:
-                return str(hour) + ':' + str(minute)
+            return calc_time(hour, minute)
