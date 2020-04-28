@@ -7,7 +7,7 @@ using namespace std;
 
 string solution(int n, int t, int m, vector<string> timetable) {
     string answer = "";
-    # timetable의 시각은 순서대로 주어지지 않기 때문에 우선순위 큐를 사용했다.
+    // timetable의 시각은 순서대로 주어지지 않기 때문에 우선순위 큐를 사용했다.
     priority_queue<int, vector<int>, greater<int>> times;
     int hour, minute;
     
