@@ -14,7 +14,7 @@ def bfs(maps,start,end):
             colchange = colpos+ colmove
             if rowchange == end[0] and colchange == end[1]:   #다음 영역이 목표지점일 경우
                 return dep+1
-            elif 0 <= rowchange < len(maps) and 0 <= colchange < len(maps[0]):    #다음 영역이 주어진 좌표값 안이여야 함 ex[-1][-1]은 불가능
+            elif 0 <= rowchange < len(maps) and 0 <= colchange < len(maps[0]):    #다음 영역이 주어진 좌표값 안이여야 함 (-1,-1)은 불가능
                 if maps[rowchange][colchange] == 1:     # 길이 있는경우
                     maps[rowchange][colchange] = 0      # visit 판단하기위해 해당영역을 길이 없는경우로 바꿔준다
                     queue.append((rowchange,colchange,dep+1))
