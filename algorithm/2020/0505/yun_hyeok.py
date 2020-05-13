@@ -1,6 +1,4 @@
-# Deepcopy의 시간 소요가 상당
 from collections import deque, namedtuple
-from copy import deepcopy
 def solution(maps):
     N = len(maps) - 1
     M = len(maps[0]) - 1
@@ -23,4 +21,4 @@ def solution(maps):
             if next_pos.is_out_of_range(): continue
             if map_[next_pos.y][next_pos.x] == 1:
                 map_[pos.y][pos.x] = -1
-                states.append(State(deepcopy(map_), next_pos, depth+1))
+                states.append(State(map_, next_pos, depth+1))
