@@ -16,8 +16,7 @@ def solution(maps):
     while True:
         if len(states) == 0: return -1
         (map_, pos, depth) = states.popleft()
-        if pos == Position(N, M):
-            return depth
+        if pos == Position(N, M): return depth
         for action in actions:
             next_pos = pos + action
             if next_pos.is_out_of_range(): continue
