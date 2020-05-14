@@ -36,6 +36,6 @@ def bfs(maps,start,end):
 def solution(maps):
     answer = 0
     start = (0,0,1)   # 시작지점 (0,0)에 첫시작점이니 dep =1
-    end = (len(maps)-1,len(maps[0])-1)  #목표지점 (n,m)
+    end = (len(maps)-1,len(maps[0])-1)  #목표지점 (n-1,m-1)
     answer = bfs(maps,start,end)
     return answer
