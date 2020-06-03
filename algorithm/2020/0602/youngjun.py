@@ -7,7 +7,7 @@ def solution():
     info=[]
 
     for i in range(0,11):
-        input_time, input_incorrect_verdicts = map(int, input().split())  # 문제 푸는데 걸린 시간, 패널티
+        input_time, input_incorrect_verdicts = map(int, input().split())  # 문제 푸는데 걸린 시간, incorrect verdicts
         info.append((input_time,input_incorrect_verdicts))
 
     #time순으로 sort
