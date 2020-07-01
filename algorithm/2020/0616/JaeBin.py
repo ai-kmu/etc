@@ -1,4 +1,4 @@
-# 다른 사람 풀이 참고
+# stack을 사용한 풀이 참조
 def solution(number, k):
     answer = ''
 
