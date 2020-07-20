@@ -97,6 +97,3 @@ num1 = -1, n1 = 2, num2 = 3, n2 = 5
 nums1_deq = deque([])  
 nums2_deq = deque([])  
 answer = [9, 8, 6, 5, 3], k = 0  
-
-
-## 혜진님이 푼 풀이  
