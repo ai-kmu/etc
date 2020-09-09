@@ -11,3 +11,5 @@ class Solution:
                 out += i,
         return out
 ```
+
+![예](https://user-images.githubusercontent.com/44395361/92556669-7d10cc80-f2a5-11ea-8190-ce74dbbe3f28.jpg)
