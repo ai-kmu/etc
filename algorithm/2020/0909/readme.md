@@ -1,6 +1,6 @@
 https://leetcode.com/problems/merge-intervals/
 
-
+```{.python}
 class Solution:
     def merge(self, intervals: List[List[int]]) -> List[List[int]]:
         out = []
@@ -10,3 +10,4 @@ class Solution:
             else:
                 out += i,
         return out
+```
