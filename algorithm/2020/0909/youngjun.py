@@ -3,15 +3,16 @@
 
 class Solution(object):
     def merge(self, intervals):
-
+        #먼저 intervals sort하기
         intervals.sort()
         if len(intervals)<2:
             return intervals
 
         answer=[]
+        #interval 돌면서 체크하는 과정
         interval_candidate=intervals[0]
         for interval in intervals:
-            if interval[0]>interval_candidate[1]:
+            if interval[0]>interval_candidate[1]:# 겹치는지 체크
                 answer.append(interval_candidate)
                 interval_candidate=interval
             else:
