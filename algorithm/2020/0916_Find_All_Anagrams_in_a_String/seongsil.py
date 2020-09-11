@@ -26,4 +26,3 @@ class Solution:
             start += 1
                 
         return answer
-            교
