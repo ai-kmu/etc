@@ -5,7 +5,7 @@ class Solution:
         answer = []
         start = 0
         
-        if len(s) < len(p)교
+        if len(s) < len(p):
             return answer
         
         dCount = collections.Counter(p)  # 정렬하는데 메모리 많이쓰이므로 카운터 함수 사용
