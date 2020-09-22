@@ -21,3 +21,11 @@ class Solution:
                 print(row[j], row[~j])
                 row[j], row[~j] = row[~j], row[j]
                 print(row[j], row[~j])
+
+        """        
+        
+        matrix[:] = zip(*matrix[::-1])
+        
+        리스트 거꾸로 정렬해서 각 인덱스에 있는 요소값끼리 합쳐서 리스트 다시 생성하는 코드
+        
+        """
