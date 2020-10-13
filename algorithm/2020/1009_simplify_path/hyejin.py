@@ -15,6 +15,8 @@ class Solution:
     
     
     def simplifyPath(self, path: str) -> str:
+        # 첫번째 방법 / 단위로 split해서 구하기 => 간단해서 생략
+        # 두번째 방법 / 트리구조를 이용하여 구하기
         # path에서 추출한 폴더들을 (parent index, base name)으로 저장하기
         canon_path = [(0,'/')]
         # 현재 parent index
