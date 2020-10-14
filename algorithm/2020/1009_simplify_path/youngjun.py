@@ -2,7 +2,6 @@ class Solution(object):
     def simplifyPath(self, path):
 
         answer=""
-
         # "/"로 split한 요소들 추출
         elements=path.split(("/"))
         tmp=[]
