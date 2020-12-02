@@ -27,7 +27,7 @@ class NestedIterator:
         if nestedList[i].isInteger():
           result.append(nestedList[i].getInteger()) # 원소가 정수인 경우 result에 저장
         else:
-          result += nestedList[i].getList() # 원소가 list인 경우 하나의 배열로 extend하여 result에 저장
+          result.extend(nestedList[i].getList()) # 원소가 list인 경우 하나의 배열로 extend하여 result에 저장
 
       self.result = result # 결과 result 저장
       self.index=-1
