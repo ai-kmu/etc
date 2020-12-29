@@ -8,7 +8,7 @@ class Solution:
             if maximum_index == i:
                 break
 
-        if maximum_index == nums(len(nums)-1):
+        if maximum_index >= nums(len(nums)-1):
             return True
 
         elif maximum_index < nums(len(nums)-1):
