@@ -1,7 +1,4 @@
-# 1. 입력노드 갯수가 0 인 것을 탐색.
-# 2. 그 노드와 관련된 edge(선) 제거, 입력노드 수가 0인 것을 업데이트
-# 3. 1,2를 반복
-# 4. 모든 반복을 끝으로 정렬 완료
+
 
 def canFinish(self, numCourses: int, prerequisites: List[List[int]]) -> bool:
     graph = [[] for _ in range(numCourses)] # 노드별 연결 인덱스를 나타내는 graph 생성
