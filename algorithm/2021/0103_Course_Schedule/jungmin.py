@@ -20,5 +20,5 @@ def dfs(self, graph, visited, i): #깊이 우선 탐색 이용
     for j in graph[i]: # 인덱스 i의 선수 과목 보기
         if not self.dfs(graph, visited, j):
             return False # 인덱스 i의 선수 과목을 전에 이미 방문했으면 false반환
-    visited[i] = 1 
+    visited[i] = 1 # 인덱스 i가 선수과목 없는 경우 visited를 1로 저장
     return True
