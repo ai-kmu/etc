@@ -11,4 +11,4 @@ class Solution:
                     visited[i] = 1 # 처음 방문 한 방은 visited값을 1로 저장
                     visited_room.append(i) # 방문한 방을 기록하는 리스트 visited_room에 i 저장
                     
-        return all(visited)
+        return all(visited) # 최종적으로 visited 리스트에서 하나라도 0이 존재하면 False를 출력. 0이라는 것은 결국 그 방에 방문을 못했다는 의미이다.
