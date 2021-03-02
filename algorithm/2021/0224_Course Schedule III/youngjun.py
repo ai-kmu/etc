@@ -22,7 +22,7 @@ class Solution(object):
             #heapq에 원소 추가 
             heapq.heappush(max_heap, -t) #-t는 가장 오래걸리는 강의를 heapq에서 맨앞에 두기위해
             print(max_heap)
-            if now > end: # 초과해서 일을 할 경우 
+            if now > end: # 강의 끝나는 기한을 초과해서 강의를 들을 경우 
                 #heapq에서 원소 삭제 
                 now += heapq.heappop(max_heap)
         return len(max_heap)
