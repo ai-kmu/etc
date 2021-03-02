@@ -10,9 +10,11 @@ class Solution:
         print(courses)
         curr_time = count = 0
         max_heap = []
+        # heap의 모양으로 생성
         heapify(max_heap)
 		
         for i in range(len(courses)):
+            # heap에 원소 추가
             heappush(max_heap, -1 * courses[i][0])
             curr_time += courses[i][0]
             count += 1
