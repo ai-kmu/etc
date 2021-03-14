@@ -4,6 +4,8 @@
 # 4. 다 더한다
 
 
+# **** 사실 numpy 안쓰는게 더 빠르다 ****
+
 import numpy as np
 
 class Solution:
