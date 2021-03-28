@@ -11,6 +11,7 @@ class Solution:
         
         for i in range(nums_len-1): 
             max_jump= max(max_jump, i+nums[i]) # 점프를 해서 가장 멀리 도착할 수 있는 타겟 인덱스 구하기
+            
             if i == targetIdx: #  점프를 해서 가장 멀리 도착할 수 있는 타겟 인덱스에 도착했다면
                 answer += 1 # 점프 수 카운트 
                 targetIdx=max_jump # 현재까지 지나온 것 중 가장 멀리 도착할 수 있는 인덱스로 타겟 인덱스 갱신
