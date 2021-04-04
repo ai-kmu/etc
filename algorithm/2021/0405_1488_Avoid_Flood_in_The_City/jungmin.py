@@ -4,7 +4,7 @@ from collections import defaultdict
 class Solution:
     def avoidFlood(self, rains: List[int]) -> List[int]:
         
-        full = set() # 비 왔던 호수 저장하기 위한 리스트 생성
+        full = set() # 비 왔던 호수 저장하기 위한 set 생성
         output = [] # 최종 출력 리스트 생성
         step_info = defaultdict(list) # 호수 번호별 비가 온 때를 저장하기 위한 defaultdict 선언
         future = [] # 미래에 어떤 호수가 또 비가 올 것인지 따로 저장
