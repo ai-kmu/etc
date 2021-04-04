@@ -19,8 +19,8 @@ class Solution:
                 
                 full.add(rains[i]) # 비가 온 홍수 번호를 full에 저장
                 
-                # step_info에서 만약 호수가 현재 말고 다른 미래에도 비가 온다면 future에 그 정보 저장
-                step_info[rains[i]].pop(0) # 현재 호수의 현재 index 제거
+                
+                step_info[rains[i]].pop(0) # step_info에서 현재 호수의 index 제거
                 if step_info[rains[i]]: # 만약 현재 index를 제거해도 다른 index값이 남아 있으면
                     heapq.heappush(future, step_info[rains[i]][0]) # 그 index를 future에 저장
                     
