@@ -7,3 +7,4 @@ You are a professional robber planning to rob houses along a street. Each house 
 
 Given an integer array nums representing the amount of money of each house, return the maximum amount of money you can rob tonight without alerting the police.
 
+![image](https://user-images.githubusercontent.com/12128784/114368424-5d81af80-9bb8-11eb-83d8-14069299ffb6.png)
