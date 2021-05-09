@@ -1,6 +1,6 @@
 ## Bipartite Graph
 
-![image](https://user-images.githubusercontent.com/38813640/117582214-dafafa00-b13b-11eb-91cd-4887a35f2e09.png)
+![image](https://user-images.githubusercontent.com/38813640/117582214-dafafa00-b13b-11eb-91cd-4887a35f2e09.png)  
 인접한 정점끼리 서로 다른 색으로 칠해서 모든 정점을 두 가지 색으로만 칠할 수 있는 그래프 !
 즉, 모든 정점이 두 그룹으로 나뉘어지고 같은 그룹끼리는 간선이 존재하지 않는 그래프를 이분 그래프라고 함 
 
