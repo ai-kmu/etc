@@ -1,8 +1,7 @@
 class Solution:
     def myAtoi(self, s: str) -> int:
         # leading whitespace를 무시
-        # 뒷부분 whitespace도 제거하지만 영향 없음
-        s = s.strip()
+        s = s.lstrip()
 
         # strip한 결과 string이 빈 문자열이면 0을 리턴
         if len(s) == 0:
