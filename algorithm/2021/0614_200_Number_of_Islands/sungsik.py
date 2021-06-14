@@ -14,7 +14,7 @@ class Solution:
                 if grid[m][n] == '1':
                     stack.append((m,n))
                     answer += 1
-                # BFS를 활용해 섬에 포함되는 땅을 모두 찾아낸 후 visited를 True로 설정한다.
+                # DFS를 활용해 섬에 포함되는 땅을 모두 찾아낸 후 visited를 True로 설정한다.
                 while stack:
                     row, col = stack.pop()
                     # 모서리에 있는 경우를 제외하고 상하좌우 방향을 설정한다.
