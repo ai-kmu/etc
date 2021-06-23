@@ -1,7 +1,7 @@
 class Solution:
     def minimumJumps(self, forbidden: List[int], a: int, b: int, x: int) -> int:
         forbidden = set(forbidden)
-        lim = a+b+max(max(forbidden) , x)#조건이 확실하지 않음
+        lim = a+b+max(max(forbidden) , x)#조건이 확실하지 않음 , 일단 통과함
         queue  = [(x , 0 , False )]
         while queue:
             curr , jump , is_back = queue.pop(0)
