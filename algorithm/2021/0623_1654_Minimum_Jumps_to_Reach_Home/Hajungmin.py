@@ -7,8 +7,9 @@ forbidden = set(forbidden)
 forbidden.add(0)
 # 처음에 0에서 시작하니 0을 forbidden에 더해준다.
         
-MAX_DIST = max(x, max(forbidden)) + a + b
-# 거리의 최대값을 설정해주는데 왜 forbidden을 참조하는지 의문        
+MAX_DIST = 5997
+# 최대 거리를 5997로 했을 때 가장 빨리 돌아감 만약 이것보다 작으면 output이 -1로 정상적으로 작동하지 않음
+    
 
 while queue:
     tmp = deque()
