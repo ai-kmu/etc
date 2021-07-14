@@ -24,12 +24,11 @@ class Solution:
             return False
         
         
-        m, n = len(board), len(board[0])
         if len(word) == 1 and word[0] == board[0][0]:
             return True
-        for r in range(m):
-            for c in range(n):
-                if DFS(word, c, r):
+        for i in range(len(board[0])):
+            for j in range(len(board)):
+                if DFS(word, i, j):
                     return True
         return False
     
