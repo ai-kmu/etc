@@ -1,8 +1,7 @@
 class Solution:
     def bestTeamScore(self, scores: List[int], ages: List[int]) -> int:
-        #age와 스코어를 묶어서 리스트로 만들어준다.
-        for i in range(len(ages)):
-            team=list(zip(ages,scores))
+        #age와 스코어를 묶어서 리스트로 만들어준다
+        team=list(zip(ages,scores))
     
         # 나이를 오름차순으로 정렬한다
         team.sort()
