@@ -1,15 +1,29 @@
 class Solution:
     def search(self, nums: List[int], target: int) -> int:
-        n = len(nums)
-        pivot = 0
-        # pivot 찾은 다음 원래대로 정렬한다.
-        # O(n)
-        for i in range(n-1):
-            if nums[i] > nums[i+1]:
-                nums = nums[i+1:] + nums[:i+1]
-                pivot = i + 1
-                break
+        # pivot을 찾아주는 함수
+        # O(logn)
+        def find_pivot(start, end):
+            while start <= end:
+                mid = start + ((end - start) // 2)
+                if mid < end and nums[mid] > nums[mid + 1]:
+                    return mid + 1
+                elif mid > start and nums[mid] < nums[mid - 1]:
+                    return mid
+                elif nums[mid] > nums[start]:
+                    start = mid + 1
+                else:
+                    end = mid - 1
+            return start + 1
         
+        n = len(nums)
+        start, end = 0, n-1
+        pivot = 0
+        # 만약 제일 앞의 값이 제일 뒤의 값보다 클 경우
+        # rotated 되었다고 판단하고 pivot을 찾은 후 원래대로 정렬한다
+        if nums[start] > nums[end]:
+            pivot = find_pivot(start, end)
+            nums = nums[pivot:] + nums[:pivot]
+
         # binary search
         # O(logn)
         start, end = 0, n-1
