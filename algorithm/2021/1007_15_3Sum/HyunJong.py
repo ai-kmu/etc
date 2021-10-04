@@ -11,6 +11,6 @@ class Solution(object):
             twoSum = -nums[i] ##첫번째 값
             for j in range(i+1, len(nums)): ##포인터 2
                 target = twoSum - nums[j] ## 두번째 값 설정
-                if target in check and check[target] > j: ## 첫번째 두번째 뺀 값이 check에 있으면 성공
+                if target in check and check[target] > j: ## 첫번째 두번째 더한 음수 값이 check에 있으면 성공
                     result.add((-twoSum, nums[j], target)) ## 정답에 추가
         return result
