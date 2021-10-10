@@ -7,7 +7,7 @@ class Solution:
             # 재귀적으로 현재 인덱스 값에서 다음 인덱스의 값을 더하거나 빼는 함수
             # 다만 위에 @cache를 선언해야 중복 연산을 안하여 time limit 오류가 안나옴
             
-            if i == len(nums): # nums만큼 다 더했을 때 target과 같으면 1, 아니면 0 출력
+            if i == len(nums): # nums 길이만큼 다 더했을 때 target과 같으면 1, 아니면 0 출력
                 if sums == target:
                     return 1
                 else:
