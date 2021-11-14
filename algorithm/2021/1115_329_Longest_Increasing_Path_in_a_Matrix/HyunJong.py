@@ -24,13 +24,13 @@ class Solution(object):
                     ## 조건, 움직일 방향이 matrix범위안에 존재, 움직인 방향이 기존 값보다 커야된다.
                 
                     zero_matrix[x][y] = max(zero_matrix[x][y], dfs(x_, y_))
-                    ## 업데이트되는 path 길이 중에서 가장 큰값만 저장
+                    ## 업데이트되는 path 길이 중에서 가장 큰 값만 저장
                 
             zero_matrix[x][y] += 1     
             return zero_matrix[x][y]   
             
             
-        for x in range(xlen): ## 모든 matrix 모든요소 dfs 탐색
+        for x in range(xlen): ## matrix 모든 요소 dfs 탐색
             for y in range(ylen):
                 result = max(result, dfs(x, y))
                 
