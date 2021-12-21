@@ -1,28 +1,24 @@
 # dp로 품
-# sliding window를 만듦
-# slding window에 idx 0부터 차례로 집어 넣음
-# sliding window내의 크기가 음수가 되면 양수가 될때 까지 맨 왼쪽것을 하나 뺌
-# slinding window의 크기가 입력값의 크기와 같아지면 반환
-# 위 조건을 만족하지 못하면 return -1
-
+# *를 처리하는 것이 관건
+# *를 처리할 때 *이후에 처음 matching되는 글자부터인지 아니면 
+# 두번째 이후인지의 경우의 수를 dp로 처리
+# dp의 구조는 dp[i][j] 가 True일 시 s[:i]와 p[:i]는 참이라는 것
 
 class Solution:
-    def canCompleteCircuit(self, gas, cost) -> int:
-        benefit = [gas[i] - cost[i] for i in range(len(gas))]  # 각 주유소에서 얻을 수 있는 이득 = 현재 주요소에서 체울 수 있는 가스 - 다음 도시까지 드는 가스
-        benefit += benefit[:-1]  # 순환해야 하므로 뒤에 더 붙여 줌
+    def isMatch(self, s: str, p: str) -> bool:
+        # dp 테이블 만듦, 우선 서로 아무것도 없는 경우는 당연히 True
+        dp = [[False for _ in range(len(p)+1)] for _ in range(len(s) + 1)]
+        dp[0][0] = True
+        for i in range(1, len(p)+1):
+            if p[i-1] != '*':
+                break
+            dp[0][i] = True
         
-        window_size, sum_ = 0, 0
-        
-        for i in range(len(benefit)):
-            sum_ += benefit[i]
-            window_size+=1
-            
-            while(sum_<0): # 음수면 양수 될때 까지 앞에거 뺌
-                sum_ -= benefit[i-window_size+1]
-                window_size-=1
-
-            if window_size == len(gas): # sliding window의 크기가 입력값의 크기와 같아지면 반환
-                return i-window_size+1
-
-        return -1
-        
+        for s_idx in range(1, len(s)+1):
+            for p_idx in range(1, len(p)+1):
+                if p[p_idx-1] == '*': # 현재 값이 *이면 이전 값을 보고 이전값이 True이면 현재도 같음 그러나 이전이 False이면 한칸 전의 값에 종속적
+                    dp[s_idx][p_idx] = (dp[s_idx-1][p_idx] or dp[s_idx][p_idx-1])
+                elif p[p_idx - 1] == s[s_idx - 1] or p[p_idx - 1] == '?': # 한칸 무시
+                    dp[s_idx][p_idx] = dp[s_idx-1][p_idx-1]
+                    
+        return dp[-1][-1]
