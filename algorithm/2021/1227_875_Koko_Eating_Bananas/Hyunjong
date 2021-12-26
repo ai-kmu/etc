@@ -1,0 +1,22 @@
+class Solution(object):
+    ## 이분탐색 방법
+    def minEatingSpeed(self, piles, h):
+        """
+        :type piles: List[int]
+        :type h: int
+        :rtype: int
+        """
+        l = 1 ## 시작 k는 1로 설정
+        k_max = max(piles) ## 최대 가능한 k 설정
+        
+        while l <= k_max: ## 이분탐색 시작
+            mid = (l + k_max) // 2 ## 탐색값 설정
+            k_time = 0 ## 매 루프마다 초기화
+            for i in piles:
+                k_time += ((i-1)//mid)+1 ## 현재 탐색중인 값으로 k 정의
+                
+            if k_time <= h:  ##  h보다 작으면
+                k_max = mid - 1 ## 왼쪽영역선택
+            else: ## h 보다 크게되면
+                l = mid + 1 ## 오른쪽 영역선택
+        return k_max+1
