@@ -13,20 +13,19 @@ Note: a + b is the concatenation of strings a and b.
 
 ![image](https://user-images.githubusercontent.com/76420366/147863819-47c9565f-d6e8-47d6-8dad-3b6e7abcdf07.png)
 
-example 1)
-Input: s1 = "aabcc", s2 = "dbbca", s3 = "aadbbcbcac"
+example 1)</br>
+Input: s1 = "aabcc", s2 = "dbbca", s3 = "aadbbcbcac"</br>
 Output: true
 
-example 2)
-Input: s1 = "aabcc", s2 = "dbbca", s3 = "aadbbbaccc"
+example 2)</br>
+Input: s1 = "aabcc", s2 = "dbbca", s3 = "aadbbbaccc"</br>
 Output: false
 
-example 3)
-Input: s1 = "", s2 = "", s3 = ""
+example 3)</br>
+Input: s1 = "", s2 = "", s3 = ""</br>
 Output: true
 
-Constraints:
-
-0 <= s1.length, s2.length <= 100
-0 <= s3.length <= 200
+Constraints:</br>
+0 <= s1.length, s2.length <= 100</br>
+0 <= s3.length <= 200</br>
 s1, s2, and s3 consist of lowercase English letters.
