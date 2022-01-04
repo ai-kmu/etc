@@ -11,12 +11,23 @@ class Solution:
         # 먼저 dp배열의 첫번째 행과 열을 채운다
         
         for i in range(1, len(s1)+1):
-            # 만약 s1과 s3의 문자가 같고 이전 dp배열의 값이 True라면 현재 dp배열 값을 True로 넣어준다
-            dp[i][0] = s1[i-1] == s3[i-1] and dp[i-1][0]
+            # 만약 s1과 s3의 문자가 같고 이전 dp배열의 값이 True라면 현재 dp배열 값을 True로 넣어준다.
+            '''
+                코드 수정 by 김성식
+                한번 False가 되면 그 이후는 무조건 False가 되므로
+                break문을 추가
+            '''
+            if s1[i-1] == s3[i-1]:
+                dp[i][0] = True
+            else:
+                break
             
         for j in range(1, len(s2)+1):
             # 만약 s2와 s3의 문자가 같고 이전 dp배열의 값이 True라면 현재 dp배열 값을 True로 넣어준다.
-            dp[0][j] = s2[j-1] == s3[j-1] and dp[0][j-1]
+            if s2[j-1] == s3[j-1]:
+                dp[0][j] = True
+            else:
+                break
             
         # 이후 이중 for문을 돌며 s1과 s3를 비교한 뒤 이전 dp배열을 확인하여 True일시 현재 dp배열에 true를 넣는 방식으로 s2도 동일하게 조건문을 세워준다.    
         for i in range(1, len(s1)+1):
