@@ -18,8 +18,9 @@ class Solution:
         pass_7 = 0 # days 배열에서 7일 패스권의 포인터 개념임. 현재로부터 7일전.
         pass_30 = 0 # 위의 7일 패스권 처럼 30일 패스권의 포인터 개념.
         
-        
-        
+        # days의 요소 하나씩마다 while문 2번이나 사용하여 시간적으로 비효율적
+        # 결국엔 days 안 요소값이 7보다 작은 경우, 30보다 작은 경우로 구현하는게 더 좋지 않을까 하는 생각이 듦.       
+        # dp[i] = min(dp[i-1] + costs[0],dp[max(0,i-7)] + costs[1], dp[max(0,i-30)]+costs[2])
         for i in range(n):
           
             print("days[i] : ", days[i])
