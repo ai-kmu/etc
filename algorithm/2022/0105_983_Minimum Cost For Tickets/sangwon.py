@@ -22,6 +22,15 @@ class Solution:
                     j += 1
                 dp[i] = min(dp[i], c + dfs(j))
                 # 현재 구매한 날짜수의 가격과 7일이나 30일을 추가한 가격을 비교
+            print(dp)
             return dp[i]
+#         days = [1,4,6,7,8,20], costs = [2,7,15] 일 때 dp값
+#         {0: inf, 1: inf, 2: inf, 3: inf, 4: inf, 5: 2}
+#         {0: inf, 1: inf, 2: inf, 3: inf, 4: 4, 5: 2}
+#         {0: inf, 1: inf, 2: inf, 3: 6, 4: 4, 5: 2}
+#         {0: inf, 1: inf, 2: 8, 3: 6, 4: 4, 5: 2}
+#         {0: inf, 1: 9, 2: 8, 3: 6, 4: 4, 5: 2}
+#         {0: 11, 1: 9, 2: 8, 3: 6, 4: 4, 5: 2}
+
 
         return dfs(0)
