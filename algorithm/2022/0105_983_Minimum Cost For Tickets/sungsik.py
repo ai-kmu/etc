@@ -40,7 +40,7 @@ class Solution:
             # 1. 하루권을 끊는 경우 => 이전 cost를 더한다.
             # 2. 일주일권을 끊는 경우 => 일주일권에 포함시킬수 있는 최근 이전 day들을 제외시키고 남은 day의 cost를 더한다.
             # 3. 한달권을 끊는 경우 => 일주일권과 마찬가지
-            cost = min(dp[i-1] + costs[0], dp[seven_days_ago] + costs[1], dp[thirty_days_ago] + costs[2])
+            cost = min(dp[i-1] + costs[0], dp[seven_days_ago] + costs[1], dp[thirty_days_ago] + costs[2]) # seven_days_ago, thirty_days_ago index값을 이진 탐색으로 찾아냄.
             
             dp[i] = cost
         
