@@ -2,7 +2,7 @@ class Solution:
     def mincostTickets(self, days: List[int], costs: List[int]) -> int:       
         #ex)days=(1,5,6,7,8,9)
         dp = [0]*(days[-1]+1) # dp=[0]*(9 + 1)=[0,0,0,0,0,0,0,0,0,0]    
-        days = set(days)     
+#         days = set(days) 없어도 됨. 이미 days가 값 순서대로 입력으로 들어오고 중복되지 않으므로 주석 처리함     
         
         for i in range(1,len(dp)):  #for i in range(1, 10)
             #i=1~10 
