@@ -2,14 +2,17 @@ class Solution(object):
     def mincostTickets(self, days, costs):
         ## dp 방식
         
-        dp = [0]*366
+#         dp = [0]*366
+        
+        dp = [0]*(days[-1]+1)
         ## dp방식으로 각 day에 대한 cost 저장용 리스트
         
         for i in days:
             dp[i] = 1       
         ## days의 날짜만 연산하기 위해 365일 중 days를 1로 나머지를 0로 분류하기
         
-        for i in range(1,366):
+#         for i in range(1,366):
+        for i in range(1,days[-1]+1):
             if 0 == dp[i]:
                 dp[i] = dp[i-1]
             ## days에 없는 날이면 이전 날짜 cost 복붙하기
