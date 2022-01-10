@@ -12,6 +12,11 @@ class Solution:
             # calender에 days[i]~days[i+1]까지 최소비용을 저장함
             calender += [min(calender[days[i]]    + costs[2], 
                              calender[days[i]+23] + costs[1],
-                             calender[days[i]+29] + costs[0])] * (days[i+1]-days[i])  
+                             calender[days[i]+29] + costs[0])] * (days[i+1]-days[i]) # ??
+
+        # days = [1,4,6,7,8,20], costs = [2,7,15]의 경우
+        # calender의 길이 31 -> 51로 변경됨
+        # [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 
+        # 0, 0, 0, 0, 0, 0, 2, 2, 2, 4, 4, 6, 7, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 11]
 
         return calender[-1]
