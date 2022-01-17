@@ -1,3 +1,6 @@
+# 발표자 comment 
+# result에 tmp의 일정 부분을 추가한 후 삭제할 것이면 pop을 사용하는 것이 좋아보입니다.
+
 class Solution:
     def spiralOrder(self, matrix: List[List[int]]) -> List[int]:
         tmp = matrix.copy() # 임시 행렬 tmp로 입력 matrix를 복사
