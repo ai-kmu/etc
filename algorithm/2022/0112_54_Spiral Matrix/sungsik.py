@@ -1,3 +1,7 @@
+# 발표자 comment
+# 굳이 edge라는 변수를 만들어 나중에 result에 붙여주는 이유가 있나요?
+# 마지막 elif문은 else로 대체하는 것이 속도면에서는 이득입니다.
+
 import numpy as np
 
 
