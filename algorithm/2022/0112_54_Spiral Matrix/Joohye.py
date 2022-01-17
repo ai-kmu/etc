@@ -1,3 +1,9 @@
+# 발표자 comment
+# 사실 이 코드도 굳이 comment가 필요해보이진 않지만
+# 굳이 달자면 append 말고 +=을 통해 해결하는것이 나아보입니다.
+# value를 하나하나 추가할때에는 append를 쓰는것이 좋으나
+# 여러개의 value를 한번에 추가할때에는 list를 만들어 넣어주는것이 좋습니다.
+
 class Solution:
     def spiralOrder(self, matrix: List[List[int]]) -> List[int]:
         result = []
