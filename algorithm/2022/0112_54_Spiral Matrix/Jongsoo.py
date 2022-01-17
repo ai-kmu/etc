@@ -1,3 +1,8 @@
+# 발표자 comment
+# PEP(Python Enhancement Proposal)
+# +=사용시 좌우로 space 한칸씩 띄면 좋습니다.
+# 물론 안띄어도 되긴 합니다만 권장사항입니다.
+
 class Solution:
     def spiralOrder(self, matrix: List[List[int]]) -> List[int]:
         answer = []
