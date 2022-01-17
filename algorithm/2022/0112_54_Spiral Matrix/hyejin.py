@@ -1,3 +1,7 @@
+# 발표자 comment
+# 딱히 수정해야할 부분은 안보이지만 굳이 따지자면 PEP(Python Enhancement Proposal) 형식에 따라 주석은 줄맞춤을 해주는것이 좋을것 같습니다.
+
+    
 class Solution:
     def spiralOrder(self, matrix: List[List[int]]) -> List[int]:
         answer = []
