@@ -1,3 +1,6 @@
+# 발표자 comment
+# 사소하지만 left를 필요할 때에만 만들어주는것이 좋을것 같습니다.
+
 class Solution(object):
     def spiralOrder(self, matrix):
     
