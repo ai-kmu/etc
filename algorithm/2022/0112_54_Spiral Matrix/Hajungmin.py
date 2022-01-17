@@ -1,3 +1,12 @@
+# 발표자 comment
+# 행을 추가할때는 indexing을 써보는 것이 괜찮을것 같습니다.
+# 아래 보다는
+# for i in range(left, right):
+#    curr_list.append(matrix[top][i])
+# 아래와 같이 하는게 좀더 좋을것 같습니다.
+# curr_list += matrix[top][left:right]
+# tmi로 value만 추가할때에는 append가 빠르지만 list를 추가할때에는 +=이 빠릅니다.
+
 class Solution:
     def spiralOrder(self, matrix: List[List[int]]) -> List[int]:
         # 매트릭스의 top, left, bottom, right의 길이를 저장해줍니다.
