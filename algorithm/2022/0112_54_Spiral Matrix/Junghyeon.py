@@ -1,3 +1,6 @@
+# 발표자 comment
+# +=을 이용해 list를 한번에 추가하는 것이 좋을것 같습니다.
+
 class Solution:
     '''
     문제풀이 방법
