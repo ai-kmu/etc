@@ -20,7 +20,7 @@ class Solution(object):
                     
             # 아래 껍질 벗기기
             if matrix: # 매트릭스가 비어있지 않을 때 시행
-                result += matrix.pop()[[::-1]] # 매트릭스의 마지막 행을 통째로 뽑아낸 후 역순으로 저장
+                result += matrix.pop()[::-1] # 매트릭스의 마지막 행을 통째로 뽑아낸 후 역순으로 저장
                 
             # 왼쪽 껍질 벗기기
             if matrix and matrix[0]: # 매트릭스가 2차원 열이 있을 때 시행
