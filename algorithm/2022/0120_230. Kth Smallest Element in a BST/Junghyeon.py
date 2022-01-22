@@ -9,7 +9,7 @@ class Solution:
         '''
         문제풀이 방법
         BST의 경우, 항상 leftnode < rootnode < rightnode가 성립한다.
-        즉, Inorder방식(left -> root -> right)으로 tree를 순회하고 해당 인덱스에 해당하는 값을 리턴한다.
+        즉, Inorder방식(left -> root -> right)으로 tree를 순회하고 해당 인덱스에 해당하는 값을 저장한다.
         DFS(Depth First Search)를 이용해서 tree 탐색
         '''
         answer = list()
