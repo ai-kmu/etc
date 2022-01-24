@@ -1,3 +1,8 @@
+#코멘트: stack()을 이용하였다. 자식노드를 진행하다가 더이상 루트노드가 없을 때 pop을 하고 count를 +1하는 기본적인 접근방식은 같았는데  
+#pop을 한 원소를 inorder_arr에 넣는 일까지 추가하였다. 리스트를 따로 안만들고 k와 count가 일치할때, pop을 한 value를 return하는 방식으로도 생각해보면 좋을 것 같다. 
+
+
+
 # Definition for a binary tree node.
 # class TreeNode:
 #     def __init__(self, val=0, left=None, right=None):
