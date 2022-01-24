@@ -1,3 +1,8 @@
+#  출제자 comment
+
+#  중위 순회 구현
+#  counter를 사용한 것이 독특한 것 같습니다.
+
 # Definition for a binary tree node.
 # class TreeNode:
 #     def __init__(self, val=0, left=None, right=None):
