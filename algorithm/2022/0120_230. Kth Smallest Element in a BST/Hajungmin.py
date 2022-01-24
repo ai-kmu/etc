@@ -1,5 +1,6 @@
 #  출제자 comment
-#  1) 중간에 count를 따로 생성해서 노드를 방문해서 원소를 append를 할 때마다 count를 +1을 하게 만든다. count가 k와 같으면 정답을 출력하는 방식으로 생각했으면 좋겠다.
+#  1) 중간에 count를 따로 생성해서 노드를 방문해서 원소를 append를 할 때마다 count를 +1을 하게 만든다. 
+#  -> count가 k와 같으면 정답을 출력하는 방식으로 생각했으면 좋겠습니다.
 
 class Solution:
     def kthSmallest(self, root: Optional[TreeNode], k: int) -> int:
