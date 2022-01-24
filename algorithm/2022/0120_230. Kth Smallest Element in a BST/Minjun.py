@@ -1,3 +1,6 @@
+#  if root:만 하면 된다.
+
+
 # Definition for a binary tree node.
 # class TreeNode:
 #     def __init__(self, val=0, left=None, right=None):
