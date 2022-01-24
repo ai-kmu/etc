@@ -1,3 +1,10 @@
+#  출제자 comment
+
+#  stack 이용. 
+
+#  스택을 이용하여 잘 풀이한 것 같습니다.
+#  재귀를 통해 풀어보는 것도 생각해보면 좋을 것 같습니다.
+
 # 재귀가 아닌 스택을 사용한 풀이
 class Solution:
     def kthSmallest(self, root, k):
