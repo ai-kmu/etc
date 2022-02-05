@@ -11,9 +11,9 @@ class Solution:
             gain = int(str(num)[::-1]) - num
             
             if not (gain in d): 
-                d[gain] = 1 #만약 gain이 d 에 있으면 1
+                d[gain] = 1 #만약 gain이 d 에 없으면 1
             else:
-                d[gain] += 1 #없으면 dictionary에 있는 gain에 1 증가
+                d[gain] += 1 # dictionary에 있는 gain에 1 증가
             
         ## hashmap(dict)에서 nice pair 계산
         num_of_nice_pairs = 0 # 초기값 0으로 지정
