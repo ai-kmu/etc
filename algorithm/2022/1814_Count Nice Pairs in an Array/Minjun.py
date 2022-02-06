@@ -9,15 +9,16 @@ class Solution:
         
         # nums를 i - rev(i) 로 계산한다.
 
-        
+        diff = [] # i - rev(i) 저장할 리스트 생성
         for num in nums:
-            nums = [num - int(str(num)[::-1])]
+            diff.append(num - int(str(num)[::-1]))
         
-        counter = Counter(nums)    
+        counter = Counter(diff)    
         
         answer = 0
         
         for i in counter.values():
+            
             if i > 1: # 차가 같은 요소가 존재하는 경우에만 계산
                 answer += i * (i - 1) // 2 # 조합공식으로 푼다
         
