@@ -23,9 +23,7 @@ class Solution:
         
         count = 0
         for sub_values in sub_count.values(): #values()를 이용해 딕셔너리에서 value를 꺼내기 
-            # 만약 차이에 따른 원소의 개수가 1보다 크면 차이가 같은 쌍이 존재한다는 뜻임. 
-            if sub_values > 1:
-                # nC2만큼 answer에 더해준다.(조합을 생각)
-                count += sub_values * (sub_values-1) // 2
+        # nC2만큼 answer에 더해준다.(조합공식), 어차피 value가 1개만 있으면 0이  count에 누적되지 않는다.  
+            count += sub_values * (sub_values-1) // 2
         
         return count % 1000000007 #너무 많은 pair을 대비하여 큰 수로 나눴다. 
