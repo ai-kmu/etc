@@ -7,8 +7,11 @@
 # 즉 ∑(n)(n-1)/2 = (∑(n)(n-1))/2이다. 
 # 여기서 n은 nums[i] - rev(nums[i])의 dictionary값이다.
 
+# 추가로 함수내에서 추가적인 변수를 사용하지 않는 경우 lambda 함수를 사용하는 것이 좋다.
+# lambda함수는 메모리 절약에 유리하다.
+
 from collections import Counter
 
 class Solution:
-    def countNicePairs(self, nums):
-        return sum(v*(v-1) for v in Counter([int(str(n)[::-1]) - n for n in nums]).values()) // 2 % (10**9+7)
+    def __init__(self):
+        self.countNicePairs = lambda nums: sum(v*(v-1) for v in Counter([int(str(n)[::-1]) - n for n in nums]).values()) // 2 % (10**9+7)
