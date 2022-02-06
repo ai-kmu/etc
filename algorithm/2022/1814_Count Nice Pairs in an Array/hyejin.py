@@ -18,4 +18,4 @@ class Solution:
         for value in diff_dict.values():
             answer += value * (value-1) // 2
         
-        return answer % (10**9 + 7)
+        return answer % 1000000007
