@@ -15,3 +15,5 @@ from collections import Counter
 class Solution:
     def __init__(self):
         self.countNicePairs = lambda nums: sum(v*(v-1) for v in Counter([int(str(n)[::-1]) - n for n in nums]).values()) // 2 % (10**9+7)
+        
+# comment : 한 줄에 모두 넣는 것보다는 각 줄별로 한 줄에 하나의 의미를 담는 것이 좋을 것 같음
