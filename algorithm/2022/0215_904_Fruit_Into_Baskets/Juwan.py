@@ -9,31 +9,38 @@ class Solution:
 
         high = 0
 
-        bucket = set()
-        temp = []
-        for idx, fruit in enumerate(fruits):
-            temp.append(fruit)
 
-            # print("=============idx iteration : ", idx, "==============")
-            # print("process : ", temp)
+        bucket = set()
+
+
+        for idx, fruit in enumerate(fruits):
+
             high = idx
+
+
             bucket.add(fruit)
-            # print("bucket : ", bucket)
+
+
 
             if len(bucket) == 3:
-    #             print("======== In if =======")
-                bucket.remove(fruits[low])
-                # print("removed bucket : ", bucket)
-                low = low+1
-                # print("final high low : ", high, ", ", low)
-                max_val = max(max_val, high - low+1)            
-                # print("max_val : ", max_val)
-    #             print("======== out if =======")
-                continue
+
+
+                max_val = max(max_val, high - low)            
+
+
+                low = idx - 1
+
+                while fruits[low-1] == fruits[low]:
+                    low -= 1
+
+                bucket = set()
+                bucket.add(fruits[low])
+                bucket.add(fruits[high])
+
+
+
+
             else:
-
-                # print("final high low : ", high, ", ", low)
-                max_val = max(max_val, high+1 - low)
-                # print("out if max_val : ", max_val)
-
+                continue
+        max_val = max(max_val, high - low+1)
         return max_val
