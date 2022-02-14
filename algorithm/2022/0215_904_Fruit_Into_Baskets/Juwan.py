@@ -1,7 +1,12 @@
 class Solution:
+    '''
+    sliding window  방식
+    comment 상관 없는 코드 제거
+    '''
     def totalFruit(self, fruits: List[int]) -> int:
-        if len(fruits) < 3:
-            return len(fruits)
+        
+        # if len(fruits) < 3: 속도에 영향 x
+        #     return len(fruits)
 
         max_val = 0
 
