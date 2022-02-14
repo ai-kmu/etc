@@ -10,7 +10,7 @@ class Solution:
         left = 0
         answer = 0
         count = 0
-        """
+        
         for i in range(len(fruits)):
             while(fruits[i] not in baskets and len(baskets) ==2):
                 if(baskets[fruits[left]] == 1):
@@ -24,21 +24,7 @@ class Solution:
                 baskets[fruits[i]] += 1
             else:
                 baskets[fruits[i]] = 1
-        """
-# (새로운 3번째 과일이 들어올 때 기존 과일 제거 -> 과일 추가) 방식 순서 변경
-        for i in range(len(fruits)):
-            if fruits[i] in baskets:
-                baskets[fruits[i]] += 1
-            elif len(baskets) < 2:
-                baskets[fruits[i]] = 1                
-            while(fruits[i] not in baskets and len(baskets) == 2):
-                if(baskets[fruits[left]] == 1):
-                    baskets.pop(fruits[left])
-                    baskets[fruits[i]] = 1                                    
-                else:
-                    baskets[fruits[left]] -= 1
-                count -= 1
-                left += 1
+        
          
             count += 1
             answer = max(answer, count)
