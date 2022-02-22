@@ -22,6 +22,6 @@ class Solution(object):
                 max_count = max(max_count, fast - slow)
                            
             else:  # 아니라면, 바구니안에 마지막으로 방문한 나무와,나무의 열매가 있어야 한다.
-                basket = set([tree[last_tree_index], tree[fast]])
+                basket = set([tree[last_tree_index], tree[fast]]) ##  바구니 재설정
                 slow = last_tree_index ## 1, 1을 가진 상태로 3부터 다시 카운트 
         return max_count
