@@ -14,7 +14,7 @@ class Solution(object):
         
         # 변수 초기화한다.
         baskets = {} # 바구니
-        last_tree_idx = 0 # pointer 역할  
+        idx = 0 # pointer 역할  
         answer = 0 # return 값
         count = 0 # 나무 열매 개수 저장용 변수
 
@@ -25,13 +25,13 @@ class Solution(object):
                 baskets[fruits[i]] += 1 # 바구니에 열매를 넣는다.
             
             while(fruits[i] not in baskets and len(baskets) ==2): # 열매가 새로운 종류이고 바구니에 2종류의 열매가 있는 동안
-                if(baskets[fruits[last_tree_idx]] == 1): # 지난 나무 열매 종류가 1개가 있을 때
-                    baskets.pop(fruits[last_tree_idx]) # 지난 나무 열매를 바구니에서 제거하고
+                if(baskets[fruits[idx]] == 1): # 지난 나무 열매 종류가 1개가 있을 때
+                    baskets.pop(fruits[idx]) # 지난 나무 열매를 바구니에서 제거하고
                     baskets[fruits[i]] = 1 # 새로운 종류의 나무 열매를 바구니에 넣는다
                 else: # 지난 나무 열매 종류가 2개 이상이면
-                    baskets[fruits[last_tree_idx]] -= 1 # 열매 개수를 한개 줄이고
+                    baskets[fruits[idx]] -= 1 # 열매 개수를 한개 줄이고
                 count -= 1 # 전체 열매 개수를 줄인다.
-                last_tree_idx += 1
+                idx += 1
 
             count +=1 # 전체 열매 개수를 늘린다.
             answer = max(answer,count)
