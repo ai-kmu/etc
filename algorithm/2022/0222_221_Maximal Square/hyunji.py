@@ -9,7 +9,7 @@ class Solution:
         if rows == 0 or cols == 0:
             return 0
         
-        # dp 배열을 생성해주기
+        # dp 행렬을 생성해주기
         Dp = [[0]*(cols+1) for x in range(rows+1)]
         
 
