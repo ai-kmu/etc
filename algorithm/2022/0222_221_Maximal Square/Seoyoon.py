@@ -30,5 +30,3 @@ class Solution:
                     
         # 면적을 계산하기 위해 변을 제곱
         return max_edge ** 2     
-        
-        return answer
