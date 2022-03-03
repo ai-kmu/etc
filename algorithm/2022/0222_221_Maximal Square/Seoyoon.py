@@ -1,36 +1,34 @@
-#주어진 배열에서 값이 모두 1인 정사각형 중 가장 큰 정사각형을 찾는 문제
-
-# Maximal Rectangle 문제와 유사하게 풀이
+"""
+bottom-up dp 방식 풀이
+idea : 요소값이 1일때 왼쪽, 위쪽, 대각선의 값을 보고 min인 값에 1 더해줌
+예를들어 if (matrix[y][x] == 1) 일 때 dp[y - 1][x], dp[y][x - 1], dp[y - 1][x - 1]의 최솟값에 1을 더해 dp[y][x]를 업데이트
+(최솟값이 0이라면 앞에 정사각형이 전혀 없는 것이기 때문에, 자기 자신 1이 정사각형의 최댓값이기 때문에 1 더해야 함)
+이 방식으로 최대 변 길이를 구해서 면적을 구하겠다.
+"""
 
 class Solution:
-    def maximalSquare(self, matrix: List[List[str]]) -> int:
-        
-        #결과를 저장할 변수 answer 
-        answer = 0 
-        
-        # dp array 생성
-        dp = [0] * (len(matrix[0])+1)
-        
-        # 행을 위에서 아래로 보면서 현재 행까지 연속 1인 수를 추적한다. 
-        for row in matrix:
-            for i in range(len(row)):
-                if row[i] == '1':
-                    dp[i] += 1
-                else: 
-                    dp[i] = 0
-            
+    def maximalSquare(self, matrix):
 
-            # 단조(증가 스택)을 사용해서 히스토그램의 각 열을 보고 높이가 증가하면 계속 stack
-            #그렇지 않은 경우 스택의 맨 위가 현재 높이보다 낮아질 때까지 pop 하고 다음 스텍을 계속한다.
-            # 여기서 우리는 index를 스택에 저장한다.
-            stack = [-1]
-            for i in range(len(dp)):
-                while stack and dp[stack[-1]] > dp[i]:
-                    j = stack.pop()
+        ROW= len(matrix) # matrix의 행의 길이
+        COL= len(matrix[0]) #matrix의 열의 길이
+        
+        # dp 생성 (0으로만 구성된 (ROW)행 (COL)열 크기의 배열 생성)
+        dp = [[0]*(COL) for x in range(ROW)]
+        
+        # 최대 변 길이
+        max_edge = 0
+        
+
+        for r in range(ROW):
+            for c in range(COL):
+                if matrix[r][c] == '1': 
+                    # 요소 값이 1일 때 주변 값들과 비교해서 최소값으로 dp 업데이트
+                    dp[r][c] = min(dp[r-1][c], dp[r][c-1], dp[r-1][c-1]) + 1
+    
+                    # 최대 변 update
+                    max_edge = max(max_edge, dp[r][c])
                     
-                    #스택에서 나올 때마다 최대 제곱의 면적을 계산하고 업데이트
-                    area = min((i - stack[-1] - 1), dp[j]) ** 2
-                    answer = max(answer, area)
-                stack.append(i)
+        # 면적을 계산하기 위해 변을 제곱
+        return max_edge ** 2     
         
         return answer
