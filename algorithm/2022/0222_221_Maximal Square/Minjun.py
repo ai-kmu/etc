@@ -8,7 +8,6 @@ class Solution:
         '''
         # 점화식: dp[x][y] = min(dp[x-1][y], dp[x][y-1], dp[x-1][y-1]) + 1
         
-        
         rows = len(matrix)  
         cols = len(matrix[0]) 
         
