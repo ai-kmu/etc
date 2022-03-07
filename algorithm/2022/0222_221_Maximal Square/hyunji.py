@@ -6,6 +6,8 @@ class Solution:
         # base case: 행과 열의 길이가 0인 배열의 경우 
         rows = len(matrix)
         cols = len(matrix[0])
+        
+        ### feedback: 문제 조건상 입력 matrix 행과 열이 반드시 1이상이기 때문에 생략해도 무방
         if rows == 0 or cols == 0:
             return 0
         
