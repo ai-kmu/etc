@@ -23,7 +23,7 @@ class Solution:
                 if row == 0 or col == 0:
                     dp[row][col] = int(matrix[row][col])
                 else:
-                    if int(matrix[row][col]) == 1:
+                    if int(matrix[row][col]) == 1:  ### feedback: matrix 값을 int로 바꿔서 조건문을 사용한다면 == 1 생략하는 방향
                         dp[row][col] = min(dp[row][col-1],dp[row-1][col],dp[row-1][col-1])+1
                     else:
                         dp[row][col] = 0
