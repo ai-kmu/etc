@@ -17,18 +17,27 @@ class Solution:
         # 최대 길이
         max_cnt = 0  
         
+        ### feedback 01: (주완님의 경우처럼 2번 진행) matrix 0으로 초기화 => 각각의 값을 input matrix를 진행해 값을 할당 => list comprehension를 활용해 한번에 생성
+       
+        
         for row in range(rows):
             for col in range(cols):
                 # dp값 할당
                 dp[row][col] = int(matrix[row][col])  
                 
+        ### feedback 02: input matrix의 값에서 크기가 1인 정사각형 유무를 이중 for문마다 확인해서 갱신 => 연산으로 전체 값 중에서 크기 1인 정사각형 1개라도 있는 경우 판단
+        ### 예시 코드 1
+        max_cnt = max(max(dp))
+        
                 # dp에 값이 할당됐다면(1), 최대 길이 1
-                if dp[row][col]:  
-                    max_cnt = 1 
+                #if dp[row][col]:  
+                #    max_cnt = 1 
         
         for i in range(1,rows):
             for j in range(1,cols):
                 # dp 값이 0 아니라면 (정사각형 이루고 있다면) 좌,상단 비교한다
+                
+        ### feedback 03: dp 내부의 값들은 정수로 변환하였기 때문에 != 0 을 생략 가능
                 if dp[i][j] != 0:
                     dp[i][j] = 1 + min(dp[i-1][j], dp[i][j-1], dp[i-1][j-1])
                     
