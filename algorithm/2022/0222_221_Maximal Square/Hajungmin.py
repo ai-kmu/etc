@@ -2,8 +2,8 @@ class Solution:
     def maximalSquare(self, matrix: List[List[str]]) -> int:
         
         ### feedback: 문제 조건(1 <= m, n <= 300, m: 행의 길이, n: 열의 길이)이 입력 matrix의 행과 열이 반드시 1이상임으로 아래 조건식의 경우는 생략해도 무방
-        #if len(matrix) == 0:
-        #    return 0
+        if len(matrix) == 0:
+            return 0
         
         row = len(matrix)
         col = len(matrix[0])
