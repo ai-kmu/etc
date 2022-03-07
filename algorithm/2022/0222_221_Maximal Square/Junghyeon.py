@@ -4,6 +4,7 @@ class Solution:
         brute force 방식으로 2차원 배열을 순회하면서 최댓값을 갱신하는 방식으로 풀이
         '''
         # (0, 0)부터 (m, n)까지 완전 탐색
+        result = 0
         for m in range(len(matrix)):
             for n in range(len(matrix[0])):
                 if matrix[m][n] == '1':
