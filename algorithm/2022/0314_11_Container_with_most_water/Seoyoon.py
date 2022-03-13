@@ -2,9 +2,9 @@
 
 class Solution:
     def maxArea(self, height):
-        maxx = 0 #max 면적을 저장할 변수
-        left = 0 #포인터 1
-        right = len(height) - 1 #포인터 2
+        maxx = 0 # max 면적을 저장할 변수
+        left = 0 # 포인터 1
+        right = len(height) - 1 # 포인터 2
         
         while right > left:
             # 가로 길이(x축 방향)는 두 포인터의 차
