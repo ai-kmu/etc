@@ -12,7 +12,7 @@ class Solution(object):
             #면적 구해서 가장 넓은 면적을 찾는 방법
             
             if height[left_point] < height[right_point]:
-            # 왼쪽과 오른쪽 중에서 더 짧은 포인터fh 옮기기
+            # 왼쪽과 오른쪽 중에서 더 짧은 포인터 옮기기
                 left_point += 1
             else:
                 right_point -= 1
