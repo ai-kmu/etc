@@ -1,3 +1,4 @@
+#이 코드를 해석하시는 분들께 감사의 말씀을 드립니다.
 from collections import Counter 
 class Solution:
     def rearrangeBarcodes(self, barcodes: List[int]) -> List[int]:
