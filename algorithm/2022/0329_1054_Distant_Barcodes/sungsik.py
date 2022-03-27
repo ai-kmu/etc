@@ -8,7 +8,7 @@ class Solution:
         barcode_count = [[x, y] for x, y in Counter(barcodes).most_common()]
         
         # 가장 많이 나온 barcode를 찾음
-        # 해답이 있음을 보장하기 때문에 max_count는 <= n // 2 + 1 이 보장됨
+        # 해답이 있음을 보장하기 때문에 max_count는 <= (n + 1) // 2 이 보장됨
         max_count = barcode_count[0][1]
         
         # 가장 많이 나온 barcode를 세운 다음에
