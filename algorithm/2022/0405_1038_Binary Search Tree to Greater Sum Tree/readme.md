@@ -9,10 +9,13 @@ The right subtree of a node contains only nodes with keys greater than the node'
 Both the left and right subtrees must also be binary search trees.
 
 ![image](https://user-images.githubusercontent.com/67910856/160596182-a22e3ad2-cf46-4332-9125-17f06be2443c.png)
+
 Input: root = [4,1,6,0,2,5,7,null,null,null,3,null,null,null,8]
+
 Output: [30,36,21,36,35,26,15,null,null,null,33,null,null,null,8]
 
 Input: root = [0,null,1]
+
 Output: [1,null,1]
 
 Constraints:
