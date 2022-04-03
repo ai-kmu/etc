@@ -6,7 +6,7 @@
 class Solution:
     def dfs(self, node):
         # print(f"input: {node}, accumulation = {self.accum}")
-        if not node: return #파이썬은 아무것도 없으면 return None알아서 하기 때문에 노드 비었는지 확인할 필요 없습니다. 
+        if not node: return 
         
         # 오른쪽에서 먼저 시작
         self.dfs(node.right)
