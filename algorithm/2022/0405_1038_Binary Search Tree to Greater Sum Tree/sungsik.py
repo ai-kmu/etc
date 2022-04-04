@@ -38,3 +38,17 @@ class Solution:
         # 다시 크기 순서대로 cumulative sum한 결과를 할당함
         self.inorderAssign(root, cumsum_tree)
         return root
+
+"""
+tree: [8, 7, 6, 5, 4, 3, 2, 1, 0]
+cumsum tree:  [36, 36, 35, 33, 30, 26, 21, 15, 8]
+root.val: 36
+root.val: 36
+root.val: 35
+root.val: 33
+root.val: 30
+root.val: 26
+root.val: 21
+root.val: 15
+root.val: 8
+"""
