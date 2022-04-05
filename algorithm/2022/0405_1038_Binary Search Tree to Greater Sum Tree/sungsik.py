@@ -42,13 +42,5 @@ class Solution:
 """
 tree: [8, 7, 6, 5, 4, 3, 2, 1, 0]
 cumsum tree:  [36, 36, 35, 33, 30, 26, 21, 15, 8]
-root.val: 36
-root.val: 36
-root.val: 35
-root.val: 33
-root.val: 30
-root.val: 26
-root.val: 21
-root.val: 15
-root.val: 8
-"""
+
+TreeNode{val: 30, left: TreeNode{val: 36, left: TreeNode{val: 36, left: None, right: None}, right: TreeNode{val: 35, left: None, right: TreeNode{val: 33, left: None, right: None}}}, right: TreeNode{val: 21, left: TreeNode{val: 26, left: None, right: None}, right: TreeNode{val: 15, left: None, right: TreeNode{val: 8, left: None, right: None}}}}
