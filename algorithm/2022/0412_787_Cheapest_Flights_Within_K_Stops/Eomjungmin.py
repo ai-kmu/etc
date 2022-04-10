@@ -26,7 +26,7 @@ class Solution:
             
             dest_min_s[dest] = stop # 현재 dest 노드의 최소 stop 수 저장
             
-            if stop+1 <= k: # stop 횟수가 k보다 작으면
+            if stop < k: # stop 횟수가 k보다 작으면
                 for d, c in dist_cost[dest]: # 현재 dest에서 다음으로 가는 노드에 대한 추가된 cost와 다음 노드 저장
                     heapq.heappush(h, (cost + c, stop + 1, d))
                     
