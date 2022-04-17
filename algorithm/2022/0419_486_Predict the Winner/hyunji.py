@@ -25,7 +25,7 @@ class Solution:
                 # 대각선으로 값을 채워나감(1 <= i < j < n)
                 j = i + diagnol
                 
-                # player1에게 nums[i]와 nums[j] 중 최적의 선택으로 dp 배열을 채워나감
+                # nums[i]와 nums[j] 중 최적의 선택으로 dp 배열을 채워나감
                 Dp[i][j] = max(nums[i] - Dp[i+1][j], nums[j] - Dp[i][j-1])
                 
         return Dp[0][n-1] >= 0
