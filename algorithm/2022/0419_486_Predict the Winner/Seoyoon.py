@@ -27,7 +27,7 @@ class Solution(object):
                     """
                     print('두 값 비교: ', nums[0]-compare(nums[1:]), nums[-1]-compare(nums[:-1]))
                     print('그때의 배열의 끝값: ', nums[0],nums[-1])
-                    print(score)
+                    #print(score)
                     """
 
                     return score[key_nums] 
