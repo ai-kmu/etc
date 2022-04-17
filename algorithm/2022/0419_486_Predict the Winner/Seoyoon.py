@@ -24,7 +24,7 @@ class Solution(object):
                     # 앞에서부터 재귀탐색, 뒤에서부터 재귀탐색한 값을 비교해서 더 큰 값 찾음
                     score[key_nums] = max(nums[0]-compare(nums[1:]), nums[-1]-compare(nums[:-1]))
 
-                    """"
+                    """
                     print('두 값 비교: ', nums[0]-compare(nums[1:]), nums[-1]-compare(nums[:-1]))
                     print('그때의 배열의 끝값: ', nums[0],nums[-1])
                     print(score)
