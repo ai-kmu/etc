@@ -20,7 +20,7 @@ class Solution:
         divide = factorial(n-1)
         for i in range(n-1, 0, -1):
             select = k // divide
-            if k % divide == 0: # 0으로 나뉘어지는거면 첫째자리의 마지막 순서이므로 select-1 해줌
+            if k % divide == 0: # 0으로 나뉘어지는거면 덩어리 안에서의 마지막 순서이므로 select-1 해줌
                 select -= 1
                 k = divide
             else:
