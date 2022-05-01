@@ -14,8 +14,7 @@ class Solution:
         # 사용가능한 숫자는 1부터 n까지
         candidates = list(range(1, n+1))
         # 현재 위치를 저장하는 pos는 n - 1 부터 시작
-        pos = n - 1
-        for i in range(n-1):
+        for pos in range(n-1, 0, -1):
             # 현재 위치에서 아직까지 사용하지 않은 숫자가 (pos)!만큼 등장하며
             # 따라서 k를 facst[pos]로 나눈 몫이 k번째의 숫자가 되며
             tmp = (k - 1) // facts[pos] + 1
