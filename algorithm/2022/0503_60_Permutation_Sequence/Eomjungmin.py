@@ -26,7 +26,7 @@ class Solution:
         while(n):
             print("-------------------------")
             fact = factorial[n-1]
-            ind = (k-1) // fact # 인덱스이므로 k에서 1을 뺀것을 fact로 나눈 몫이어야 한다.
+            ind = (k-1) // fact # 한 그룹당 fact개만큼 있므로 k에서 1을 뺀것을 fact로 나눈 몫이어야 한다.
             ans += str(numset[ind])
             numset.remove(numset[ind])
             n -= 1
