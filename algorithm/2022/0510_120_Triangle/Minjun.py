@@ -1,3 +1,8 @@
+''' 
+feedback 정리
+-> h 변수 이름이 명확하지가 않다  h 뜻 보다는 height로 해주자
+'''
+
 class Solution:
     def minimumTotal(self, triangle: List[List[int]]) -> int:
         h = len(triangle)
