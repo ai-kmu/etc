@@ -20,7 +20,7 @@ class Solution:
                     n = y1 - m * x1
                     lines[(m, n)] = lines.get((m, n), 0) + 1
         
-        # 근의 공식을 써서 Combination(n, 2)를 n으로 치환
+        # 근의 공식을 써서 Combination(n, 2)에서 n을 구함
         # n(n-1)/2 = k
         # n^2 - n + 2K = 0
         # n = (1 + root(1 + 8k)) / 2
