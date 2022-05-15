@@ -1,6 +1,6 @@
 # test case는 통과
 # [[0,0],[4,5],[7,8],[8,9],[5,6],[3,4],[1,1]] case 에서 예측 실패
-# 시도 방법은 두 point으로 직선의 방정식의 파라미터 a, b(y = ax + b) 를 구해서 같은 point들 개수 세기 
+# 시도 방법은 두 점으로 직선의 방정식의 파라미터 a, b(y = ax + b) 를 구해서 같은 점들 개수 세기 
 class Solution(object):
     def maxPoints(self, points):
         """
@@ -24,7 +24,7 @@ class Solution(object):
                     bias = points[i][1] - slope * points[i][0]
                     param = (slope, bias)       
                     
-                    # 딕셔너리에 param을 키로 설정하고 각 point을 넣는다 => 추후 set을 통해 중복제거해서 개수파악
+                    # 딕셔너리에 param을 키로 설정하고 각 점을 넣는다 => 추후 set을 통해 중복제거해서 개수파악
                     if param not in result:
                         result[param] = []
                         result[param].append(points[i])
@@ -40,13 +40,15 @@ class Solution(object):
                     
                     if param not in result:
                         result[param] = []
+                    
+                    result[param].append(points[i])
+                    result[param].append(points[j])
         
         aws = []
         
-        # 같은 param을 가지는 point의 중복 제거
+        # 같은 param을 가지는 점들의 중복 제거
         for i in result.keys():
             line_point = set(map(tuple, result[i]))
-            # 같은 param의 point 개수 파악
             aws.append(len(line_point))
         if aws != []:
             return max(aws)
