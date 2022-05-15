@@ -40,9 +40,6 @@ class Solution(object):
                     
                     if param not in result:
                         result[param] = []
-                    
-                    result[param].append(points[i])
-                    result[param].append(points[j])
         
         aws = []
         
