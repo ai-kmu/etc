@@ -26,5 +26,5 @@ class Solution:
                 # p1에서 같은 기울기를 가지는 최대 point 갯수 갱신
                 max_num_points = max(max_num_points, count)
                 
-            res = max(res, max_num_points+1) # 최종 최대 포인트 갯수 저장
+            res = max(res, max_num_points+1) # p1일 때 최종 최대 포인트 갯수 갱신
         return res
