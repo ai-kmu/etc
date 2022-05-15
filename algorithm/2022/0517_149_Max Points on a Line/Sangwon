@@ -1,15 +1,40 @@
+#wrong answer 17/35
+
 from collections import defaultdict
 from collections import Counter
+
 class Solution:
     def maxPoints(self, points: List[List[int]]) -> int:
+        if len(points) == 1:
+            return 1
+        vertical_sum = 0
         maximal_point = []
         trash =[]
         for i in range(len(points)):
             for j in range(i+1, len(points)):
                 if points[i][0]-points[j][0] == 0:
+                    vertical_sum += 1
                     continue
                 maximal_point.append((points[i][1]-points[j][1])/(points[i][0]-points[j][0]))
+        if len(maximal_point)<= 2:
+            return 2
         
-        answer_candidate = Counter(maximal_point).most_common()
+        answer_candidate = Counter(maximal_point).most_common()[0][1]
+        if vertical_sum > answer_candidate:
+            answer_candidate = vertical_sum
+        same = 0
+        for i in range(len(points)):
+            if points[i] == sorted(points)[i]:
+                same += 1
+        if same == len(points):
+            return answer_candidate
         
-        return answer_candidate[0][1]
+        def find_answer(sum_answer, n, answer_candidate):
+            if sum_answer == answer_candidate:
+                return n
+            else:
+                sum_answer += n
+                return find_answer(sum_answer, n+1, answer_candidate)
+        answer = find_answer(0, 1, answer_candidate)
+        return answer
+        
