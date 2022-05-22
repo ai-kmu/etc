@@ -1,7 +1,7 @@
 class Solution:
     '''
     딕셔너리에서 키값들을 비교해가며 업데이트하는 방식
-    O(n^2)으로 풀이 -> 32번째에서 시간초과...
+    O(n^3)으로 풀이 -> 32번째에서 시간초과...
     '''
     def getFolderNames(self, names):
         name_dict = dict()
