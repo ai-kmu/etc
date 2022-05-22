@@ -20,4 +20,8 @@ class Solution:
 
         return games.keys()
       
-      # 운 좋으면 통과함 ㅋㅋ..
+      # 운 좋으면 통과함
+"""
+Runtime: 9329 ms
+Memory Usage: 28.6 MB
+"""
