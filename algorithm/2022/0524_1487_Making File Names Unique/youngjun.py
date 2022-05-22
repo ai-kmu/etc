@@ -13,7 +13,7 @@ class Solution:
                     new_name = names[i] + '(' + str(dict[names[i]]) + ')'
                     re_names.append(new_name)
             elif names[i] is not dict:
-                dict[names[i]] += 1
+                dict[names[i]] = 0
                 if names[i].count('(') == 0:
                     re_names.append(names[i])
                 elif names[i].count('(') != 0:
