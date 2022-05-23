@@ -1,6 +1,7 @@
 '''
 [feedback]
 dictionary에 지금까지 등장한 중복된 이름을 value로 갱신하면 Time Error 해결 가능(한줄)
+=> cnt를 정의했지만 games[i]는 항상 1부터 탐색을 시작해서 진행 / 중복된 이름 key에 대한 value 값을 1씩 증가함으로써 위에 문제 해결
 '''
 
 class Solution:
@@ -18,7 +19,7 @@ class Solution:
                     cnt += 1
                 s = f'{i}({cnt})'
                 games[s] += 1
-                games[i] += 1
+                games[i] += 1  # 수정코드 1
 
         return games.keys()
       
