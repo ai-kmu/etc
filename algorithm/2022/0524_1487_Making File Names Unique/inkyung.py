@@ -1,3 +1,5 @@
+# runtime Error 해결 방법: 정답에 같은 값 확인할 떄 => list 대신 dictionary key로 활용
+# list => O(n) / dictionary => O(1) 
 class Solution:
     def getFolderNames(self, names: List[str]) -> List[str]:
         name_cnt = {}
@@ -12,7 +14,8 @@ class Solution:
                 cnt = name_cnt[name]
                 temp = name + '(' + str(cnt) + ')'
                 # 정답에 같은게 없을때까지 숫자를 늘려줌
-                while temp in answer:
+                while temp in name_cnt
+                #while temp in answer:
                     cnt += 1
                     temp = name + '(' + str(cnt) + ')'
                 name_cnt[name] = cnt
