@@ -5,6 +5,7 @@
 #     그 숫자부터 시작해서 1씩 늘려가며 중복되는 이름이 있는지 확인
 #     없으면 그 숫자를 저장하고 종료
 
+# error 해결 방법: 새롭게 생성한 name + 접미사도 dictionary 추가 
 
 class Solution:
     def getFolderNames(self, names):
@@ -20,6 +21,9 @@ class Solution:
                     name = f"{name_origin}({count})"
                     
                 name = f"{name_origin}({count})"
+            
+            # 추가 코드(error해결)
+            container[name_origin] = count
             
             if name != name_origin:
                 container[name] = 0  
