@@ -1,3 +1,12 @@
+'''
+입력: ["kaido","kaido(1)","kaido","kaido(1)","kaido(2)"]
+내 출력: ["kaido","kaido(1)","kaido(2)","kaido(1)(1)","kaido(2)"]
+정답 출력: ["kaido","kaido(1)","kaido(2)","kaido(1)(1)","kaido(2)(1)"]
+
+이 Testcase에서 걸림...... 수정 필요함......
+'''
+
+
 class Solution:
     def getFolderNames(self, names: List[str]) -> List[str]:
         # {name: name이 몇 번 나왔는지}를 저장하는 dict
