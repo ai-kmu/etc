@@ -22,7 +22,7 @@ class Solution:
                 # 괄호가 없는 경우 리스트에 추가
                 if names[i].count('(') == 0:
                     re_names.append(names[i])
-                # 괄호가 있는 경우, 괄호를 벗겨낸 name을 key로 넣어주고 괄호 속 숫자를 value로 설정, name을 리스트에
+                # 괄호가 있는 경우, 괄호를 벗겨낸 name을 key로 넣어주고 괄호 속 숫자를 value로 설정, name을 리스트에 추가한다.
                 elif names[i].count('(') != 0:
                     ori_name = re.sub("[(]"," ", names[i])
                     ori_name = re.sub("[)]","", ori_name)
