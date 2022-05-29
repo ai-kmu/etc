@@ -1,6 +1,6 @@
 # 아이디어 : 문자열을 순서대로 탐색하면서 stack에 순서대로 문자를 append한다.
 #          : ]을 발견하면 문자를 decoding한다. 
-#          : decoding을 할 때는 [ 문자가 나올 때 까지 문자를 저장하고 [ 문자가 나오면 (앞의 숫자 x 저장된 문자 연산)을 수행한다.
+#          : decoding을 할 때는 [ 문자가 나올 때 까지 문자를 저장하고 [ 문자가 나오면 (앞의 숫자 x 저장된 문자) 연산을 수행한다.
 
 class Solution(object):
     def decodeString(self, s):
