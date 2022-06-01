@@ -16,6 +16,7 @@ class Solution:
         for c in range(n):
             answer[m][c+1] = c
             
+        # 밑에서부터 도착지 업데이트
         # (c-1, c) and (c와 c+1)을 pair로 봐서 all -1일 때는 answer[r][c] = answer[r+1][c-1]
         # all 1일 때는 answer[r][c] = answer[r+1][c+1]
         # 1, -1일 때는 answer[r][c] = -1
