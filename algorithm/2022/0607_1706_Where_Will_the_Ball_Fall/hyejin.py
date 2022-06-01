@@ -17,7 +17,6 @@ class Solution:
             answer[m][c+1] = c
             
         # (c-1, c) and (c와 c+1)을 pair로 봐서 all -1일 때는 answer[r][c] = answer[r+1][c-1]
-        # c가 0과 n-1일 때는 벽쪽 보고 있음 -1 각자
         # all 1일 때는 answer[r][c] = answer[r+1][c+1]
         # 1, -1일 때는 answer[r][c] = -1
         for r in range(m-1, -1, -1):
