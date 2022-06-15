@@ -13,7 +13,7 @@ class Solution:
             while stack and heights[stack[-1]] > v: # 현재 v보다 클 때까지 뽑아서 area update
                 height = heights[stack.pop()] # 뽑은 height
                 if stack: # 뽑은 height를 최소로 하는 요소들의 길이 계산
-                    length = i - stack[-1] - 1 # 현재부터 stack[-1]이후부터 height를 보장
+                    length = i - stack[-1] - 1 # 현재부터 stack[-1]이후까지 height를 보장
                 else:
                     length = i # stack이 없다면 0번째부터 height를 보장
                 answer = max(answer, height * length)
