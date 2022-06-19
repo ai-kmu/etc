@@ -4,7 +4,7 @@ from typing import List
 class Solution:
     def largestRectangleArea(self, heights: List[int]) -> int:
         max_area = 0
-        stack = [] # pair (index, h)
+        stack = [] # index와 height를 쌍으로
         
         for i, h in enumerate(heights):
             start = i
