@@ -9,7 +9,7 @@ class Solution:
         for i, h in enumerate(heights):
             start = i
             
-            # height[i]가 될 수 있는 가장 작은 index 찾기
+            # height[i]가 될 수 있는 것중 가장 작은 index 찾기
             while stack and stack[-1][1] > h:
                 index, height = stack.pop()
                 width = i - index
