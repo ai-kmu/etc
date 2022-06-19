@@ -17,3 +17,20 @@ class Solution:
                 max_area = max(max_area,min_height*(j-i+1))
                 
         return max_area
+
+#Solution 2: stack 이용하여 풀이, Testcase 걸림
+
+class Solution:
+    def largestRectangleArea(self, heights: List[int]) -> int:
+        max_area = 0
+        stack = []
+
+        for i,h in enumerate(heights):
+            
+            while stack and stack[-1][1] > h:
+                min_index, min_height = stack.pop()
+                max_area = max(max_area,min_height*(i-min_index))
+                
+            stack.append([i,h])
+            
+        return max_area
