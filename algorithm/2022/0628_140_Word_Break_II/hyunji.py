@@ -6,7 +6,7 @@ class Solution:
         
         def findWord(start, tmp, res):
             
-            # 만약 탐색 시작 지점이 s의 길이보다 길면 
+            # 만약 탐색 시작 지점(start)이 s의 길이와 같아지면
             # tmp 배열의 원소들을 join 후 return
             if start == len(s):
                 res.append(' '.join(tmp))
