@@ -1,3 +1,4 @@
+# 유사 문제 : 스티커 모으기(2) : https://programmers.co.kr/learn/courses/30/lessons/12971?language=python3
 class Solution:
     def rob(self, nums: List[int]) -> int:
         # 집이 3개 이하인 경우에는 가장 큰 금액을 털 수 있는 집을 고르기
