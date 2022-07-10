@@ -9,11 +9,11 @@ class Solution:
         
         # 재귀가 끝나면 저장하는 output list와 방문 노드를 저장하는 visit list를 만든다.
         output = []
-        visit = []
+        visit = set()
 
         def dfs(node, visit, output):
             # 먼저 node를 visit list에 저장한다.
-            visit.append(node)
+            visit.add(node)
             # 그 뒤에 node의 인접 노드를 재귀를 통해 탐색하면서 visit 갱신한다.
             for nx in graph[node]:
                 if nx not in visit:
@@ -22,6 +22,8 @@ class Solution:
             output.append(node)
 
         for i in range(numCourses):
-            dfs(i, visit, output)
+            # node 중 visit에 저장되어 있지 않는 것으로 
+            if i not in visit:
+                dfs(i, visit, output)
                 
         return output
