@@ -22,7 +22,6 @@ class Solution:
             output.append(node)
 
         for i in range(numCourses):
-            if i not in visit:
-                dfs(i, visit, output)
+            dfs(i, visit, output)
                 
         return output
