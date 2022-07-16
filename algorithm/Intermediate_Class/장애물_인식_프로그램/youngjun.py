@@ -5,12 +5,12 @@ n = int(sys.stdin.readline())
 Map = [list(sys.stdin.readline().strip()) for i in range(n)]
 
 def bfs(start_point):
-    count = 0
     direction = [[-1,0],[1,0],[0,-1],[0,1]]
     Map_queue = deque()
+    visited = []
 
     Map_queue.append(start_point)
-    count += 1
+    visited.append(start_point)
 
     while Map_queue:
         r, c = Map_queue.popleft()
@@ -18,11 +18,11 @@ def bfs(start_point):
             new_r = r + y
             new_c = c + x
             if 0 <= new_r < n and 0 <= new_c < n:
-                if Map[new_r][new_c] == '1':
+                if Map[new_r][new_c] == '1' and [new_r,new_c] not in visited:
                     Map[new_r][new_c] = '0'
                     Map_queue.append([new_r,new_c])
-                    count += 1
-    return count
+                    visited.append([new_r,new_c])
+    return len(visited)
 
 ob_num_list = []
 
