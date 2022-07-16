@@ -10,9 +10,9 @@ class Solution:
             for _ in range(qlen):
                 node = queue.popleft()
                 if node:
-                    rightside = node
                     queue.append(node.left)
                     queue.append(node.right)
+                    rightside = node
                     
             if rightside:
                 answer.append(rightside.val)
