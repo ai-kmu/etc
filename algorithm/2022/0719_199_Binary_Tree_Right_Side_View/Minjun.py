@@ -20,6 +20,7 @@ class Solution:
             if len(answer) == idx:
                 answer.append(node.val)
             
+            # rigth를 탐색해서 성공하면 answer 길이가 +1 -> left 무시됨.
             find(node.right, idx+1)
             find(node.left, idx+1)
         
