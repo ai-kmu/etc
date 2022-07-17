@@ -77,3 +77,35 @@ j = 2 / i = 0 to 2
 j = len-1 / i = 0 to len-1
     first[0:len-(len-1-0)], ..., first[len-1:len]
 '''
+
+
+# 정답코드 추가: 
+import sys
+
+# K 쓸모없음
+N, M, _ = map(int, sys.stdin.readline().split())
+
+first = list(map(int, sys.stdin.readline().split()))
+second = list(map(int, sys.stdin.readline().split()))
+
+# DP?
+DP = [[0] * M for _ in range(N)]
+# 정답 초깃값
+answer = 0
+for i in range(N):
+    for j in range(M):
+        # first의 i번째 요소가 second의 j번째에 있다면 갱신
+        if first[i] == second[j]:
+            # index error 방지
+            if i == 0 or j == 0:
+                DP[i][j] = 1
+            # first의 i-1번째 요소 "또한" second의 j-1번째에 있다면
+            # 연속하는 수열이 존재하는 것이다
+            # 따라서 DP[i-1][j-1]에 1을 더하여 갱신
+            else:
+                DP[i][j] = DP[i - 1][j - 1] + 1
+
+            # 2차원 배열의 max값을 뽑는 것보단 갱신해가면서 answer 갱신이 나음
+            answer = max(answer, DP[i][j])
+
+print(answer)
