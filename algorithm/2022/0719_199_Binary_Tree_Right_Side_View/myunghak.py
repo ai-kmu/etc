@@ -23,4 +23,4 @@ class Solution:
         
         depth = rec_func(root, 0)
         
-        return ans[:rec_func(root, 0)]
+        return ans[:depth]
