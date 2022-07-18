@@ -2,7 +2,7 @@
 발표 순서:  
 1. 해시  
     * [프로그래머스링크](https://school.programmers.co.kr/learn/courses/30/parts/12077)
-    * [발표자료]() - 조현아
+    * [발표자료](https://github.com/ai-kmu/etc/blob/master/algorithm/Basic_Class/%EB%B0%9C%ED%91%9C%EC%9E%90%EB%A3%8C/01_hash.ipynb) - 조현아
     * 풀어야할 문제
         - [42577_전화번호목록](https://school.programmers.co.kr/learn/courses/30/lessons/42577)
         - [42578_위장](https://school.programmers.co.kr/learn/courses/30/lessons/42578)
