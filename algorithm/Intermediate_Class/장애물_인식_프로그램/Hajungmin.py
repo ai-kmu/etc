@@ -6,7 +6,7 @@ board = []
 for _ in range(N):
     board.append(list(sys.stdin.readline().strip()))
 
-# dfs를 위한 deque
+# bfs를 위한 deque
 Q = deque()
 dx = [1, -1, 0, 0]
 dy = [0, 0, 1, -1]
