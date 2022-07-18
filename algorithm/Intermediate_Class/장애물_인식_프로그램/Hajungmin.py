@@ -22,7 +22,7 @@ for i in range(N):
             Q.append((i, j))
             board[i][j] = '0'
             cnt += 1
-            # dfs 진행
+            # bfs 진행
             while Q:
                 x, y = Q.popleft()
                 for k in range(4):
