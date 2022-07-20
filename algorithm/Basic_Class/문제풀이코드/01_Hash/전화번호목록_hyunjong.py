@@ -32,7 +32,7 @@ def solution(phone_book):
             if tmp in store.values() and tmp != current:
                 return False
     return True
-## 통과
+# 통과
 # 값을 key에 집어넣고 키 값에서 바로 찾으니 통과됨
 def solution(phone_book):
     store = {}
