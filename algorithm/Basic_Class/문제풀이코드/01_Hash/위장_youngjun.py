@@ -1,3 +1,5 @@
+# 1번 케이스에서 시간초과 걸림
+
 from itertools import combinations
 
 def solution(clothes):
