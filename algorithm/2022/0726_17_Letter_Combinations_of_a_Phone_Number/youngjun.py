@@ -35,7 +35,7 @@ class Solution:
             phone_number[str(key+2)] = value
         
         # 재귀 활용하여 조합 구함
-        def backtrack(i, str):
+        def recursion(i, str):
             # str의 길이와 digits의 길이가 같아지면 재귀 완료
             if len(digits) == len(str):
                 answer.append(str)
@@ -44,6 +44,6 @@ class Solution:
             for c in phone_number[digits[i]]:
                 backtrack(i+1, str + c)
         
-        backtrack(0,"")
+        recursion(0,"")
         
         return answer
