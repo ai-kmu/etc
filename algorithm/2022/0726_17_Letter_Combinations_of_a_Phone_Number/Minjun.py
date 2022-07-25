@@ -1,6 +1,5 @@
 '''
-    데카르트 곱(product 연산) 구현해보고 싶어서 직접 해봤습니다.
-    
+    데카르트 곱(itertools - product) 구현해보고 싶어서 직접 해봤습니다.  
 '''
 class Solution:
     def letterCombinations(self, digits: str) -> List[str]:
