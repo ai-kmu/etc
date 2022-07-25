@@ -1,5 +1,5 @@
 '''
-    데카르트 곱(itertools - product) 구현해보고 싶어서 직접 해봤습니다.  
+    데카르트 곱(product 연산) 구현해보고 싶어서 직접 해봤습니다.    
 '''
 class Solution:
     def letterCombinations(self, digits: str) -> List[str]:
@@ -46,8 +46,7 @@ class Solution:
             if idx+1 < len(digits):
                 return recursion(tmp, digit[int(digits[idx+1])], idx+1)
             # 다음 요소 없다면, 연산 결과 return
-            else:
-                return tmp
+            return tmp
         
         # digits 0, 1번째 요소부터 데카르트 곱 시작
         return recursion(digit[int(digits[0])], digit[int(digits[1])], 1)
