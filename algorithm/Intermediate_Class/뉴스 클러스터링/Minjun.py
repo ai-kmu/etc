@@ -34,7 +34,7 @@ def solution(str1, str2):
     for i in both:
         gyo += (min(both_str1[i], both_str2[i]))
     
-    # 교집합 / ([집합A+집합B-교집합] == 합집합)
+    # 자카드 유사도: 교집합 / ([집합A+집합B-교집합] == 합집합)
     J = gyo / (len(multi_str1) + len(multi_str2) - gyo)
 
     return int(J*65536)
