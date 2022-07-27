@@ -8,7 +8,7 @@
         - [42578_위장](https://school.programmers.co.kr/learn/courses/30/lessons/42578)
 2. 스택/큐
     * [프로그래머스링크](https://school.programmers.co.kr/learn/courses/30/parts/12081)
-    * [발표자료](https://github.com/ai-kmu/etc/blob/master/algorithm/Basic_Class/%EB%B0%9C%ED%91%9C%EC%9E%90%EB%A3%8C/%E1%84%89%E1%85%B3%E1%84%90%E1%85%A2%E1%86%A8_%E1%84%8F%E1%85%B2.ipynb) - 이햔종
+    * [발표자료](https://github.com/ai-kmu/etc/blob/master/algorithm/Basic_Class/%EB%B0%9C%ED%91%9C%EC%9E%90%EB%A3%8C/%E1%84%89%E1%85%B3%E1%84%90%E1%85%A2%E1%86%A8_%E1%84%8F%E1%85%B2.ipynb) - 이현종
     * 풀어야할 문제
         - []()
         - []()
@@ -20,7 +20,7 @@
         - []()
 4. 정렬
     * [프로그래머스링크](https://school.programmers.co.kr/learn/courses/30/parts/12198)
-    * [발표자료]() - 이현종
+    * [발표자료]() - 조우성
     * 풀어야할 문제
         - []()
         - []()
