@@ -3,7 +3,10 @@ class Solution:
     def maxSlidingWindow(self, nums: List[int], k: int) -> List[int]:
         q = deque()
         answer = []
-        # monotonic increasing queue 구현
+        '''
+        monotonic decreasing queue 구현
+        시간 복잡도 : O(N)
+        '''
         for i in range(len(nums)):
             # 큐에서 가장 왼쪽이 더 이상 영향을 미칠 수 없게 됐을 때 pop
             while q and q[0][1] <= i - k:
@@ -15,5 +18,5 @@ class Solution:
             q.append((nums[i], i))
             # 가장 왼쪽의 숫자가 영향을 미치는 범위 내에서의 가장 큰 숫자이므로 answer에 추가
             answer.append(q[0][0])
-            # 슬라이딩 윈도우가 형성되는 때부터가 정답
+        # 슬라이딩 윈도우가 형성되는 때부터가 정답
         return answer[k - 1:]
