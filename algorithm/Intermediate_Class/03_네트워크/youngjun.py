@@ -1,3 +1,5 @@
+# Sol 1) BFS
+
 from collections import deque
 
 def solution(n, computers):
