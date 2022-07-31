@@ -19,7 +19,13 @@ class Solution:
             start = end - k + 1
             # end 위치가 최댓값일 경우
             # max_neg_num을 변경
-            # 꼭 >가 아니라 >=을 사용해야 max_idx가 변경됨
+            # 꼭 '>'가 아니라 '>='을 사용해야 max_idx가 변경됨
+            '''
+                (추가)
+                '>'를 써도 정답이 나오는데
+                밑에 else에서 처리가 되기 때문
+                다만, 최대한 index가 큰 값으로 유지하는 것이 더 효율적이라고 생각
+            '''
             if nums[end] >= -max_neg_num:
                 max_idx = end
                 max_neg_num = -nums[end]
