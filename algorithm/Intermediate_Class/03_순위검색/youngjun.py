@@ -27,15 +27,22 @@ def solution(info, query):
 
     for q in query:
         query_temp = q.split()
-        order, value = query_temp[:-1], int(query_temp[-1])
+        q_order, q_value = query_temp[:-1], int(query_temp[-1])
         for _ in range(3):
-            order.remove('and')
-        q_case = ''.join(order)
+            q_order.remove('and')
+        q_case = ''.join(q_order)
         if q_case in info_dict.keys():
-            q_num = 0
-            for num in info_dict[q_case]:
-                if num >= value:
-                    q_num += 1
+            score_list = info_dict[q_case]
+            score_target = q_value
+            score_length = len(score_list)
+            low, high = 0, len(score_list)
+            while low < high:
+                mid = (low + high) // 2
+                if score_target > score_list[mid]:
+                    low = mid + 1
+                elif score_target <= score_list[mid]:
+                    high = mid
+            q_num = score_length - high
             answer.append(q_num)
         else:
             answer.append(0)
