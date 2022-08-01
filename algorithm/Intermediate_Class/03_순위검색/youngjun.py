@@ -1,6 +1,3 @@
-# Sol 1. info 정보를 hash table로 생성한다.
-# query 검색에서 시간초과 발생
-
 from itertools import combinations
 from collections import defaultdict
 
