@@ -13,10 +13,6 @@ def solution(n, computers):
             if computers[start][i] and (i not in visited):
                 visited.add(i)
                 DFS(i)
-            # start를 연결한 애들 중 방문 안 한 애 있으면 넣고 DFS
-            if computers[i][start] and (i not in visited):
-                visited.add(i)
-                DFS(i)
 
     # 모든 노드에 대해서
     for start in range(n):
