@@ -14,7 +14,7 @@
         - [12909_올바른 괄호](https://school.programmers.co.kr/learn/courses/30/lessons/12909)
 3. 힙(Heap)
     * [프로그래머스링크](https://school.programmers.co.kr/learn/courses/30/parts/12117)
-    * [발표자료]() - 신유송
+    * [발표자료](https://github.com/ai-kmu/etc/blob/master/algorithm/Basic_Class/%EB%B0%9C%ED%91%9C%EC%9E%90%EB%A3%8C/Heap.ipynb) - 신유송
     * 풀어야할 문제
         - []()
         - []()
