@@ -9,7 +9,7 @@ class Solution:
         dx = [-1, 1, 0, 0]
         dy = [0, 0, -1 ,1]
         
-        # 정답지 초기화
+        # output은 isWater의 배열과 크기는 똑같지만 전부 0으로 초기화된 배열부터 시작
         output = [[0 for _ in range(n)] for _ in range(m)]
         
         q = deque()
