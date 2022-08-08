@@ -7,6 +7,7 @@ def solution(scoville, K):
     # 최대만큼 돌리면서
     for i in range(1000000):
         # scoville 에 heappop 한거 + heappop*2 한거 추가
+        # 제출하고 다른분들 답과 비교 해보니까 저는 scoville 에 append로 추가했는데 왜 잘되는걸까요
         scoville.append(heapq.heappop(scoville)+heapq.heappop(scoville)*2)
         # 정답 갯수 늘려주고
         answer += 1
