@@ -30,7 +30,7 @@ class Solution:
                     if (nx < 0 or nx >= cols) or (ny < 0 or ny >= rows):
                         continue
 
-                    if 0 <= nx <= cols and 0 <= ny <= rows and visited[ny][nx] == 0:
+                    if visited[ny][nx] == 0:
                         out_mat[ny][nx] = out_mat[y][x] + 1
                         visited[ny][nx] = 1
                         bfs_q.append((nx, ny))
