@@ -2,23 +2,23 @@ import heapq
 
 def solution(scoville, K):
     answer = 0
-    # 스코빌 list heapify
+    # scoville heapify
     heapq.heapify(scoville)
-    while True:
-        # 제일 낮은 숫자를 pop
-        min1 = heapq.heappop(scoville)
-        # 만약 제일 낮은 숫자가 최소 스코빌 지수보다 높다면 모든 음식이 K보다 높다는 의미이므로 break
-        if min1 >= K:
+    while len(scoville) > 1:
+        # 제일 작은 스코빌 heappop
+        sco1 = heapq.heappop(scoville)
+        # 제일 작은 스코빌이 K보다 높으면 모든 스코빌이 K보다 높으므로 break
+        if sco1 >= K:
             break
-        # scoville을 전부 섞어도 최소 스코빌 지수에 도달할 수 없는 경우는 -1을 return
-        elif not scoville:
-            answer = -1
-            break
-        # 두 번째로 낮은 숫자를 heappop
-        min2 = heapq.heappop(scoville)
-        # 새로운 스코빌 지수는 두 번째 음식의 스코빌에서 2를 곱한 것을 첫 번째 음식의 스코빌에서 더한 것
-        new_scoville = min1 + (2 * min2)
-        # 새로운 스코빌을 heappush하고 answer에 1 추가
-        heapq.heappush(scoville,new_scoville)
+        # 두 번째로 작은 스코빌 heappop
+        sco2 = heapq.heappop(scoville)
+        # 새로운 스코빌을 생성하고 heappush
+        nsco = sco1 + sco2 * 2
+        heapq.heappush(scoville, nsco)
+        # 한 번 스코빌을 섞을 때마다 answer에 1씩 추가
         answer += 1
+    
+    # 루프를 다 돌았는데도 제일 작은 스코빌이 K보다 작으면 -1 return
+    if heapq.heappop(scoville) < K:
+        return -1
     return answer
