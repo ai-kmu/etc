@@ -14,6 +14,11 @@ def solution(jobs):
     heap = []
 
     while jobs_queue or heap:
+        
+        while jobs_queue and start <= jobs_queue[0][0] <= end:
+            input_t, work = jobs_queue.popleft()
+            heapq.heappush(heap, (work, input_t))
+            
         if heap:
             work, input_t = heapq.heappop(heap)
             start = end
@@ -24,10 +29,6 @@ def solution(jobs):
             start = input_t
             end = start + work
             sum_jobs += (end - start)
-            
-        while jobs_queue and start <= jobs_queue[0][0] <= end:
-            input_t, work = jobs_queue.popleft()
-            heapq.heappush(heap, (work, input_t))
     
     answer = (sum_jobs//jobs_num)
     
