@@ -52,6 +52,6 @@ def solution(places):
             if permit == False:
                 break
                 
-        answer.append(1 if permit == True else 0)
+        answer.append(int(permit))
 
     return answer
