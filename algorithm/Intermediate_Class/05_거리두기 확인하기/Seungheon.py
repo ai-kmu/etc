@@ -12,7 +12,7 @@ def solution(places):
             return
         
         # 방문처리
-        if visited == True:
+        if visited[i][j]:
             return
         visited[i][j] = True
         
@@ -47,9 +47,9 @@ def solution(places):
                 if x == 'P':
                     place[i] = place[i][:j] + 'O' + place[i][j+1:]
                     explore(i, j)
-                    if permit == False:
+                    if not permit:
                         break
-            if permit == False:
+            if not permit:
                 break
                 
         answer.append(int(permit))
