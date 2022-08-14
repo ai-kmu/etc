@@ -5,7 +5,7 @@ def solution(people, limit):
     people.sort()
     people_deque = deque(people)
 
-    while len(people_deque) > 1:
+    while len(people_deque) >= 2:
         if people_deque[0] + people_deque[-1] <= limit:
             people_deque.popleft()
             people_deque.pop()
