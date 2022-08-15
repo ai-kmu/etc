@@ -2,7 +2,6 @@ import heapq
 from collections import deque
 
 def solution(jobs):
-
     heapq.heapify(jobs)
     jobs_num = len(jobs)
     sum_jobs = 0
