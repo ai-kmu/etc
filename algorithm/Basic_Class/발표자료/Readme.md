@@ -22,8 +22,8 @@
     * [프로그래머스링크](https://school.programmers.co.kr/learn/courses/30/parts/12198)
     * [발표자료](https://github.com/ai-kmu/etc/blob/master/algorithm/Basic_Class/%EB%B0%9C%ED%91%9C%EC%9E%90%EB%A3%8C/04_%E1%84%8C%E1%85%A5%E1%86%BC%E1%84%85%E1%85%A7%E1%86%AF.ipynb) - 조우성
     * 풀어야할 문제
-        - [42748-K번째 수](https://school.programmers.co.kr/learn/courses/30/lessons/42748)
-        - [42746-가장 큰 수](https://school.programmers.co.kr/learn/courses/30/lessons/42746)
+        - [42748_K번째 수](https://school.programmers.co.kr/learn/courses/30/lessons/42748)
+        - [42746_가장 큰 수](https://school.programmers.co.kr/learn/courses/30/lessons/42746)
 5. 완전탐색
     * [프로그래머스링크](https://school.programmers.co.kr/learn/courses/30/parts/12230)
     * [발표자료]() - 윤의현
