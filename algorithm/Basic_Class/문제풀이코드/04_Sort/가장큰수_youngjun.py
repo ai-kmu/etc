@@ -20,4 +20,10 @@ def solution(numbers):
                 # 순서를 바꿔준다.
                 str_numbers[i], str_numbers[i + 1] = str_numbers[i + 1], str_numbers[i]
                 
-    return "".join(str_numbers)
+    # 만약 [0,0,0,0] 등 0으로만 이루어진 문자열일 경우
+    if str_numbers[0] == '0':
+        answer = '0'
+    else:
+        answer = "".join(str_numbers)
+    
+    return answer
