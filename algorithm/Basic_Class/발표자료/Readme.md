@@ -26,10 +26,10 @@
         - [42746_가장 큰 수](https://school.programmers.co.kr/learn/courses/30/lessons/42746)
 5. 완전탐색
     * [프로그래머스링크](https://school.programmers.co.kr/learn/courses/30/parts/12230)
-    * [발표자료]() - 윤의현
+    * [발표자료](https://github.com/ai-kmu/etc/blob/master/algorithm/Basic_Class/%EB%B0%9C%ED%91%9C%EC%9E%90%EB%A3%8C/05_Brute_force.ipynb) - 윤의현
     * 풀어야할 문제
-        - []()
-        - []()
+        - [42839_소수 찾기](https://school.programmers.co.kr/learn/courses/30/lessons/42839)
+        - [42842_카펫](https://school.programmers.co.kr/learn/courses/30/lessons/42842)
 6. 탐욕법(Greedy)
     * [프로그래머스링크](https://school.programmers.co.kr/learn/courses/30/parts/12244)
     * [발표자료]() - 이영준
