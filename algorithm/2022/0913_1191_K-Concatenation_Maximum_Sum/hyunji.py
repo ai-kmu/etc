@@ -32,5 +32,5 @@ class Solution:
         if suffix < 0:
             return 0
         
-        return max(suffix, answer)
+        return max(suffix, answer) % (10**9 + 7)
         
