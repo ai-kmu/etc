@@ -1,5 +1,6 @@
 import math
 
+# 간단한 다항식을 응용해 문제를 풀 수 있다.
 def solution(brown, yellow):
     # x*y = brown + yellow
     mulxy = brown + yellow
