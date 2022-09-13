@@ -1,7 +1,6 @@
 class Solution:
     def kConcatenationMaxSum(self, arr: List[int], k: int) -> int:
         
-        
         # kadane's algorithm : dynamic programming 기법 중 하나
         # maximum subarray sum을 구할 수 있음
         def kadanesum(arr):
@@ -15,7 +14,6 @@ class Solution:
                     maxsum = cursum
             return maxsum
         
-        
         # 처음 혹은 끝에서부터 셈
         def sum_(arr):
             cursum = 0
@@ -25,7 +23,6 @@ class Solution:
                 if cursum > maxsum:
                     maxsum = cursum
             return maxsum
-        
         
         # k = 1일 경우 array의 subarray로 maximum sum을 구할 수 있음
         if k == 1:
