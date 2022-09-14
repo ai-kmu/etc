@@ -32,10 +32,10 @@
         - [42842_카펫](https://school.programmers.co.kr/learn/courses/30/lessons/42842)
 6. 탐욕법(Greedy)
     * [프로그래머스링크](https://school.programmers.co.kr/learn/courses/30/parts/12244)
-    * [발표자료]() - 이영준
+    * [발표자료](https://github.com/ai-kmu/etc/blob/master/algorithm/Basic_Class/%EB%B0%9C%ED%91%9C%EC%9E%90%EB%A3%8C/06_Greedy_algorithm.ipynb) - 이영준
     * 풀어야할 문제
-        - []()
-        - []()
+        - [42860_조이스틱](https://school.programmers.co.kr/learn/courses/30/lessons/42860)
+        - [42883_큰 수 만들기](https://school.programmers.co.kr/learn/courses/30/lessons/42883)
 7. 동적계획법(Dynamic Programming)
     * [프로그래머스링크](https://school.programmers.co.kr/learn/courses/30/parts/12263)
     * [발표자료]() - 하정민
