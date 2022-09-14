@@ -35,7 +35,7 @@
     * [발표자료](https://github.com/ai-kmu/etc/blob/master/algorithm/Basic_Class/%EB%B0%9C%ED%91%9C%EC%9E%90%EB%A3%8C/06_Greedy_algorithm.ipynb) - 이영준
     * 풀어야할 문제
         - [42862_체육복](https://school.programmers.co.kr/learn/courses/30/lessons/42862)
-        - [42861_섬 연결하기](https://school.programmers.co.kr/learn/courses/30/lessons/42861)
+        - [42883_큰 수 만들기](https://school.programmers.co.kr/learn/courses/30/lessons/42883)
 7. 동적계획법(Dynamic Programming)
     * [프로그래머스링크](https://school.programmers.co.kr/learn/courses/30/parts/12263)
     * [발표자료]() - 하정민
