@@ -1,3 +1,5 @@
+1. just 구현 
+
 def solution(n, lost, reserve):
     answer = 0
     # answer_list를 n만큼 1로 초기화해준다.
@@ -50,3 +52,28 @@ def solution(n, lost, reserve):
             answer += 1
     
     return answer
+
+2. 좀 더 greedy한 코드
+
+def solution(n, lost, reserve):
+    # 먼저 중복 제거
+    # reserve와 lost에 둘 다 있는 학생은 결국 체육복이 하나밖에 없는 학생이므로, 체육복을 나눠주거나 받을 수 없다.
+    # 따라서, reserve와 lost 집합을 만들고, 각각 차집합을 계산해 주면 중복 제거를 할 수 있다.
+    set_lost = set(lost) - set(reserve)
+    set_reserve = set(reserve) - set(lost)
+
+    # 여분의 체육복을 가진 학생을 순회하면서
+    for i in set_reserve:
+        # 만약 앞번호에 체육복을 가지고 있는 사람이 있을 경우
+        if (i - 1) in set_lost:
+            # 체육복을 빌려줌(lost에서 없애줌)
+            set_lost.discard(i - 1)
+        # 만약 뒷번호에 체육복을 가지고 있는 사람이 있을 경우
+        elif (i + 1) in set_lost:
+            # 체육복을 빌려줌(lost에서 없애줌)
+            set_lost.discard(i + 1)
+        # 둘 다 아닐경우 continue
+        else:
+            continue
+
+    return n - len(set_lost)
