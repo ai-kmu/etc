@@ -37,7 +37,7 @@ class Solution:
         
         return nums[start]
 
-# for ~ else 문을 통해 중간에 return => 가장 빠르게 나옴
+# for ~ else 문을 통해 중간에 return => 일반적으로 가장 빠르게 나옴
 class Solution:
     def findMin(self, nums: List[int]) -> int:
         # 처음 값으로 ans 선언
