@@ -36,3 +36,17 @@ class Solution:
                 end -= 1
         
         return nums[start]
+
+# for ~ else 문을 통해 중간에 return => 가장 빠르게 나옴
+class Solution:
+    def findMin(self, nums: List[int]) -> int:
+        # 처음 값으로 ans 선언
+        ans = nums[0]
+        
+        # nums를 돌며 값이 감소하는 곳이 나오면 그 곳이 rotation하기 전 시작점이기 때문에 return
+        # for문이 문제없이 돌게되면 값이 계속 상승한 것이기 때문에 rotation이 이뤄지지 않은 것이므로 ans return
+        for i in nums:
+            if ans > i: return i
+        
+        else:
+            return ans
