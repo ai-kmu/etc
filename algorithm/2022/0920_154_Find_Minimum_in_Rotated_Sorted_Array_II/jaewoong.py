@@ -8,7 +8,6 @@ class Solution:
             
             # 중앙 위치를 mid에 저장합니다
             mid = (left + right) // 2
-            print(nums[mid])
             # nums[mid] > nums[right] 인경우 최솟값이 우측에 있는것을 알 수 있습니다..
             if nums[mid] > nums[right]:
                 left = mid + 1
