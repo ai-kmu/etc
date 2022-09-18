@@ -1,6 +1,5 @@
 class Solution:
     def findMin(self, nums: List[int]) -> int:
-        # O(n)과 O(logn) 사이 어딘가에서 적당히 타협본 코드
         l, r = 0, len(nums)-1
         
         while l < r:
