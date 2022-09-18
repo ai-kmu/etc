@@ -4,7 +4,7 @@ class Solution:
         right = len(nums) - 1
         
         # 이분탐색해서 최솟값을 찾습니다
-        while left < right:
+        while left == right:
             
             # 중앙 위치를 mid에 저장합니다
             mid = (left + right) // 2
