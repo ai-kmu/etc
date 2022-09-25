@@ -6,7 +6,7 @@ class Solution:
         row = len(obstacleGrid)
         col = len(obstacleGrid[0])
         
-        if obstacleGrid[0][0] == 1: # 시작점에 대한 예외처리만
+        if obstacleGrid[0][0] == 1: # 시작이 끝인경우 이동할필요가없음
             return 0
         
         for i in range(row):
