@@ -1,9 +1,3 @@
-#!/usr/bin/env python
-# coding: utf-8
-
-# In[ ]:
-
-
 # bfs로 풀이
 # 해당 경로에 갈수 있는 가짓수를 구합니다
 class Solution:
