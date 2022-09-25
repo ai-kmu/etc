@@ -3,10 +3,6 @@ class Solution:
         m = len(obstacleGrid)
         n = len(obstacleGrid[0])
 
-        # 먼저 아예 시작과 끝 부분에 장애물이 있어 답이 없는 경우 계산
-        if obstacleGrid[0][0] == 1 or obstacleGrid[m - 1][n - 1] == 1:
-            print(0)
-
         # 기록 초기화
         dp = [[0] * n for i in range(m)]
 
