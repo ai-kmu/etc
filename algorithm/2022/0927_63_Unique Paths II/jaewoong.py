@@ -1,8 +1,7 @@
-# bfs로 풀이
 # 해당 경로에 갈수 있는 가짓수를 구합니다
 class Solution:
     def uniquePathsWithObstacles(self, obstacleGrid: List[List[int]]) -> int:
-        move = [(0, -1), (-1, 0)] # 이동경로, 오른쪽이나 밑으로밖에 못간다는 문제의 가정
+        move = [(0, -1), (-1, 0)]
         row = len(obstacleGrid)
         col = len(obstacleGrid[0])
         
@@ -22,11 +21,10 @@ class Solution:
                 
                 # bfs
                 for m in move:
-                    next_row = i + m[0]
-                    next_col = j + m[1]
-                    if next_row < 0 or next_col < 0 or row <= next_row or col <= next_col:
+                    before_row = i + m[0]
+                    before_col = j + m[1]
+                    if before_row < 0 or before_col < 0 or row <= before_row or col <= before_col:
                         continue
-                    obstacleGrid[i][j] += obstacleGrid[next_row][next_col]
+                    obstacleGrid[i][j] += obstacleGrid[before_row][before_col]
         
         return obstacleGrid[row-1][col-1]
-
