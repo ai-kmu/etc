@@ -1,0 +1,25 @@
+def solution(n, lost, reserve):
+    '''
+    실패..
+    
+    체육복 없는 사람의 번호보다 작은쪽을 먼저 본 후 오른쪽을 볼 것 
+    
+    '''
+    answer = n
+
+    lost.sort()
+    
+    for each in lost:
+        # 자기 자신이 체육복을 도난 당했지만 여분이 있는 경우
+        if each in reserve:
+            del reserve[reserve.index(each)]
+        # 자신보다 번호가 1 작은 사람이 여벌옷이 있는 경우
+        elif each > 1 and each - 1 in reserve:
+            del reserve[reserve.index(each - 1)]
+        # 자신보다 번호가 1 큰 사람이 여벌옷이 있는 경우
+        elif each + 1 in reserve:
+            del reserve[reserve.index(each + 1)]
+        # 위 경우가 아니라면 빌릴 수 없기때문에 -1해줌
+        else:
+            answer -= 1
+    return answer
