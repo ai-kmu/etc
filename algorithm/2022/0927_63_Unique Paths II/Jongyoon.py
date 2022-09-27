@@ -1,5 +1,7 @@
 from collections import deque
-
+"""
+시간 초과
+"""
 class Solution(object):
     
     def uniquePathsWithObstacles(self, obstacleGrid: List[List[int]]) -> int:
