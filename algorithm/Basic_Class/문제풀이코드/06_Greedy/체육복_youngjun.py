@@ -1,4 +1,4 @@
-1. just 구현 
+1. 방법 1
 
 def solution(n, lost, reserve):
     answer = 0
@@ -35,7 +35,7 @@ def solution(n, lost, reserve):
     
     return answer
 
-2. 좀 더 greedy한 코드
+2. 방법 2
 
 def solution(n, lost, reserve):
     # 먼저 중복 제거
