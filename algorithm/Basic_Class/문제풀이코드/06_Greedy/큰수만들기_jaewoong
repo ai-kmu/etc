@@ -1,0 +1,33 @@
+def solution(number, k):
+    answer = ''
+    num_list = list(map(str, number))
+    # 스택형태로 만들어 보관했다 빼는 형태
+    # 1924
+    stack = []
+    # 가장 첫 수를 꺼내줍니다
+    # 1
+    stack.append(num_list.pop(0))
+    
+    # 924
+    for num in num_list:
+        # 스택이 비어있지 않고
+        # 마지막으로 들어온 스택의 값이 num_list의 순서대로의 숫자보다 작고
+        # 아직 num_list에서 값을 제거할 수 있을 때
+        while len(stack) > 0 and stack[-1] < num and k > 0:
+            # k=2-1
+            k -= 1
+            # 1이 9보다 작으므로 1제거
+            stack.pop()
+        # 9 추가
+        stack.append(num)
+        # 앞자리수가 큰 수가 가장 큰수이므로 마지막에는 남은 숫자를 넣어주면 된다.
+    
+    # 4321과 같이 앞이 가장 큰 경우, 순서대로는 들어가지만
+    # 숫자는 제거해주어야 함
+    while k != 0:
+        stack.pop()
+        k -= 1
+    
+    answer = ''.join(stack)
+    
+    return answer
