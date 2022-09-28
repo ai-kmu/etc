@@ -40,7 +40,7 @@
     * [프로그래머스링크](https://school.programmers.co.kr/learn/courses/30/parts/12263)
     * [발표자료]() - 하정민
     * 풀어야할 문제
-        - [42898_등굣길](https://school.programmers.co.kr/learn/courses/30/lessons/42898)
+        - [43105_정수 삼각형](https://school.programmers.co.kr/learn/courses/30/lessons/43105)
         - [42895_N으로 표현](https://school.programmers.co.kr/learn/courses/30/lessons/42895)
 8. 깊이/너비 우선 탐색(DFS/BFS)
     * [프로그래머스링크](https://school.programmers.co.kr/learn/courses/30/parts/12421)
