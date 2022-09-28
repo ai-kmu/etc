@@ -38,7 +38,7 @@
         - [42883_큰 수 만들기](https://school.programmers.co.kr/learn/courses/30/lessons/42883)
 7. 동적계획법(Dynamic Programming)
     * [프로그래머스링크](https://school.programmers.co.kr/learn/courses/30/parts/12263)
-    * [발표자료]() - 하정민
+    * [발표자료](https://github.com/ai-kmu/etc/blob/master/algorithm/Basic_Class/%EB%B0%9C%ED%91%9C%EC%9E%90%EB%A3%8C/07_Dynamic_Programming.ipynb) - 하정민
     * 풀어야할 문제
         - [43105_정수 삼각형](https://school.programmers.co.kr/learn/courses/30/lessons/43105)
         - [42895_N으로 표현](https://school.programmers.co.kr/learn/courses/30/lessons/42895)
