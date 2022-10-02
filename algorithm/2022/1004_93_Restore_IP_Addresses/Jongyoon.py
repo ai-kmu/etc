@@ -17,7 +17,7 @@ class Solution(object):
                             third = s[a1+a2:a1+a2+a3]                                          # 세 번째 ip
                             fourth = s[a1+a2+a3:a1+a2+a3+a4]                                   # 네 번째 ip
                                                         
-                            data = list(map(self.CheckNum, [first, second, third, fourth]))    # 중복 제거 후 2차원 배열로
+                            data = list(map(self.CheckNum, [first, second, third, fourth]))    # check invalid ip 
                             
                             if None not in data:                                               # check 후 문제가 없다면  
                                 result.append(".".join(data))                                  # .으로 나눈 후 join
