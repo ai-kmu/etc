@@ -12,7 +12,7 @@ class Solution:
             if n_dots > 4:
                 return
             
-            # 점 4개 다 찍었으면 정답 리스트 ans에 추가해서 
+            # 점 4개 다 찍었으면 정답 리스트 ans에 추가해서 리턴
             if n_dots == 4 and i == l:
                 ans.append(curr_string[:-1])
                 return 
