@@ -20,7 +20,7 @@ class Solution(object):
                             data = list(map(self.CheckNum, [first, second, third, fourth]))    # check invalid ip 
                             
                             if None not in data:                                               # check 후 문제가 없다면  
-                                result.append(".".join(data))                                  # .으로 나눈 후 join
+                                result.append(".".join(data))                                  # . 으로 나눈 후 join
                     
         return result
     
