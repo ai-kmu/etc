@@ -18,8 +18,8 @@ class Solution:
                 return 
             
             # 시작점 i부터 숫자 3개를 보는데 그 3개 안에서 for문 반복
-            # for문 반복하면서 현재 보는 string 구간이 256보다 작거나
-            # 한자리 숫자, 또는 시작 숫자가 0이 아닌 경우 string에 추가
+            # for문 반복하면서 현재 보는 string 구간이 256보다 작고
+            # 현재 보는 구간이 한 자리 숫자인 경우 또는  숫자가 0이 아닌 경우 string에 추가
             for j in range(i, min(i+3, l)):
                 if int(s[i:j+1]) < 256 and (i == j or int(s[i]) != 0):
                     backtracking(curr_string+s[i:j+1]+'.',j+1,n_dots+1)
