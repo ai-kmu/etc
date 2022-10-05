@@ -44,7 +44,7 @@
         - [42895_N으로 표현](https://school.programmers.co.kr/learn/courses/30/lessons/42895)
 8. 깊이/너비 우선 탐색(DFS/BFS)
     * [프로그래머스링크](https://school.programmers.co.kr/learn/courses/30/parts/12421)
-    * [발표자료]() - 최재웅
+    * [발표자료](https://github.com/ai-kmu/etc/blob/master/algorithm/Basic_Class/%EB%B0%9C%ED%91%9C%EC%9E%90%EB%A3%8C/08_DFS%26BFS.ipynb) - 최재웅
     * 풀어야할 문제
         - []()
         - []()
