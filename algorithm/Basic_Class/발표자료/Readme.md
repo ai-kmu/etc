@@ -46,8 +46,8 @@
     * [프로그래머스링크](https://school.programmers.co.kr/learn/courses/30/parts/12421)
     * [발표자료](https://github.com/ai-kmu/etc/blob/master/algorithm/Basic_Class/%EB%B0%9C%ED%91%9C%EC%9E%90%EB%A3%8C/08_DFS%26BFS.ipynb) - 최재웅
     * 풀어야할 문제
-        - []()
-        - []()
+        - [43165_타겟넘버](https://school.programmers.co.kr/learn/courses/30/lessons/43165)
+        - [1844_게임 맵 최단거리](https://school.programmers.co.kr/learn/courses/30/lessons/1844)
 9. 이분탐색
     * [프로그래머스링크](https://school.programmers.co.kr/learn/courses/30/parts/12486)
     * [발표자료]() - 이재석
