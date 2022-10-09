@@ -1,5 +1,3 @@
-from copy import deepcopy
-
 class Solution:
     def uniquePathsIII(self, grid: List[List[int]]) -> int:
         
@@ -23,19 +21,21 @@ class Solution:
      
         answer = []
         
-        def dfs(x, y, d, maps):
-            if maps[x][y] or grid[x][y] == -1:
+        def dfs(x, y, d):
+            if grid[x][y] == -1:
                 return
-            maps[x][y] = True
+
             if grid[x][y] == 2:
                 answer.append(d)
                 return
             
             for i, j in zip(dx, dy):
-                temp = deepcopy(maps)
-                if 0 <= x - i < m and 0 <= y - j < n:
-                    dfs(x - i, y - j, d + 1, temp)
-            
-        dfs(start_x, start_y, 1, visited)
+                if 0 <= x - i < m and 0 <= y - j < n and not visited[x - i][y - j]:
+                    visited[x - i][y - j] = True
+                    dfs(x - i, y - j, d + 1)
+                    visited[x - i][y - j] = False
+        
+        visited[start_x][start_y] = True
+        dfs(start_x, start_y, 1)
                 
         return answer.count(m*n - blocks)
