@@ -16,7 +16,8 @@ def solution(maps):
             nx = x + dx[i]
             ny = y + dy[i]
             # 다음 갈 위치가 map을 벗어나거나 벽이면 더 이상 진행하지 않음
-            if nx < 0 or ny < 0 or nx >= rows or ny >= cols or maps[nx][ny] == 0:
+            if (nx < 0 or ny < 0 or nx >= rows or
+                    ny >= cols or maps[nx][ny] == 0):
                 continue
             # map이 1인 곳은 아직 가지 않은 곳(visited의 역할도 겸함)이므로 한칸 더 간 거리로 넣어줌
             if maps[nx][ny] == 1:
