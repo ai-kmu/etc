@@ -1,4 +1,6 @@
 from collections import deque
+
+
 def solution(maps):
     rows = len(maps)
     cols = len(maps[0])
