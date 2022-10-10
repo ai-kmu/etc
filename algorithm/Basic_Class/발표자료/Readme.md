@@ -50,10 +50,10 @@
         - [1844_게임 맵 최단거리](https://school.programmers.co.kr/learn/courses/30/lessons/1844)
 9. 이분탐색
     * [프로그래머스링크](https://school.programmers.co.kr/learn/courses/30/parts/12486)
-    * [발표자료]() - 이재석
+    * [발표자료](https://github.com/ai-kmu/etc/blob/master/algorithm/Basic_Class/발표자료/09_Binary_Search.ipynb) - 이재석
     * 풀어야할 문제
-        - []()
-        - []()
+        - [43238_입국심사](https://school.programmers.co.kr/learn/courses/30/lessons/43238)
+        - [43236_징검다리](https://school.programmers.co.kr/learn/courses/30/lessons/43236)
 10. 그래프
     * [프로그래머스링크](https://school.programmers.co.kr/learn/courses/30/parts/14393)
     * [발표자료]() - 조현아
