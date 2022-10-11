@@ -19,7 +19,7 @@ def solution(maps):
     # 처음 위치 방문처리 + 첫 번째 위치여서 1
     graph[0][0] = 1
 
-    # 큐를 돌며 DFS 수행
+    # 큐를 돌며 BFS 수행
     while queue:
         y, x = queue.popleft()
 
