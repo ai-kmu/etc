@@ -25,8 +25,8 @@ class Solution:
         # bfs를 이용하여 정답 출력
         # 현재 단어 word랑 한 글자만 다른 다른 단어들 iword를 뽑아내서
         # iword 안에 있는 단어 하나씩 보면서 그 단어가 endWord랑 같으면 바로 level+1를 return
-        # 그렇지 않으면 그 단어를 방문 안한 경우 deq에 추가하고 추가했다면 deq에 추가하지 않도록 함
-        # 그리하여 중복 계산을 방지하도록 함
+        # 그렇지 않으면 그 단어를 방문 안한 경우 deq에 추가
+        # 만약 방문했다면 deq에 추가하지 않음으로써 중복 계산을 방지하도록 함
         while deq:
             word, level = deq.popleft()
             for i in range(l):
