@@ -24,7 +24,7 @@ class Solution:
                         
                     else:
                         ans = (nums[i], nums[j], nums[x], nums[y])
-                        if not ans in answer: answer.add(ans)
+                        if not ans in answer: answer.add(ans) # set이라 if를 안써도 되지만 있으면 좀 더 빠른 거 같음
                         x += 1
                         y -= 1 # 포인터 이동
         return answer
