@@ -23,7 +23,7 @@ class Solution:
                 continue
             for j in range(i+1, len(nums)-2):
                 b = nums[j]
-                if sum(nums[i+1:i+3]) + a + b > target:
+                if sum(nums[j+1:j+3]) + a + b > target:
                     break
                 if sum(nums[-2:]) + a + b < target:
                     continue
@@ -31,7 +31,7 @@ class Solution:
                     continue
                 for k in range(j+1, len(nums)-1):
                     c = nums[k]
-                    if sum(nums[i+1:i+2]) + a + b + c > target:
+                    if sum(nums[k+1:k+2]) + a + b + c > target:
                         break
                     if sum(nums[-1:]) + a + b + c < target:
                         continue
