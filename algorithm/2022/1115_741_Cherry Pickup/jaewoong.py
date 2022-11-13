@@ -1,9 +1,5 @@
 class Solution(object):
     def cherryPickup(self, grid):
-        """
-        :type grid: List[List[int]]
-        :rtype: int
-        """
         n = len(grid)
 		
         dp = [[0]*n for _ in range(n)]
