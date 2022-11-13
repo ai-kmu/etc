@@ -9,7 +9,7 @@ class Solution(object):
         dp = [[0]*n for _ in range(n)]
         dp[0][0] = grid[0][0]
         # dp[i][j]: 경로에서 가져올 수 있는 최대 체리 수
-	    # k는 최대 이동 횟수, 2*n-1 인 경우 최대
+	# k는 최대 이동 횟수, 2*n-1 인 경우 최대
         for k in range(1, 2*n-1):
             curr = [[-1]*n for _ in range(n)]
             for i in range(min(n, k+1)):
