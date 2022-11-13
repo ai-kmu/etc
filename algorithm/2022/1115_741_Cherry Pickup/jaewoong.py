@@ -1,7 +1,7 @@
 class Solution(object):
     def cherryPickup(self, grid):
         n = len(grid)
-		
+	# dp테이블 생성
         dp = [[0]*n for _ in range(n)]
         dp[0][0] = grid[0][0]
         # dp[i][j]: 경로에서 가져올 수 있는 최대 체리 수
