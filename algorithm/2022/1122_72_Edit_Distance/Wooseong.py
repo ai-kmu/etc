@@ -21,7 +21,7 @@ class Solution:
         for i in range(M+1):
             DP[i][0] = i
 
-        # DP 시작: top down
+        # DP 시작: bottom-up
         for j in range(1, M+1):
             for i in range(1, N+1):
                 # 같을 경우: 이전 알파벳을 비교함
