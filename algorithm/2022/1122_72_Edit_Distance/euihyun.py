@@ -5,7 +5,7 @@ class Solution(object):
         :type word2: str
         :rtype: int
         """
-        # 진짜 모르겠음... 
+        # dp로 풀어보려고 했으나 진짜 모르겠음... 
         m, n = len(word1), len(word2)
         dp = [[0]*(n+1) for i in range(m+1)]
 
