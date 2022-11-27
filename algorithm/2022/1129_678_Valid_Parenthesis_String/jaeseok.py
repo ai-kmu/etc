@@ -35,7 +35,7 @@ class Solution:
             if not s1:
                 return True
             # (이 남아있으면서 ) 역할을 할 s2가 없으면 올바른 괄호 완성 불가능
-            if s1 and not s2:
+            elif not s2:
                 return False
             # (와 대응하는 *를 가능한 만큼 제거
             while s1 and s2 and s1[-1] == "(":
