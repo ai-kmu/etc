@@ -42,6 +42,4 @@ class Solution:
                 s1.pop()
                 s2.pop()
 
-        # 모든 과정이 끝났을 때 s1에 남은 것이 없다면 True
-        if not s1:
-            return True
+        return True
