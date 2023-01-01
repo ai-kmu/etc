@@ -7,6 +7,6 @@ class Solution:
     def maxResult(self, nums, k):
         dp = np.array(nums)
         for i in range(1, len(nums)):
-            dp[i] = dp[i] + np.max(dp[max(0, i-k):i])
+            dp[i] += np.max(dp[max(0, i-k):i])
 
         return dp[-1]
