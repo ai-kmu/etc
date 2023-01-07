@@ -5,10 +5,11 @@ class Solution:
         rectangles.sort(key = lambda x :(x[1], x[0]))
         
         # 왼쪽 아래부터 쌓는 방식으로 rectangles을 만드는지 확인한다.
+        
+        # 시작부분 찾기
         min_height = float('inf')
         max_width = float('-inf')
         min_width = float('inf')
-
         for x, y, a, b in rectangles:
             x += 10**5
             a += 10**5
@@ -16,7 +17,7 @@ class Solution:
             max_width = max(a, max_width)
             min_height = min(y, min_height)
         
-        # 쌓으면 높이를 올린다
+        # 쌓을 list 만들기
         heights = [ min_height for i in range(max_width+1)]
         
         # 이어지게 쌓으면 계속 쌓고 이어지지 않으면 False return
