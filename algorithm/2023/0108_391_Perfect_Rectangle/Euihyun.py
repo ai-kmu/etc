@@ -25,5 +25,5 @@ class Solution(object):
         # 4개가 아니면 겹치는거로 False
         if len(check_point) != 4 :
             return False
-
+        # area 체크
         return total_area == ((max(rectangles[2])-min(rectangles[0]))*(max(rectangles[3]) - min(rectangles[1])))
