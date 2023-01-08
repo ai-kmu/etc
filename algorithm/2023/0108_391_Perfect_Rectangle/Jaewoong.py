@@ -11,4 +11,4 @@ class Solution:
             bottom_right = (r[2], r[3])
             for i in [top_left, top_right, bottom_left, bottom_right]:
                 #if i not in hs:
-                #
+                #지정 특정영역 벗어나면 false
