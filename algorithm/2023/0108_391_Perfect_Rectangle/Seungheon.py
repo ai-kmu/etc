@@ -1,38 +1,29 @@
-class Solution:
-    def isRectangleCover(self, rectangles: List[List[int]]) -> bool:
-
-        # y값을 기준으로 오름차순, y값이 같으면 x값을 기준으로 오름차순 정렬
-        rectangles.sort(key = lambda x :(x[1], x[0]))
-        
-        # 왼쪽 아래부터 쌓는 방식으로 rectangles을 만드는지 확인한다.
-        
-        # 시작부분 찾기
-        min_height = float('inf')
-        max_width = float('-inf')
-        min_width = float('inf')
-        for x, y, a, b in rectangles:
-            x += 10**5
-            a += 10**5
-            min_width = min(x, min_width)
-            max_width = max(a, max_width)
-            min_height = min(y, min_height)
-        
-        # 쌓을 list 만들기
-        heights = [ min_height for i in range(max_width+1)]
-        
-        # 이어지게 쌓으면 계속 쌓고 이어지지 않으면 False return
-        for x, y, a, b in rectangles:
-            x += 10**5
-            a += 10**5
-            for i in range(x, a):
-                i += 1
-                if heights[i] == y:
-                    heights[i] = b
+수정수정중
+class Solution(object):
+    def isRectangleCover(self, rectangles):
+        """
+        :type rectangles: List[List[int]]
+        :rtype: bool
+        """
+        # 체크포인트 설정
+        check_point = set()
+        total_area = 0
+        for i in rectangles :
+            # 각 점들 지정
+            x, y, a, b = i[0], i[1], i[2], i[3] 
+            # 전체 넓이 합
+            total_area += (a-x) * (b-y)
+            
+            # 각 꼭지점 [x, y], [x, b], [a, y], [a, b]
+            for point in [(x,y), (x,b), (a,y), (a,b)] : 
+                # 꼭지점 체크
+                if point in check_point:
+                    check_point.remove(point)
                 else:
-                    return False
+                    check_point.add(point)
 
-        # 모두 같은 높이로 채웠으면 True 아니면 False
-        if all(heights[-1] == i for i in heights[min_width+1:]):
-            return True
-        else:
+        # 4개가 아니면 겹치는거로 False
+        if len(check_point) != 4 :
             return False
+        
+        return total_area == ((max(rectangles[2])-min(rectangles[0]))*(max(rectangles[3]) - min(rectangles[1])))
