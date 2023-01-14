@@ -32,6 +32,7 @@ class Solution:
         final_diffs = [] # 인덱스별로 differences과 best_difference의 차이를 저장
         for i in range(n):
             final_diffs.append(differences[i] - best_difference[i])
+            
         # absolute_sum_difference에서 final_diff의 요소들 중 가장 큰 값을 빼서 최종 답 구함
         ans = absolute_sum_difference - (final_diffs[final_diffs.index(max(final_diffs))])
          
