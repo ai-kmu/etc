@@ -1,7 +1,7 @@
 class Solution:
     def minAbsoluteSumDiff(self, nums1:List[int], nums2:List[int]) -> int:
         n =len(nums1)
-        differences = [] # 같은 인덱스 끼리의 절대 차를 저장하는 리스트
+        differences = [] # 같은 인덱스끼리 절대 차를 저장하는 리스트
         absolute_sum_difference = 0 # 입력에서 총 절대차들의 합
         for i in range(n):
             difference = abs(nums1[i] - nums2[i])
@@ -12,7 +12,7 @@ class Solution:
         nums1.sort() # 이진 탐색을 위해 nums1 정렬
         
         '''
-        nums2를 for문 돌면서 nums1을 이진 탐색한 인덱스(ind)를 구한 후
+        nums2를 for문 돌면서 nums1을 이진 탐색(왼쪽)한 인덱스(ind)를 구한 후
         nums1[ind]와 nums2[i]간의 절대차를 best_difference에 저장
         ind가 0이거나 n인 경우 nums1의 양 끝과만 절대차를 구하고
         그 외의 ind가 나오는 경우 두 가지의 차이를 구할 수 있으므로 그 두 가지중 작은 것을 
