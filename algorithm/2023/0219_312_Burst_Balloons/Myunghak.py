@@ -1,13 +1,13 @@
+# 안풀려서 답보고 풀었습니다.
+# 풀이는 안해주셔도 되요
+
 class Solution:
     def maxCoins(self, nums: List[int]) -> int:
-        # Add padding of 1 to beginning and end of nums array
         nums = [1] + nums + [1]
         n = len(nums)
 
-        # Initialize dp array with 0's
         dp = [[0] * n for _ in range(n)]
 
-        # Perform dynamic programming
         for len_subarray in range(2, n):
             for i in range(n - len_subarray):
                 j = i + len_subarray
