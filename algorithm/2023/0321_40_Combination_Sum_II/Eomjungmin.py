@@ -9,16 +9,20 @@ class Solution:
                 ans.append(comb)
                 return
 
-            if sum(comb) > target: # comb 안 요소값 합할 때 target보다 크면 return으로 backtracking 함수 종료
+            # comb 안 요소값 합할 때 target보다 크면 return으로 backtracking 함수 종료
+            if sum(comb) > target: 
                 return
             
             for i in range(start_ind,len(candidates)):
-                if candidates[i] > target: # comb에 추가할 숫자가 target보다 크면 for문 break
+                # comb에 추가할 숫자가 target보다 크면 for문 break
+                if candidates[i] > target: 
                     break
-                if i > start_ind and candidates[i] == candidates[i-1]: # 중복된 comb 추가를 방지
+
+                # 중복된 comb 추가를 방지. 중복된 comb가 나오는 이유는 candidates 내에 같은 값 요소가 들어있기 때문
+                if i > start_ind and candidates[i] == candidates[i-1]:
                     continue
+                    
                 backtracking(i+1,comb+[candidates[i]],ans)
-                
 
         backtracking(0,[],ans)
         
