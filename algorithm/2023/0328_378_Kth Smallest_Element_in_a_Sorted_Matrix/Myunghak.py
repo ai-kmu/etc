@@ -8,6 +8,7 @@
 # n*n크기를 matrix에서 (x,y)가 rank r이 될 수 있는 조건은 아래와 같다.
 # x(n+1) + y(n+1) -xy - 2n < r < xy
 # 이 떄 n값과 r값은 상수이므로 부등식을 방정식으로 바꾸어 x,y쌍의 해를 구하면 가능한 부분만 BFS로 탐색이 가능하다.
+# 그런데 솔직히 sorting이 더 빠른듯...
 
 import heapq
 
