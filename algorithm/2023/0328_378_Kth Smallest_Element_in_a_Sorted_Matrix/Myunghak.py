@@ -5,7 +5,7 @@
 
 
 # directed graphg의 BFS
-# n*n크기를 matrix에서 (x,y)가 rank r이 될 수 있는 조건은 아래와 같다.
+# n*n크기를 matrix에서 (x,y)가 rank r이 될 수 있는 조건은 아래와 같다(특정 지점으로 부터 왼쪽 위로는 다 그 지점보다 낮은 숫자이고 오른쪽 아래는 높은 숫자이기 때문).
 # x(n+1) + y(n+1) -xy - 2n < r < xy
 # 이 떄 n값과 r값은 상수이므로 부등식을 방정식으로 바꾸어 x,y쌍의 해를 구하면 가능한 부분만 BFS로 탐색이 가능하다.
 # 그런데 솔직히 sorting이 더 빠른듯...
@@ -30,11 +30,11 @@ class Solution:
         for i in range(start_index, k):
             v, r, c = heapq.heappop(pq)
 
-            if r + 1 < m and (r + 1, c) not in visited:
+            if r + 1 < m and (r + 1, c) not in visited and r*c < k:
                 heapq.heappush(pq, [matrix[r + 1][c], r + 1, c])
                 visited.add((r + 1, c))
 
-            if c + 1 < n and (r, c + 1) not in visited:
+            if c + 1 < n and (r, c + 1) not in visited and r*c < k:
                 heapq.heappush(pq, [matrix[r][c + 1], r, c + 1])
                 visited.add((r, c + 1))
 
