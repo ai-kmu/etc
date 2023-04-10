@@ -1,3 +1,6 @@
+# 답보고 풀었습니다.
+# 리뷰 안해주셔도 되요
+
 class Solution:
     def getMaximumGold(self, grid: List[List[int]]) -> int:
         def dfs(i, j, gold, visited):
