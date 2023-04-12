@@ -1,4 +1,4 @@
-# 테스트 케이스 하나는 통과하는데 다른 하나를 통과 못함
+# 피드백 후 수정 -> 통과됨
 
 class Solution:
     def getMaximumGold(self, grid: List[List[int]]) -> int:
@@ -50,7 +50,6 @@ class Solution:
                     # DFS를 수행한 후 다시 visited에서 False처리
                     # curr_score에서 값을 빼줌
                     visited[new_row][new_col] = 'False'
-                    curr_score -= grid[new_row][new_col]
 
         # start_points를 돌며 해당 좌표로부터 DFS수행
         for idx in range(len(start_points)):
@@ -61,4 +60,4 @@ class Solution:
             score[idx] = best_score
 
         # 저장된 값들 중 가장 큰 값 출력
-        return max(score)
+        return 0 if len(score) == 0 else max(score)
