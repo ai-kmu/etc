@@ -1,4 +1,4 @@
-# 어디선가 꼬이면서 못풀었습니다.. 
+# 어디선가 꼬이면서 못풀었습니다.. 그래서 답을 코드입니다
 
 class Solution:
     def isNStraightHand(self, hand: List[int], groupSize: int) -> bool:
