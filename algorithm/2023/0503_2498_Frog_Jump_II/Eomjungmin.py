@@ -1,6 +1,6 @@
 class Solution:
     def maxJump(self, stones: List[int]) -> int:
-    # test case에서 막힘
+    # test case는 통과이나 submit 이후 막힘
         if len(stones) == 3:
             return stones[2]
         ans = stones[1]
