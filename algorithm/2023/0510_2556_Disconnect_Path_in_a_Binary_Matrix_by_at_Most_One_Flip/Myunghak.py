@@ -20,5 +20,5 @@ class Solution:
 
             return False
 
-        path_num = dfs(0,0, visit)
+        dfs(0,0, visit)
         return not dfs(0,0, visit)
