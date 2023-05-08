@@ -4,22 +4,20 @@
 class Solution:
     def isPossibleToCutPath(self, grid):
         m, n = len(grid), len(grid[0])
-        visit = [[False] * n for _ in range(m)]
 
-        def dfs(x, y, visit):
+        def dfs(x, y, grid):
             if x == m - 1 and y == n - 1:
-                visit[x][y] = False
+                grid[x][y] = 1
                 return True
 
             for dx, dy in [(1, 0), (0, 1)]:
                 new_x, new_y = x + dx, y + dy
-                if new_x < m and new_y < n and not visit[new_x][new_y]  and grid[new_x][new_y]:
-                    visit[new_x][new_y] = True
-                    if dfs(new_x, new_y, visit):
+                if new_x < m and new_y < n and grid[new_x][new_y]:
+                    grid[new_x][new_y] = 0
+                    if dfs(new_x, new_y, grid):
                         return True
 
             return False
         
         # 2번다 무사히 도착하면 안됨
-        return not(dfs(0,0, visit) and dfs(0,0, visit))
-        
+        return not(dfs(0,0, grid) and dfs(0,0, grid))
