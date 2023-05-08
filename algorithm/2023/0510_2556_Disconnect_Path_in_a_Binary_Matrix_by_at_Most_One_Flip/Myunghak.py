@@ -19,6 +19,7 @@ class Solution:
                         return True
 
             return False
-
-        dfs(0,0, visit)
-        return not dfs(0,0, visit)
+        
+        # 2번다 무사히 도착하면 안됨
+        return not(dfs(0,0, visit) and dfs(0,0, visit))
+        
