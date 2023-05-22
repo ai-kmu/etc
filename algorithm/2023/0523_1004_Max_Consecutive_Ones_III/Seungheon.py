@@ -1,3 +1,5 @@
+# 솔루션 참고함
+
 class Solution:
     def longestOnes(self, nums: List[int], k: int) -> int:
         # 두개의 포인터 l, r를 이용
