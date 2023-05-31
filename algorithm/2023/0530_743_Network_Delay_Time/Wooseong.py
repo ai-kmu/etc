@@ -25,6 +25,6 @@ class Solution(object):
             # 해당 노드의 이웃 노드 탐색
             for w, v in adj[node]:
                 if v not in visited:
-                    hq.heappush(heap, total + w, v)
+                    hq.heappush(heap, (total + w, v))
         
         return -1
