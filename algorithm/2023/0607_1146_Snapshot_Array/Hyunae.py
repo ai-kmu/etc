@@ -19,9 +19,7 @@ class SnapshotArray:
         return self.snap_id
 
     def get(self, index: int, snap_id: int) -> int:
-        print(self.arr)
-        print(snap_id)
-        print(self.arr[index][0][snap_id])
+        # index out of range :(
         return self.arr[index][0][snap_id-1]
 
 
