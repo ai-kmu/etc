@@ -1,0 +1,20 @@
+class Solution(object):
+    def groupAnagrams(self, strs):
+        l=[]
+        for i in range(len(strs)):
+            a=''.join(sorted(strs[i]))
+            l.append(a)
+
+        setl=[]
+        for i in range(len(l)):
+            setl=list(set(l))
+
+        dic={}
+        for i in setl:
+            dic[i]=[]
+
+        for j in range(len(l)):
+            a=l[j]
+            if a in dic.keys():
+                dic[a].append(strs[j])
+        return list(dic.values())
