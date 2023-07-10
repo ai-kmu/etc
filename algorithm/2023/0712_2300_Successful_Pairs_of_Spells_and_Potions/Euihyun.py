@@ -1,4 +1,5 @@
-# 타임 리밋 해결못함
+# 타임 리밋 해결못하고 봤어요
+# 리뷰 안해주셔도 됩니다.
 from bisect import bisect_left
 
 class Solution(object):
