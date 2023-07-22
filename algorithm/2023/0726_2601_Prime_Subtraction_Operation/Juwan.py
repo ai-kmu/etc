@@ -1,11 +1,10 @@
 class Solution:
     def primeSubOperation(self, nums: List[int]) -> bool:
-        
-        # 에라토스테네스의 체
 
-        if len(nums) == 1:
+        if len(nums) == 1: # 만약 길이가 1이면 그냥 True 리턴
             return True
 
+        # 에라토스테네스의 체
         def find_primes(N):
             eratos = [True] * N
             eratos[0], eratos[1] = False, False
