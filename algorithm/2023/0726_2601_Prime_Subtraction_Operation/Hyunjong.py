@@ -1,3 +1,4 @@
+# 답보고 했습니다. 리뷰 안 해주셔도 됩니다
 class Solution:
     def primeSubOperation(self, nums: List[int]) -> bool:
         # 소수 배열 생성
