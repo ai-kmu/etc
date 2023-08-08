@@ -7,6 +7,7 @@ class Solution:
             if c in 'aeiouAEIOU':
                 vowels.append(c)
                 vowels_inds.append(i)
+                
         # sorted 함수로 key lambda를 이용하여 ascii code 오름차순으로 정렬
         # ord 함수를 이용하여 정렬 가능
         vowels = sorted(vowels, key = lambda x : ord(x))
