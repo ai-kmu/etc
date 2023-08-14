@@ -1,3 +1,5 @@
+# 정답 확인했습니다
+# 리뷰 x
 class Solution:
     def minIncrements(self, n: int, cost: List[int]) -> int:
 
