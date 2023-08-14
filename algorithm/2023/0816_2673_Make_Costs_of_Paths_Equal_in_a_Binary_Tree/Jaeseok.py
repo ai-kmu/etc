@@ -15,10 +15,9 @@ class Solution:
             left = dfs((node * 2))
             right = dfs((node * 2) + 1)
             self.answer += abs(left - right)
-            # 왼쪽과 오른쪽을 비교하는 cost 중 계속 최대 cost를 유지하도록 함
+            # 최대 cost를 유지하면서 위로 거슬러 올라감
             return cost[node] + max(left, right)
 
-        # root 노드부터 시작하여 top-down 방식으로 dfs 순회
         dfs(1)
 
         return self.answer
