@@ -10,7 +10,7 @@ class Solution:
             # 트리를 벗어나는 노드 처리
             if node > n:
                 return 0
-            print(node)
+            
             # 왼쪽과 오른쪽을 비교해서 두 경로가 같은 cost를 가지도록 더해야 하는 양을 answer에 추가
             left = dfs((node * 2))
             right = dfs((node * 2) + 1)
