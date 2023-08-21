@@ -3,8 +3,8 @@ class Solution:
         # strings: 문제 조건에 부합한 string을 저장하는 리스트 선언
         strings = []
 
-        # dfs 방법 사용
-        def dfs(string):
+        # 재귀적인 방법 사용
+        def search_string(string):
             # 입력 string의 길이가 n이랑 같으면 strings에 추가
             if len(string) == n:
                 strings.append(string)
@@ -17,11 +17,11 @@ class Solution:
             for i, c in enumerate(["a", "b", "c"]):
                 if string[-1] == c:
                     continue
-                dfs(string + c)
+                search_string(string + c)
 
-        # 시작이 'a','b','c'일 때 dfs 함수를 통해 모든 string 구함
+        # 시작이 'a','b','c'일 때 search_string 함수를 통해 모든 string 구함
         for s in ["a", "b", "c"]:
-            dfs(s)
+            search_string(s)
         
         if len(strings) < k:
             return ""
