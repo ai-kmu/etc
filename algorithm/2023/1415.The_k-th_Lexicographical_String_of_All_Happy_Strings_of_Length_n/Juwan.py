@@ -1,5 +1,3 @@
-import itertools
-
 
 
 class Solution:
