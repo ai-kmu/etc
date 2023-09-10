@@ -2,7 +2,7 @@ class Solution:
     def findPaths(self, m: int, n: int, maxMove: int, startRow: int, startColumn: int) -> int:
 
         # 공을 퍼져나가게 하는식으로 풀이
-        # 공이 있는위치에서 4방향으로 공을 보내고 현제 위치의 공을 제거
+        # 공이 있는 위치에서 4방향으로 공을 보내고 현재 위치의 공을 제거
         
         # dp 구성
         # row, col, ball_count, tmp 
