@@ -1,6 +1,9 @@
 class Solution:
     def findPaths(self, m: int, n: int, maxMove: int, startRow: int, startColumn: int) -> int:
 
+        # 공을 퍼져나가게 하는식으로 풀이
+        # 공이 있는위치에서 4방향으로 공을 보내고 현제 위치의 공을 제거
+        
         # dp 구성
         # row, col, ball_count, tmp 
         dp = [[[0, 0] for _ in range(n)] for _ in range(m)]
@@ -16,7 +19,7 @@ class Solution:
                     if dp[i][j][0] == 0:
                         continue
                     # 공 이동
-                    for di, dj in [[1, 0],[0, 1],[-1, 0],[0, -1]]:
+                    for di, dj in [[1, 0], [0, 1], [-1, 0], [0, -1]]:
                         # 범위 밖이면
                         if i + di < 0 or j + dj < 0 or i + di >= m or j + dj >= n:
                             answer += dp[i][j][0]
