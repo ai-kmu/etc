@@ -1,4 +1,5 @@
-from collections import Counter  # Counter 모듈을 임포트해야 합니다.
+# 답 봤어요 리뷰 안해주셔도 됩니다.
+from collections import Counter 
 
 class Solution:
     def leastInterval(self, tasks: List[str], n: int) -> int:
