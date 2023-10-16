@@ -17,3 +17,5 @@ class Solution(object):
         
         # 모든 숫자를 반복하고도 조건을 만족하면 True를 반환
         return True
+        
+# 수정사항있어서 수정해서 다시 올렸습니다
