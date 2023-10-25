@@ -5,7 +5,7 @@ class Solution:
     def kthGrammar(self, n: int, k: int) -> int:
         self.answer = 0
 
-        def traverse(k, flag):
+        def dfs(k, flag):
             if k == 1:
                 self.answer = 1 if flag is True else 0
                 return
@@ -18,6 +18,6 @@ class Solution:
         if k <= 2:
             return [0, 1][k - 1]
 
-        traverse(k, False)
+        dfs(k, False)
 
         return self.answer
