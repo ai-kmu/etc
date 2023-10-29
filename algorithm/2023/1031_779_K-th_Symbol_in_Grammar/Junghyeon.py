@@ -10,7 +10,7 @@ class Solution:
 
         while n > 1:
             # k가 홀수
-            if k%2 == 1:
+            if k % 2 == 1:
                 k = (k+1) // 2
             # k가 짝수
             else:
