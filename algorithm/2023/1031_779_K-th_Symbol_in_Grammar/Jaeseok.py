@@ -13,7 +13,7 @@ class Solution:
             if k % 2 == 0:
                 flag = not flag
 
-            return traverse(math.ceil(k / 2), flag)
+            return dfs(math.ceil(k / 2), flag)
 
         if k <= 2:
             return [0, 1][k - 1]
