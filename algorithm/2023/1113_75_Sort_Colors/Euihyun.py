@@ -20,6 +20,6 @@ class Solution(object):
             else:
                 continue
 
-        # 이거 왜 temp 로 리턴하면 안됨? 알려주셈;
+        
         nums[:] = temp
         return nums
