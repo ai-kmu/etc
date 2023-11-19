@@ -7,4 +7,4 @@ class Solution:
         tasks.sort(reverse = True)
         processorTime.sort()
             
-        return max([pt + max(tasks[i * 4: (i + 1) * 4]) for i, pt in enumerate(processorTime)])
+        return max([pt + max(tasks[i * 4 : (i + 1) * 4]) for i, pt in enumerate(processorTime)])
