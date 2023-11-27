@@ -1,27 +1,17 @@
 class Solution:
     def canCompleteCircuit(self, gas: List[int], cost: List[int]) -> int:
-        a = []
-
+        # 실패
+        if sum(gas) < sum(cost):
+            return -1
+        # 성공의 경우 (optimal)
+        idx = 0
+        tank = 0
         for i, g in enumerate(gas):
-            for j, c in enumerate(cost):
-                if i == j:
-                    a.append(g-c)
-                else:
-                    continue
-        tot = 0
-        posit = []
-        for i, _ in enumerate(a):
-            if _ > 0:
-                posit.append(i)
-        print(a)
-        for i, _ in enumerate(posit):
-            arr = a[_:]+a[:_]
-            tot = 0
-            print(arr)
-            for j in arr:
-                tot += j
-                print(tot)
-                if tot <= 0:
-                    break
-            return _
-        return -1
+            # 누적합
+            tank += g - cost[i]
+            # optimal하기 때문에 실패하면, 다음 지점부터 다시 시작
+            if tank < 0:
+                idx = i+1
+                tank = 0
+        return idx
+
