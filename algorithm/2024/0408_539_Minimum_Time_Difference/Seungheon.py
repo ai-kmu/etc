@@ -1,8 +1,6 @@
 class Solution:
     def findMinDifference(self, timePoints: List[str]) -> int:
 
-        answer = float('inf')
-
         timePoints.sort()
 
         time_list = [ int(tp[:2]) * 60 + int(tp[3:]) for tp in timePoints]
