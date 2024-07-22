@@ -23,6 +23,7 @@ class Solution(object):
         self.count = 0
         from collections import deque
         self.queue = deque([root])
+        
         # Step 1
         while self.queue:
             self.Step_1()
