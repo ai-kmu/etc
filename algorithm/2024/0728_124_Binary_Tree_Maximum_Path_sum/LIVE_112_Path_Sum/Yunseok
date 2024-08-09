@@ -1,0 +1,42 @@
+########################################################
+제출 방법 인지하지 못하고 있다가 뒤늦게 제출합니다
+벌금 납부 하였습니다!
+########################################################
+
+# Definition for a binary tree node.
+# class TreeNode:
+#     def __init__(self, val=0, left=None, right=None):
+#         self.val = val
+#         self.left = left
+#         self.right = right
+class Solution:
+    
+    def __init__(self):
+        self.is_satisfied = False
+
+    def traverse(self, node, current_val, targetSum):
+        left_node = node.left
+        right_node = node.right
+
+        my_val = node.val
+
+        if left_node is None and right_node is None:
+            total_val = my_val + current_val
+            print(total_val)
+            if total_val == targetSum:
+                self.is_satisfied = True
+            return
+
+        if left_node is not None:
+            self.traverse(left_node, my_val + current_val, targetSum)
+
+        if right_node is not None:
+            self.traverse(right_node, my_val + current_val, targetSum)
+        
+
+    def hasPathSum(self, root: Optional[TreeNode], targetSum: int) -> bool:
+        if root is not None:
+            self.traverse(root, 0, targetSum)
+
+        return self.is_satisfied
+        
