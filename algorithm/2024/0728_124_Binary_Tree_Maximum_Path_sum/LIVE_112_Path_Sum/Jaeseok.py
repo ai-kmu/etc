@@ -5,7 +5,6 @@ class Solution:
     def hasPathSum(self, root: Optional[TreeNode], targetSum: int) -> bool:
         if root is None:
             return False
-        answer = False
         q = deque()
         q.append((root, root.val))
         while q:
@@ -17,5 +16,5 @@ class Solution:
             if node.right is not None:
                 q.append((node.right, val + node.right.val))
         
-        return answer
-      
+        return False
+        
