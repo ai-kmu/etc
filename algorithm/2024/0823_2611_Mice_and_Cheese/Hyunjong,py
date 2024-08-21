@@ -1,0 +1,26 @@
+class Solution:
+    def miceAndCheese(self, reward1, reward2, k):  
+        # cheese의 개수 n을 reward1의 길이로 설정
+        n = len(reward1)
+        diff = []
+        for i in range(n):
+            # 차이값으로 치즈 우선 순위 판별
+            diff.append((reward1[i] - reward2[i], i))
+        
+        # 차이값을 기준으로 내림차순으로 정렬
+        diff.sort(reverse=True)
+        aws = 0
+        
+        # 치즈 위치 저장용, 리스트로 하면 time error
+        tmp = set()
+        
+        # 첫 번째 쥐가 k개의 치즈를 선택하여 총 점수에 추가
+        for i in range(k):
+            aws += reward1[diff[i][1]]
+            tmp.add(diff[i][1])
+        
+        # 나머지 치즈들은 두 번째 쥐가 가져가며 총 점수에 추가
+        for i in range(n):
+            if i not in tmp:
+                aws += reward2[i]
+        return aws
