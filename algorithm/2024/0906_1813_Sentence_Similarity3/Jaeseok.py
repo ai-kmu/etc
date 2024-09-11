@@ -18,5 +18,5 @@ class Solution:
         while j < n + 1 and s1[-j] == s2[-j]:
             j += 1
         
-        # 겹치는 부분은 이제 가장 긴 sentence가 되므로 s1의 길이보다 길어야 similar
+        # 겹치는 부분은 이제 가장 긴 sentence가 되므로 s1의 길이와 같아야 하는데 이 때 j가 1부터 시작했으므로 n보다 커야 함
         return i + j > n
