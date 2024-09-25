@@ -1,3 +1,6 @@
+# solution 참조
+# https://saurus2.tistory.com/entry/LeedCode-423-Reconstruct-Original-Digits-from-English-%ED%8C%8C%EC%9D%B4%EC%8D%AC-Medium
+
 class Solution:
     def originalDigits(self, s: str) -> str:
         # 각 숫자를 고유하게 식별할 수 있는 문자들
