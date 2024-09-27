@@ -10,9 +10,8 @@ class Solution(object):
         ans_ = []
         for i in range(len(temp)-1,-1,-1):
             if temp[i] != '':
-#                 print(i,'asd')
+
                 ans_.append(str(temp[i]))
-#         print(ans_)
         
         for i in range(len(ans_)):
             if i != len(ans_)-1:
