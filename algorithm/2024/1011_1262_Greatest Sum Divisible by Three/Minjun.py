@@ -40,11 +40,9 @@ class Solution:
                     if n % 3 == 0:
                         continue
                     if n % 3 == 1 and full1 != 2:
-                        print('hi1')
                         full1 += 1
                         tmp1 += n
                     elif n % 3 == 2 and not full2:
-                        print('hi2')
                         full2 = 1
                         tmp2 = n
                 break
