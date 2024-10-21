@@ -10,7 +10,7 @@ class Solution:
             int_list.append(int(bin_num, 2))
 
         # 가능한 범위 내에서 존재하지 않는 수 탐색
-        for i in range(n**2+1):
+        for i in range(2**n):
             if i not in int_list:
                 # 자릿수 맞춰서 2진수 -> 10진수로 리턴
                 return format(i , formatting)
