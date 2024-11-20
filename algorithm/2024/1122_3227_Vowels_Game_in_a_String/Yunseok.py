@@ -1,3 +1,21 @@
+###### 다시 생각 해봄 ######
+class Solution:
+    def doesAliceWin(self, s: str) -> bool:
+        next_str = s
+        vowels_idx_list = []
+        for idx, elem in enumerate(next_str):
+            if elem in ['a', 'e', 'i', 'o', 'u']:
+                vowels_idx_list.append(idx)
+
+        # 어차피 앨리스가 시작
+        # 모음이 홀수 개일 때, 한 번에 어차피 모두 가져갈 수 있음
+        # 짝수이면 앨리스 차례에서 홀수 개가 되어버림
+        if len(vowels_idx_list) == 0:
+            return False
+        else:
+            return True
+
+######################### 이전 문제 풀이 #########################
 # 문제 풀이 실패
 # 문제를 잘못 이해하였음
 class Solution:
