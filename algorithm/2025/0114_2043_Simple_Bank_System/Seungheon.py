@@ -3,9 +3,9 @@
 
 # 데코레이터 생성, try except으로 false 처리
 def operation_func(func):
-    def wrapper(*args, **kwargs):
+    def wrapper(*args):
         try:
-            return func(*args, **kwargs)
+            return func(*args)
         except :
             return False
     return wrapper
