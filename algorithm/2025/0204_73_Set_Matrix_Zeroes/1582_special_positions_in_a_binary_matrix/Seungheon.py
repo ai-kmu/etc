@@ -27,3 +27,28 @@ class Solution(object):
 
         return answer
 
+
+class Solution(object):
+    def numSpecial(self, mat):
+        """
+        :type mat: List[List[int]]
+        :rtype: int
+        """
+
+
+
+        row_sum = [0 for _ in mat]
+        col_sum = [0 for _ in mat[0]]
+        
+        for row_idx, row in enumerate(mat):
+            for col_idx, value in enumerate(row):
+                row_sum[row_idx] += value
+                col_sum[col_idx] += value
+
+        answer = 0
+        for row_idx, row in enumerate(mat):
+            for col_idx, value in enumerate(row):
+                if mat[row_idx][col_idx] == 1 and row_sum[row_idx] == 1 and col_sum[col_idx] == 1:
+                    answer += 1
+
+        return answer
