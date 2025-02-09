@@ -1,5 +1,6 @@
 class Solution:
     def findDiagonalOrder(self, nums: List[List[int]]) -> List[int]:
+        m, n = len(nums), max([len(row) for row in nums])
         diagonals = [[] for _ in range(m+n-1)]
 
         for i, row in enumerate(nums):
