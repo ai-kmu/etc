@@ -1,28 +1,24 @@
 class Solution:
     def spiralOrder(self, matrix: List[List[int]]) -> List[int]:
         m, n = len(matrix), len(matrix[0])
-        # 현재 위치의 값을 사용 가능한지 확인하는 함수
-        not_available = lambda i, j: not(0 <= i < m and 0 <= j < n and matrix[i][j] is not None)
-
         dirs = [(0, 1), (1, 0), (0, -1), (-1, 0)]
 
-        count = 0
         dir_index = 0
         row, col = 0, 0
         answer = [None] * (m * n)
 
-        while count < m * n:
+        for count in range(m * n):
             answer[count] = matrix[row][col]
+            # visit 처리
             matrix[row][col] = None
             new_row = row + dirs[dir_index][0]
             new_col = col + dirs[dir_index][1]
 
-            # 만약 사용 불가능하면 방향을 바꿈
-            if not_available(new_row, new_col):
+            # 새로운 위치가 index를 벗어낫거나, 이미 visit한 위치라면 방향을 바꿈
+            if not(0 <= new_row < m and 0 <= new_col < n and matrix[new_row][new_col] is not None):
                 dir_index = (dir_index + 1) % 4
                 new_row = row + dirs[dir_index][0]
                 new_col = col + dirs[dir_index][1]
             row = new_row
             col = new_col
-            count += 1
         return answer
