@@ -11,7 +11,7 @@ class Solution:
                 continue
             answer += 1
             visited[i] = True
-            # DFS로 연결된 node를 방문
+            # BFS로 연결된 node를 방문
             queue = deque([i])
             while queue:
                 node = queue.popleft()
