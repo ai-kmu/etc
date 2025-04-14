@@ -4,7 +4,7 @@ class Solution:
         visited = [[False] * len(image[0]) for _ in range(len(image))]
         target = image[sr][sc]
 
-        def bfs(x, y):
+        def change(x, y):
             nonlocal image, visited, target
             if not visited[x][y] and (image[x][y] == target):
                 visited[x][y] = True
@@ -13,9 +13,9 @@ class Solution:
                 for dx, dy in directions:
                     new_x, new_y = x + dx, y + dy
                     if (0 <= new_x < len(image)) and (0 <= new_y < len(image[0])):
-                        bfs(new_x, new_y)
+                        change(new_x, new_y)
 
-        bfs(sr, sc)
+        change(sr, sc)
         return image
 
 
