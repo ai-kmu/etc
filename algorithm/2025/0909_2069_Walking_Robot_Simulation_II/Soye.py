@@ -1,3 +1,5 @@
+# 솔루션 참고했습니다.
+# 풀이 안 해주셔도 괜찮습니다. 
 class Robot:
     def __init__(self, width: int, height: int):
         # 격자 크기
