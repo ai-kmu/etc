@@ -25,8 +25,3 @@ class Solution:
             union(r[0], r[1])
 
         return min([r[2] for r in roads if find(r[0]) == find(n) or find(r[1]) == find(n)])
-
-
-        
-
-        
